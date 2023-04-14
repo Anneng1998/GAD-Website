@@ -9,12 +9,12 @@ if(isset($_POST['login'])) {
     if (empty($email) && empty($pass)){
         echo "<script>alert('Complete all fields');window.location.href = 'index.php';</script>";  
     }else{
-    //     $check_account = "Select * from tbl_users where fldEmail = '$email' and fldPassword = '$pass'";
-    //     $check_account_qry = mysqli_query($db, $check_account); //ichecheck kung tama yung query
-    //     $check_account_fetch = mysqli_fetch_array($check_account_qry); //kukunin yung laman ng query
-    //     $check_account_num = mysqli_num_rows($check_account_qry); //bibilangin niya yung data na nilabas
+        $check_account = "Select * from tbl_users where fldEmail = '$email' and fldPassword = '$pass'";
+        $check_account_qry = mysqli_query($db, $check_account); //ichecheck kung tama yung query
+        $check_account_fetch = mysqli_fetch_array($check_account_qry); //kukunin yung laman ng query
+        $check_account_num = mysqli_num_rows($check_account_qry); //bibilangin niya yung data na nilabas
 
-    //     if ($check_account_num == 1){
+        if ($check_account_num == 1){
     //         $user_status = $check_account_fetch['fldActivationStatus'];
     //         $id = $check_account_fetch['fldIdNumber'];
     //         if ($user_status == 'PENDING') {
@@ -30,9 +30,9 @@ if(isset($_POST['login'])) {
     //             header("location: dashboard.php");
     //         }
 
-    //     }else{
-    //         echo "<script>alert('Username and Password does not match');window.location.href = 'index.php';</script>";
-    //     }
+        }else{
+            echo "<script>alert('Username and Password does not match');window.location.href = 'index.php';</script>";
+        }
 
 
     }
