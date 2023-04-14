@@ -1,0 +1,100 @@
+<?php 
+    include 'include/header.php';
+    include 'include/sidebar.php';
+    include 'include/navbar.php';
+?>
+
+
+ <!-- start page title -->
+ <div class="row">
+    <div class="col-12">
+        <div class="page-title-box">
+            <div class="page-title-right">
+               
+            </div>
+            <h4 class="page-title"><i class="uil-cog font-100 me-1"></i>SETTING</h4>
+        </div>
+    </div>
+</div>     
+<!-- end page title --> 
+
+<div class="row">
+    <div class="col-sm-3 mb-2 mb-sm-0">
+        <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+            <a class="nav-link active show" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                aria-selected="true">
+                <i class="mdi mdi-home-variant d-md-none d-block"></i>
+                <span class="d-none d-md-block">Account Maintenance</span>
+            </a>
+            <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
+                aria-selected="false">
+                <i class="mdi mdi-account-circle d-md-none d-block"></i>
+                <span class="d-none d-md-block">Back Up & Restore</span>
+            </a>
+            <a class="nav-link" id="v-pills-arhieve-tab" data-bs-toggle="pill" href="#v-pills-arhieve" role="tab" aria-controls="v-pills-arhieve"
+                aria-selected="false">
+                <i class="mdi mdi-account-circle d-md-none d-block"></i>
+                <span class="d-none d-md-block">Archive</span>
+            </a>
+        </div>
+    </div> <!-- end col-->
+
+    <!-- Setting-Account-Maintenance -->
+    <div class="col-sm-9">
+        <div class="tab-content" id="v-pills-tabContent">
+            <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                <table id="alternative-page-datatable" class="table dt-responsive nowrap w-100">
+                    <thead>
+                        <tr>
+                            <th>ID Number</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Department</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <?php
+                    $user_qry = mysqli_query($db, "Select * from tbl_users order by id");
+                    foreach ($user_qry as $data) {
+                    ?>
+
+                    <tbody>
+                        <tr>
+                            <td><?php echo $data['fldIdNumber'] ?></td>
+                            <td><?php echo $data['fldName'] ?></td>
+                            <td><?php echo $data['fldEmail'] ?></td>
+                            <td><?php echo $data['fldDepartment'] ?></td>
+                            <td>
+                                <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#delete<?php echo $data['id'] ?>"><i class="dripicons-trash"></i></button>
+                                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#view<?php echo $data['id'] ?>"><i class="dripicons-lock"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    
+                    <?php
+                        include 'backend/setting-account-delete.php';
+                        include 'backend/setting-account-view.php';
+                        }
+                    ?>
+                </table>
+            </div>
+
+
+            <?php include 'setting-archieve.php' ?>
+
+            <?php include 'setting-backup.php'; ?>
+
+        </div> <!-- end tab-content-->
+    </div> <!-- end col-->
+</div>
+<!-- end row-->
+
+
+
+
+
+<?php 
+include 'include/footer.php';
+?>
+

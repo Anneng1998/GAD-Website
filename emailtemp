@@ -1,0 +1,54 @@
+
+
+  $mail = new PHPMailer(); 
+  //$mail->SMTPDebug=3;
+  $mail->IsSMTP(); 
+  $mail->SMTPAuth = true; 
+  $mail->SMTPSecure = 'tls'; 
+  $mail->Host = "smtp.gmail.com";
+  $mail->Port = "587"; 
+  $mail->IsHTML(true);
+  $mail->CharSet = 'UTF-8';
+  $mail->Username = "cmllcrls9@gmail.com";
+  $mail->Password = 'Rootroot12345';
+  $mail->SetFrom("cmllcrls9@gmail.com", "Welcome");
+  $mail->Subject = 'Welcome to CvSU-CCC GAD Unit';
+  $mail->Body = "Hello World";
+  $mail->AddAddress("@gmail.com"); //email ng pagsesendan
+  $mail->SMTPOptions=array('ssl'=>array(
+      'verify_peer'=>false,
+      'verify_peer_name'=>false,
+      'allow_self_signed'=>false
+  ));
+  if(!$mail->Send()){
+      echo $mail->ErrorInfo;
+  }
+
+
+  <?php 
+    include 'smtp/PHPMailerAutoload.php';
+
+      $mail = new PHPMailer(); 
+      //$mail->SMTPDebug=3;
+      $mail->IsSMTP(); 
+      $mail->SMTPAuth = true; 
+    //   $mail->SMTPSecure = 'tls'; 
+      $mail->Host = "localhost";
+      $mail->Port = "587"; 
+      $mail->IsHTML(true);
+      $mail->CharSet = 'UTF-8';
+      $mail->Username = "cmllcrls9@gmail.com";
+      $mail->Password = 'Rootroot12345';
+      $mail->SetFrom("cmllcrls9@gmail.com", "Welcome");
+      $mail->Subject = 'Welcome to CvSU-CCC GAD Unit';
+      $mail->Body = "Hello World";
+      $mail->AddAddress("annecera88@gmail.com"); //email ng pagsesendan dapat kung ano email na naka lagay sa database wet try ko lang kung gagana hahaha hula ko lang yan ehahaha
+      $mail->SMTPOptions=array('ssl'=>array(
+          'verify_peer'=>false,
+          'verify_peer_name'=>false,
+          'allow_self_signed'=>false
+      ));
+      if(!$mail->Send()){
+          echo $mail->ErrorInfo;
+      }
+?>
