@@ -14,7 +14,7 @@ if(isset($_POST['login'])) {
         // $check_account_fetch = mysqli_fetch_array($check_account_qry); //kukunin yung laman ng query
         // $check_account_num = mysqli_num_rows($check_account_qry); //bibilangin niya yung data na nilabas
 
-        if ($check_account_num == 1){
+        if (mysqli_num_rows($check_account_qry) > 0){
     //         $user_status = $check_account_fetch['fldActivationStatus'];
     //         $id = $check_account_fetch['fldIdNumber'];
     //         if ($user_status == 'PENDING') {
