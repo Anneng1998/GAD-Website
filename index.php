@@ -78,11 +78,11 @@ if(isset($_POST['login'])) {
                         <form action="index.php" method="POST">
                             <div class="mb-3">
                                 <label for="emailaddress" class="form-label">Email address</label>
-                                <input class="form-control" type="email" name="emailaddress" id="emailaddress" required="" placeholder="Enter your email">
+                                <input class="form-control" type="email" name="emailaddress" id="emailaddress" placeholder="Enter your email">
                             </div>
                             <div class="mb-3">
                                 <label for="password" class="form-label">Password</label>
-                                <input class="form-control" type="password" required="" name="password" id="password" placeholder="Enter your password">
+                                <input class="form-control" type="password" name="password" id="password" placeholder="Enter your password">
                             </div>
                             <div class="d-grid mb-0 text-center">
                                 <button class="btn btn-primary" name="login" type="submit"><i class="mdi mdi-login"></i> Log In </button>
