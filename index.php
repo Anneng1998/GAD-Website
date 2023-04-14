@@ -4,38 +4,38 @@ session_start();
 
 if(isset($_POST['login'])) {
     $email = $_POST['emailaddress'];
-    $pass = md5($_POST['password']);
+    echo $pass = md5($_POST['password']);
 
-    if (empty($email) && empty($pass)){
-        echo "<script>alert('Complete all fields');window.location.href = 'index.php';</script>";  
-    }else{
-        $check_account = "Select * from tbl_users where fldEmail = '$email' and fldPassword = '$pass'";
-        $check_account_qry = mysqli_query($db, $check_account); //ichecheck kung tama yung query
-        $check_account_fetch = mysqli_fetch_array($check_account_qry); //kukunin yung laman ng query
-        $check_account_num = mysqli_num_rows($check_account_qry); //bibilangin niya yung data na nilabas
+    // if (empty($email) && empty($pass)){
+    //     echo "<script>alert('Complete all fields');window.location.href = 'index.php';</script>";  
+    // }else{
+    //     $check_account = "Select * from tbl_users where fldEmail = '$email' and fldPassword = '$pass'";
+    //     $check_account_qry = mysqli_query($db, $check_account); //ichecheck kung tama yung query
+    //     $check_account_fetch = mysqli_fetch_array($check_account_qry); //kukunin yung laman ng query
+    //     $check_account_num = mysqli_num_rows($check_account_qry); //bibilangin niya yung data na nilabas
 
-        if ($check_account_num == 1){
-            $user_status = $check_account_fetch['fldActivationStatus'];
-            $id = $check_account_fetch['fldIdNumber'];
-            if ($user_status == 'PENDING') {
-                echo "<script>alert('Your account is still inactive');window.location.href = 'index.php';</script>";
-            } else {
-                // $_SESSION['status'] = 'ACTIVE';
-                $_SESSION['email'] = $check_account_fetch['fldEmail'];
-                $_SESSION['name'] = $check_account_fetch['fldName'];
-                $_SESSION['id'] = $check_account_fetch['fldIdNumber'];
+    //     if ($check_account_num == 1){
+    //         $user_status = $check_account_fetch['fldActivationStatus'];
+    //         $id = $check_account_fetch['fldIdNumber'];
+    //         if ($user_status == 'PENDING') {
+    //             echo "<script>alert('Your account is still inactive');window.location.href = 'index.php';</script>";
+    //         } else {
+    //             // $_SESSION['status'] = 'ACTIVE';
+    //             $_SESSION['email'] = $check_account_fetch['fldEmail'];
+    //             $_SESSION['name'] = $check_account_fetch['fldName'];
+    //             $_SESSION['id'] = $check_account_fetch['fldIdNumber'];
 
-                // $account_update = mysqli_query($db, "UPDATE tbl_users SET fldStatus = 'ACTIVE' WHERE fldIdNumber = '$id'");
+    //             // $account_update = mysqli_query($db, "UPDATE tbl_users SET fldStatus = 'ACTIVE' WHERE fldIdNumber = '$id'");
 
-                header("location: dashboard.php");
-            }
+    //             header("location: dashboard.php");
+    //         }
 
-        }else{
-            echo "<script>alert('Username and Password does not match');window.location.href = 'index.php';</script>";
-        }
+    //     }else{
+    //         echo "<script>alert('Username and Password does not match');window.location.href = 'index.php';</script>";
+    //     }
 
 
-    }
+    // }
 }
 
 ?>
