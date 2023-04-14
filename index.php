@@ -4,11 +4,11 @@ session_start();
 
 if(isset($_POST['login'])) {
     $email = $_POST['emailaddress'];
-    echo $pass = md5($_POST['password']);
+    $pass = md5($_POST['password']);
 
-    // if (empty($email) && empty($pass)){
-    //     echo "<script>alert('Complete all fields');window.location.href = 'index.php';</script>";  
-    // }else{
+    if (empty($email) && empty($pass)){
+        echo "<script>alert('Complete all fields');window.location.href = 'index.php';</script>";  
+    }else{
     //     $check_account = "Select * from tbl_users where fldEmail = '$email' and fldPassword = '$pass'";
     //     $check_account_qry = mysqli_query($db, $check_account); //ichecheck kung tama yung query
     //     $check_account_fetch = mysqli_fetch_array($check_account_qry); //kukunin yung laman ng query
@@ -35,7 +35,7 @@ if(isset($_POST['login'])) {
     //     }
 
 
-    // }
+    }
 }
 
 ?>
