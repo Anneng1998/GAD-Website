@@ -80,7 +80,7 @@
                             </td>
                         </tr>
                         <?php
-                            include 'backend/infastracture-add.php';
+                            
                             }
                         ?>
                     </tbody>
@@ -99,7 +99,7 @@
 
 
 <?php 
-include 'backend/based-research-upload.php';
+include 'backend/infastracture-add.php';
 include 'include/footer.php';
 
 ?>
