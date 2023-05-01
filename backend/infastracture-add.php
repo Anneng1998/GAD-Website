@@ -57,11 +57,11 @@ if(isset($_POST['upload'])){
             $random = random_int(100000, 999999);
             $UniqueID = 'IEC'.$random;
 
-            $insert_infastracture = "Insert into tbl_infactracture (fldUID, fldTitle, fldProponents, fldDateofApproval,fldDescription, fldType, fldTargetCompletion, fldCopyOfProposal, fldHGDG, fldStatus,fldFrom) VALUES ('$UniqueID','$title', '$proponent', '$dateofapproval', '$description', 'PROPOSAL', '$targetofcompletion', '$AR_new_name', '$hgdg_new_name', 'unarchive', 'tbl_infactracture' )";
+            echo $insert_infastracture = "Insert into tbl_infactracture (fldUID, fldTitle, fldProponents, fldDateofApproval,fldDescription, fldType, fldTargetCompletion, fldCopyOfProposal, fldHGDG, fldStatus,fldFrom) VALUES ('$UniqueID','$title', '$proponent', '$dateofapproval', '$description', 'PROPOSAL', '$targetofcompletion', '$AR_new_name', '$hgdg_new_name', 'unarchive', 'tbl_infactracture' )";
 
-            $insert_infastracture_qry = mysqli_query($db, $insert_infastracture);
+            // $insert_infastracture_qry = mysqli_query($db, $insert_infastracture);
 
-            echo "<script>alert('New data has been added successfully');window.location.href = 'infastracture.php';</script>";
+            // echo "<script>alert('New data has been added successfully');window.location.href = 'infastracture.php';</script>";
 
 
             }
