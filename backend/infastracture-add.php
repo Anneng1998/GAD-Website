@@ -40,10 +40,10 @@ if(isset($_POST['upload'])){
     $title_checking = mysqli_query("Select * from tbl_infactracture where fldTitle = '$title'");
 
     if (mysqli_num_rows($title_checking) > 0) {
-        echo "<script>alert('Title already exists');window.location.href = 'infastracture-project.php';</script>";
+        echo "<script>alert('Title already exists');window.location.href = 'infastracture.php';</script>";
     } else {
         if($title == "" && $proponent == "" && $dateofapproval == "" && $description == "" && $targetofcompletion == "" && $report == "" && $hgdg == "") {
-            echo "<script>alert('All fields are required!');window.location.href = 'infastracture-project.php';</script>";
+            echo "<script>alert('All fields are required!');window.location.href = 'infastracture.php';</script>";
         } else {
 
             $AR_new_name = 'Accomplishment Report '.$title.'.'.$AR_file_ex_loc;
@@ -61,7 +61,7 @@ if(isset($_POST['upload'])){
 
             $insert_infastracture_qry = mysqli_query($db, $insert_infastracture);
 
-            echo "<script>alert('New data has been added successfully');window.location.href = 'infastracture-project.php';</script>";
+            echo "<script>alert('New data has been added successfully');window.location.href = 'infastracture.php';</script>";
 
 
             }
@@ -79,7 +79,7 @@ if(isset($_POST['upload'])){
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
             </div>
 
-            <form action="infastracture-project.php" method="post"  id="myAwesomeDropzone" enctype="multipart/form-data">
+            <form action="infastracture.php" method="post"  id="myAwesomeDropzone" enctype="multipart/form-data">
             <!-- class="dropzone" -->
             <div class="modal-body">
 
