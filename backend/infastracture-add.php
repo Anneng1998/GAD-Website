@@ -1,3 +1,76 @@
+<?php
+
+if(isset($_POST['infastracture-add'])){
+    $title = $_POST['title'];
+    $proponent = $_POST['proponent'];
+    $dateofapproval = $_POST['dateofapproval'];
+    $description = $_POST['description'];
+    $targetofcompletion = $_POST['targetofcompletion'];
+    $proposal = $_POST['proposal'];
+    $hgdg = $_POST['hgdg'];
+
+    // copy of proposal file = AR
+
+    $AR_file_name = $_FILES['file']['name'];
+    $AR_file_size = $_FILES['file']['size'];
+    $AR_file_tmp = $_FILES['file']['tmp_name'];
+    $AR_file_ex = pathinfo($AR_file_name, PATHINFO_EXTENSION);
+
+    $AR_fileSizeRound = round($AR_file_size / 1024 / 1024);
+    $AR_fileSize = $AR_fileSizeRound.' MB';
+
+    $AR_file_ex_loc = strtolower($AR_file_ex);
+
+    $AR_allow_ex = array("pdf");
+
+    // accomplised hgdg file = hgdg
+
+    $hgdg_file_name = $_FILES['file']['name'];
+    $hgdg_file_size = $_FILES['file']['size'];
+    $hgdg_file_tmp = $_FILES['file']['tmp_name'];
+    $hgdg_file_ex = pathinfo($hgdg_file_name, PATHINFO_EXTENSION);
+
+    $hgdg_fileSizeRound = round($hgdg_file_size / 1024 / 1024);
+    $hgdg_fileSize = $hgdg_fileSizeRound.' MB';
+
+    $hgdg_file_ex_loc = strtolower($hgdg_file_ex);
+
+    $hgdg_allow_ex = array("pdf");
+
+    $title_checking = mysqli_query("Select * from tbl_infactracture where fldTitle = '$title'");
+
+    if (mysqli_num_rows($title_checking) > 0) {
+        echo "<script>alert('Title already exists');window.location.href = 'infastracture-project.php';</script>";
+    } else {
+        if($title == "" && $proponent == "" && $dateofapproval == "" && $description == "" && $targetofcompletion == "" && $report == "" && $hgdg == "") {
+            echo "<script>alert('All fields are required!');window.location.href = 'infastracture-project.php';</script>";
+        } else {
+
+            $AR_new_name = 'Accomplishment Report '.$title.'.'.$AR_file_ex_loc;
+            $AR_video_path_sa_buhay_niya = 'files/IEC/'.$AR_new_name;
+            move_uploaded_file($AR_file_tmp, $AR_video_path_sa_buhay_niya);
+
+            $hgdg_new_name = 'Accomplishment HGDG '.$title.'.'.$hgdg_file_ex_loc;
+            $hgdg_video_path_sa_buhay_niya = 'files/IEC/'.$hgdg_new_name;
+            move_uploaded_file($hgdg_file_tmp, $hgdg_video_path_sa_buhay_niya);
+
+            $random = random_int(100000, 999999);
+            $UniqueID = 'IEC'.$random;
+
+            $insert_infastracture = "Insert into tbl_infactracture (fldUID, fldTitle, fldProponents, fldDateofApproval,fldDescription, fldType, fldTargetCompletion, fldCopyOfProposal, fldHGDG, fldStatus,fldFrom) VALUES ('$UniqueID','$title', '$proponent', '$dateofapproval', '$description', 'PROPOSAL', '$targetofcompletion', '$AR_new_name', '$hgdg_new_name', 'unarchive', 'tbl_infactracture' )";
+
+            $insert_infastracture_qry = mysqli_query($db, $insert_infastracture);
+
+            echo "<script>alert('New data has been added successfully');window.location.href = 'infastracture-project.php';</script>";
+
+
+            }
+    }
+
+}
+
+?>
+
 <div id="primary-header-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -12,33 +85,33 @@
 
                 <div class="mb-3">
                     <label for="simpleinput" class="form-label">Title</label>
-                    <input type="text" name="researchtitle" id="simpleinput" class="form-control">
+                    <input type="text" name="title" id="simpleinput" class="form-control">
                 </div>
 
                 <div class="mb-3">
                     <label for="simpleinput" class="form-label">Proponent (Researcher)</label>
-                    <input type="text" name="researchdescription" id="simpleinput" class="form-control">
+                    <input type="text" name="proponent" id="simpleinput" class="form-control">
                 </div>
 
                 <div class="mb-3">
                         <label for="example-select" class="form-label">Date Of Approval</label>
-                        <input type="text" class="form-control date" name="completiondate" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
+                        <input type="text" class="form-control date" name="dateofapproval" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
                 </div>
 
                 <div class="mb-3">
                     <label for="simpleinput" class="form-label">Description</label>
-                    <input type="text" name="researchdescription" id="simpleinput" class="form-control">
+                    <input type="text" name="description" id="simpleinput" class="form-control">
                 </div>
 
                 <div class="mb-3">
                         <label for="example-select" class="form-label">Target Completion</label>
-                        <input type="text" class="form-control date" name="completiondate" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
+                        <input type="text" class="form-control date" name="targetcompletion" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
                 </div>
 
                 <div class="row mb-3">
                     <label for="inputEmail3" class="col-6 col-form-label">Copy of Proposal</label>
                     <div class="col-6 fallback">
-                        <input name="file" type="file" accept="pdf" multiple />
+                        <input name="proposal" type="file" accept="pdf" multiple />
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -51,7 +124,7 @@
             </div>
 
             <div class="modal-footer">
-                <button name="mediaupload" class="btn btn-primary">UPLOAD</button>
+                <button name="infastracture-add" class="btn btn-primary">UPLOAD</button>
             </div>
 
             </form>
