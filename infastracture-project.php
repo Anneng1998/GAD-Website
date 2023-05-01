@@ -55,12 +55,22 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                            $infastracture_query = mysqli_query($db, "Select * from tbl_iec where fldStatus = 'unarchive' order by fldID");
+                            foreach ($infastracture_query as $infastracture_data){
+                        ?>
                         <tr>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
-                            <td>1</td>
+                            <td><?php echo $infastracture_data['fldTitle'] ?></td>
+                            <td><?php echo $infastracture_data['fldProponets'] ?></td>
+                            <td><?php echo $infastracture_data['fldDateofApproval'] ?></td>
+                            <td>
+                                <?php 
+                                    $see = '<a class="seebtn" data-bs-toggle="modal" data-bs-target="#seemore'.$iec_infastracture_datadata['fldID'].'"> See More</a>';
+                                    $desc = $infastracture_data['fldDescription'];
+                                    echo mb_strimwidth($desc, 0, 100, $see);
+                                ?>
+                            </td>
+                            <td><?php echo $infastracture_data['fldTargetCompletion'] ?></td>
                             <td>
                                 <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target=""><i class="dripicons-preview"></i></button>
                                 <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle=""modaldata-bs-target=""><i class="dripicons-trash"></i></button>
@@ -71,6 +81,7 @@
                         </tr>
                         <?php
                             include 'backend/infastracture-add.php';
+                            }
                         ?>
                     </tbody>
                 </table>
