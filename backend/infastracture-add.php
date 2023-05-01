@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['infastracture-add'])){
+if(isset($_POST['upload'])){
     $title = $_POST['title'];
     $proponent = $_POST['proponent'];
     $dateofapproval = $_POST['dateofapproval'];
@@ -124,7 +124,7 @@ if(isset($_POST['infastracture-add'])){
             </div>
 
             <div class="modal-footer">
-                <button name="infastracture-add" class="btn btn-primary">UPLOAD</button>
+                <button name="upload" class="btn btn-primary">UPLOAD</button>
             </div>
 
             </form>
