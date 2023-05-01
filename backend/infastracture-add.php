@@ -4,16 +4,15 @@ if(isset($_POST['upload'])){
     $title = $_POST['title'];
     $proponent = $_POST['proponent'];
     $dateofapproval = $_POST['dateofapproval'];
-    $description = $_POST['description'];
-    $targetofcompletion = $_POST['targetofcompletion'];
-    $proposal = $_POST['proposal'];
-    $hgdg = $_POST['hgdg'];
+    $sub_description = $_POST['description'];
+    $description = str_replace("'", "\'", $sub_description); 
+    $targetcompletion = $_POST['targetcompletion'];
 
-    // copy of proposal file = AR
+    // // copy of proposal file = AR
 
-    $AR_file_name = $_FILES['file']['name'];
-    $AR_file_size = $_FILES['file']['size'];
-    $AR_file_tmp = $_FILES['file']['tmp_name'];
+    $AR_file_name = $_FILES['proposal']['name'];
+    $AR_file_size = $_FILES['proposal']['size'];
+    $AR_file_tmp = $_FILES['proposal']['tmp_name'];
     $AR_file_ex = pathinfo($AR_file_name, PATHINFO_EXTENSION);
 
     $AR_fileSizeRound = round($AR_file_size / 1024 / 1024);
@@ -25,9 +24,9 @@ if(isset($_POST['upload'])){
 
     // accomplised hgdg file = hgdg
 
-    $hgdg_file_name = $_FILES['file']['name'];
-    $hgdg_file_size = $_FILES['file']['size'];
-    $hgdg_file_tmp = $_FILES['file']['tmp_name'];
+    $hgdg_file_name = $_FILES['hgdg']['name'];
+    $hgdg_file_size = $_FILES['hgdg']['size'];
+    $hgdg_file_tmp = $_FILES['hgdg']['tmp_name'];
     $hgdg_file_ex = pathinfo($hgdg_file_name, PATHINFO_EXTENSION);
 
     $hgdg_fileSizeRound = round($hgdg_file_size / 1024 / 1024);
@@ -37,12 +36,12 @@ if(isset($_POST['upload'])){
 
     $hgdg_allow_ex = array("pdf");
 
-    $title_checking = mysqli_query("Select * from tbl_infactracture where fldTitle = '$title'");
+    $title_checking = mysqli_query($db, "Select * from tbl_infactracture where fldTitle = '$title'");
 
     if (mysqli_num_rows($title_checking) > 0) {
         echo "<script>alert('Title already exists');window.location.href = 'infastracture.php';</script>";
     } else {
-        if($title == "" && $proponent == "" && $dateofapproval == "" && $description == "" && $targetofcompletion == "" && $report == "" && $hgdg == "") {
+        if($title == "" && $proponent == "" && $dateofapproval == "" && $description == "" && $targetcompletion == "") {
             echo "<script>alert('All fields are required!');window.location.href = 'infastracture.php';</script>";
         } else {
 
@@ -55,13 +54,13 @@ if(isset($_POST['upload'])){
             move_uploaded_file($hgdg_file_tmp, $hgdg_video_path_sa_buhay_niya);
 
             $random = random_int(100000, 999999);
-            $UniqueID = 'IEC'.$random;
+            $UniqueID = 'INFAS'.$random;
 
-            echo $insert_infastracture = "Insert into tbl_infactracture (fldUID, fldTitle, fldProponents, fldDateofApproval,fldDescription, fldType, fldTargetCompletion, fldCopyOfProposal, fldHGDG, fldStatus,fldFrom) VALUES ('$UniqueID','$title', '$proponent', '$dateofapproval', '$description', 'PROPOSAL', '$targetofcompletion', '$AR_new_name', '$hgdg_new_name', 'unarchive', 'tbl_infactracture' )";
+            $insert_infastracture = "Insert into tbl_infactracture (fldUID, fldTitle, fldProponents, fldDateofApproval,fldDescription, fldType, fldTargetCompletion, fldCopyOfProposal, fldHGDG, fldStatus,fldFrom) VALUES ('$UniqueID','$title', '$proponent', '$dateofapproval', '$description', 'PROPOSAL', '$targetcompletion', '$AR_new_name', '$hgdg_new_name', 'unarchive', 'tbl_infactracture' )";
 
-            // $insert_infastracture_qry = mysqli_query($db, $insert_infastracture);
+            $insert_infastracture_qry = mysqli_query($db, $insert_infastracture);
 
-            // echo "<script>alert('New data has been added successfully');window.location.href = 'infastracture.php';</script>";
+            echo "<script>alert('New data has been added successfully');window.location.href = 'infastracture.php';</script>";
 
 
             }
@@ -82,32 +81,42 @@ if(isset($_POST['upload'])){
             <form action="infastracture.php" method="post"  id="myAwesomeDropzone" enctype="multipart/form-data">
             <!-- class="dropzone" -->
             <div class="modal-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="simpleinput" class="form-label">Title</label>
+                            <input type="text" name="title" id="simpleinput" class="form-control">
+                        </div>
+                    </div>
 
-                <div class="mb-3">
-                    <label for="simpleinput" class="form-label">Title</label>
-                    <input type="text" name="title" id="simpleinput" class="form-control">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="simpleinput" class="form-label">Proponent (Researcher)</label>
+                            <input type="text" name="proponent" id="simpleinput" class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="example-select" class="form-label">Date Of Approval</label>
+                            <input type="text" class="form-control date" name="dateofapproval" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="example-select" class="form-label">Target Completion</label>
+                            <input type="text" class="form-control date" name="targetcompletion" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="simpleinput" class="form-label">Description</label>
+                            <input type="text" name="description" id="simpleinput" class="form-control">
+                        </div>
+                    </div>
                 </div>
-
-                <div class="mb-3">
-                    <label for="simpleinput" class="form-label">Proponent (Researcher)</label>
-                    <input type="text" name="proponent" id="simpleinput" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                        <label for="example-select" class="form-label">Date Of Approval</label>
-                        <input type="text" class="form-control date" name="dateofapproval" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
-                </div>
-
-                <div class="mb-3">
-                    <label for="simpleinput" class="form-label">Description</label>
-                    <input type="text" name="description" id="simpleinput" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                        <label for="example-select" class="form-label">Target Completion</label>
-                        <input type="text" class="form-control date" name="targetcompletion" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
-                </div>
-
+                
                 <div class="row mb-3">
                     <label for="inputEmail3" class="col-6 col-form-label">Copy of Proposal</label>
                     <div class="col-6 fallback">

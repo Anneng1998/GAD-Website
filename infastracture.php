@@ -61,11 +61,11 @@
                         ?>
                         <tr>
                             <td><?php echo $infastracture_data['fldTitle'] ?></td>
-                            <td><?php echo $infastracture_data['fldProponets'] ?></td>
+                            <td><?php echo $infastracture_data['fldProponents'] ?></td>
                             <td><?php echo $infastracture_data['fldDateofApproval'] ?></td>
                             <td>
                                 <?php 
-                                    $see = '<a class="seebtn" data-bs-toggle="modal" data-bs-target="#seemore'.$iec_infastracture_datadata['fldID'].'"> See More</a>';
+                                    $see = '<a class="seebtn" data-bs-toggle="modal" data-bs-target="#seemore'.$infastracture_data['fldID'].'"> See More</a>';
                                     $desc = $infastracture_data['fldDescription'];
                                     echo mb_strimwidth($desc, 0, 100, $see);
                                 ?>
