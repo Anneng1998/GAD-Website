@@ -79,7 +79,7 @@ if(isset($_POST['upload'])){
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
             </div>
 
-            <form action="infastracture.php" method="post"  id="myAwesomeDropzone" enctype="multipart/form-data">
+            <form action="infastracture-project.php" method="post"  id="myAwesomeDropzone" enctype="multipart/form-data">
             <!-- class="dropzone" -->
             <div class="modal-body">
 
