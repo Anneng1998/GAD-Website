@@ -56,7 +56,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            $infastracture_query = mysqli_query($db, "Select * from tbl_iec where fldStatus = 'unarchive' order by fldID");
+                            $infastracture_query = mysqli_query($db, "Select * from tbl_infactracture where fldStatus = 'unarchive' order by fldID");
                             foreach ($infastracture_query as $infastracture_data){
                         ?>
                         <tr>
