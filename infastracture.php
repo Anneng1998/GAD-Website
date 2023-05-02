@@ -56,7 +56,7 @@
                     </thead>
                     <tbody>
                         <?php
-                            $infastracture_query = mysqli_query($db, "Select * from tbl_infactracture where fldStatus = 'unarchive' order by fldID");
+                            $infastracture_query = mysqli_query($db, "Select * from tbl_infactracture where fldStatus = 'unarchive' and fldType = 'PROPOSAL' order by fldID");
                             foreach ($infastracture_query as $infastracture_data){
                         ?>
                         <tr>
@@ -76,11 +76,11 @@
                                 <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle=""modaldata-bs-target=""><i class="dripicons-trash"></i></button>
                                 <button class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle=""modaldata-bs-target=""><i class="dripicons-document-edit"></i></button>
                                 <a href="#" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i><a>
-                                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle=""modaldata-bs-target=""><i class="dripicons-checkmark"></i></button>
+                                <a class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#done<?php echo $infastracture_data['fldID'] ?>"><i class="dripicons-checkmark"></i></a>
                             </td>
                         </tr>
                         <?php
-                            
+                            include 'backend/infastracture-complete.php';
                             }
                         ?>
                     </tbody>
@@ -90,7 +90,50 @@
 <!-- completed infastractur -->
 
             <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
-                <p class="mb-0">TEST2</p>
+            <div class="page-title-box">
+                    <div class="page-title-right">
+                        
+                    </div>
+                    <h4 class="page-title">List of Completed Infractracture</h4>
+                </div>
+                <table id="basic-datatable" class="table dt-responsive nowrap w-90">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Proponents</th>
+                            <th>Date Completed</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            $infastracture_query = mysqli_query($db, "Select * from tbl_infactracture where fldStatus = 'unarchive' and fldType = 'COMPLETED' order by fldID");
+                            foreach ($infastracture_query as $infastracture_data){
+                        ?>
+                        <tr>
+                            <td><?php echo $infastracture_data['fldTitle'] ?></td>
+                            <td><?php echo $infastracture_data['fldProponents'] ?></td>
+                            <td><?php echo $infastracture_data['fldDateCompleted'] ?></td>
+                            <td>
+                                <?php 
+                                    $see = '<a class="seebtn" data-bs-toggle="modal" data-bs-target="#seemore'.$infastracture_data['fldID'].'"> See More</a>';
+                                    $desc = $infastracture_data['fldDescription'];
+                                    echo mb_strimwidth($desc, 0, 100, $see);
+                                ?>
+                            </td>
+                            <td>
+                                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target=""><i class="dripicons-preview"></i></button>
+                                <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle=""modaldata-bs-target=""><i class="dripicons-trash"></i></button>
+                                <a href="#" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i><a>
+                            </td>
+                        </tr>
+                        <?php
+                            include 'backend/infastracture-complete.php';
+                            }
+                        ?>
+                    </tbody>
+                </table>
             </div>
         </div> <!-- end tab-content-->
     </div> <!-- end col-->

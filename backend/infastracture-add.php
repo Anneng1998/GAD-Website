@@ -45,12 +45,12 @@ if(isset($_POST['upload'])){
             echo "<script>alert('All fields are required!');window.location.href = 'infastracture.php';</script>";
         } else {
 
-            $AR_new_name = 'Accomplishment Report '.$title.'.'.$AR_file_ex_loc;
-            $AR_video_path_sa_buhay_niya = 'files/IEC/'.$AR_new_name;
+            $AR_new_name = 'Copy_of_Proposal'.$title.'.'.$AR_file_ex_loc;
+            $AR_video_path_sa_buhay_niya = 'files/infastracture/'.$AR_new_name;
             move_uploaded_file($AR_file_tmp, $AR_video_path_sa_buhay_niya);
 
-            $hgdg_new_name = 'Accomplishment HGDG '.$title.'.'.$hgdg_file_ex_loc;
-            $hgdg_video_path_sa_buhay_niya = 'files/IEC/'.$hgdg_new_name;
+            $hgdg_new_name = 'Accomplishment_HGDG'.$title.'.'.$hgdg_file_ex_loc;
+            $hgdg_video_path_sa_buhay_niya = 'files/infastracture/'.$hgdg_new_name;
             move_uploaded_file($hgdg_file_tmp, $hgdg_video_path_sa_buhay_niya);
 
             $random = random_int(100000, 999999);
