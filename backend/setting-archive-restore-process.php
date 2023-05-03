@@ -24,6 +24,10 @@
 
         $update_query = mysqli_query($db, "update tbl_iec set fldStatus = 'unarchive' WHERE fldUID = '$id'");
 
+    } elseif ($from == 'tbl_report') {
+
+        $update_query = mysqli_query($db, "update tbl_report set fldStatus = 'unarchive' WHERE fldUID = '$id'");
+
     }
 
     echo "<script>alert('data has been restore successfully');window.location.href = '../setting.php';</script>";

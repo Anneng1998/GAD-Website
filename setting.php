@@ -90,7 +90,7 @@
                     </thead>
 
                     <?php
-                        $media_query = mysqli_query($db, "SELECT fldTitle, fldUID, fldStatus, fldFrom FROM tbl_media where fldStatus = 'archive' UNION ALL SELECT fldTitle, fldUID, fldStatus, fldFrom FROM tbl_planbudget where fldStatus = 'archive' UNION ALL SELECT fldTitle, fldUID, fldStatus, fldFrom FROM tbl_basedresearch where fldStatus = 'archive' UNION ALL SELECT fldTitle, fldUID, fldStatus, fldFrom FROM tbl_iec where fldStatus = 'archive' UNION ALL SELECT fldTitle, fldUID, fldStatus, fldFrom FROM tbl_infactracture where fldStatus = 'archive' ");
+                        $media_query = mysqli_query($db, "SELECT fldTitle, fldUID, fldStatus, fldFrom FROM tbl_media where fldStatus = 'archive' UNION ALL SELECT fldTitle, fldUID, fldStatus, fldFrom FROM tbl_planbudget where fldStatus = 'archive' UNION ALL SELECT fldTitle, fldUID, fldStatus, fldFrom FROM tbl_basedresearch where fldStatus = 'archive' UNION ALL SELECT fldTitle, fldUID, fldStatus, fldFrom FROM tbl_iec where fldStatus = 'archive' UNION ALL SELECT fldTitle, fldUID, fldStatus, fldFrom FROM tbl_infactracture where fldStatus = 'archive' UNION ALL SELECT fldTitle, fldUID, fldStatus, fldFrom FROM tbl_report where fldStatus = 'archive' ");
                         foreach ($media_query as $data){
                     ?>
 
