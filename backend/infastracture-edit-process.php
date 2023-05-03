@@ -20,7 +20,6 @@ if(isset($_POST['update'])){
         $check_file_qry = "SELECT fldCopyOfProposal, fldHGDG FROM tbl_infactracture WHERE fldID = '$id'";
         $check_file_sql = mysqli_query($db, $check_file_qry);
         $check_file_fetch = mysqli_fetch_array($check_file_sql);
-        // watch haha
 
 
         // // copy of proposal file = AR
