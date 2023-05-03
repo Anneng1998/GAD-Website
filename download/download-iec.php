@@ -7,7 +7,7 @@
     $filename_sql = mysqli_query($db, "SELECT * FROM tbl_iec WHERE fldID = '$id'");
     $filename_fetch = mysqli_fetch_array($filename_sql);
 
-    $filename_1 = "../files/infastracture/".$filename_fetch['fldHGDG'];
+    $filename_1 = "../files/iec/".$filename_fetch['fldFile'];
     $title = $filename_fetch['fldFile'];
 
     $files = array($filename_1);
