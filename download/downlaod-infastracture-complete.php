@@ -12,7 +12,7 @@
     $filename_3 = "../files/infastracture/".$filename_fetch['fldReport'];
     $title = $filename_fetch['fldTitle'];
 
-    $files = array($filename_1, $filename_2);
+    $files = array($filename_1, $filename_2, $filename_3);
 
     # create new zip opbject
     $zip = new ZipArchive();
