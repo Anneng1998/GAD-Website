@@ -12,6 +12,7 @@ $(document).ready(function() {
             $(".dataTables_paginate > .pagination").addClass("pagination-rounded")
         }
     });
+
     
     var a = $("#datatable-buttons").DataTable({
         lengthChange: !1,

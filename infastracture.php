@@ -9,7 +9,7 @@
  <div class="row">
     <div class="col-12">
         <div class="page-title-box">
-            <h4 class="page-title">INFASTRACTURE</h4>
+            <h4 class="page-title">INFRASTRUCTURE</h4>
         </div>
     </div>
 </div>     
@@ -21,12 +21,12 @@
             <a class="nav-link active show" id="v-pills-home-tab" data-bs-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home"
                 aria-selected="true">
                 <i class="mdi mdi-home-variant d-md-none d-block"></i>
-                <span class="d-none d-md-block">Proposal</span>
+                <span class="d-none d-md-block">PROPOSAL INFRASTRUCTURE</span>
             </a>
             <a class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
                 aria-selected="false">
                 <i class="mdi mdi-account-circle d-md-none d-block"></i>
-                <span class="d-none d-md-block">Completed Infastracture</span>
+                <span class="d-none d-md-block">COMPLETED INFRASTRUCTURE</span>
             </a>
         </div>
     </div> <!-- end col-->
@@ -41,7 +41,7 @@
                     <div class="page-title-right">
                         <button type="button" class="btn btn-primary" data-bs-toggle="modal"        data-bs-target="#primary-header-modal">ADD</button>
                     </div>
-                    <h4 class="page-title">List of Proposal Infractracture</h4>
+                    <h4 class="page-title">List of PROPOSAL INFRASTRUCTURE</h4>
                 </div>
                 <table id="basic-datatable" class="table dt-responsive nowrap w-90">
                     <thead>
@@ -102,9 +102,9 @@
                     <div class="page-title-right">
                         
                     </div>
-                    <h4 class="page-title">List of Completed Infractracture</h4>
+                    <h4 class="page-title">List of COMPLETED INFRASTRUCTURE</h4>
                 </div>
-                <table id="basic-datatable" class="table dt-responsive nowrap w-90">
+                <table id="b-datatable" class="table dt-responsive nowrap w-100">
                     <thead>
                         <tr>
                             <th>Title</th>
@@ -131,13 +131,13 @@
                                 ?>
                             </td>
                             <td>
-                                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target=""><i class="dripicons-preview"></i></button>
-                                <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle=""modaldata-bs-target=""><i class="dripicons-trash"></i></button>
+                                <a class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#cview<?php echo $infastracture_data['fldID'] ?>"><i class="dripicons-preview"></i></a>
                                 <a href="#" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i><a>
                             </td>
                         </tr>
                         <?php
                             include 'backend/infastracture-complete.php';
+                            include 'backend/infastracture-complete-view.php';
                             }
                         ?>
                     </tbody>
