@@ -72,7 +72,7 @@
                             </td>
                             <td><?php echo $infastracture_data['fldTargetCompletion'] ?></td>
                             <td>
-                                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target=""><i class="dripicons-preview"></i></button>
+                                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#view<?php echo $infastracture_data['fldID'] ?>"><i class="dripicons-preview"></i></button>
 
                                 <a class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#delete<?php echo $infastracture_data['fldID'] ?>"><i class="dripicons-trash"></i></a>
 
@@ -87,6 +87,8 @@
                             include 'backend/infastracture-complete.php';
                             include 'backend/infastracture-edit.php';
                             include 'backend/infastracture-delete.php';
+                            include 'backend/infastracture-view.php';
+                            include 'backend/infastracture-seemore.php';
                             }
                         ?>
                     </tbody>

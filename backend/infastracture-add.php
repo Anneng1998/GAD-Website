@@ -85,34 +85,34 @@ if(isset($_POST['upload'])){
                     <div class="col-6">
                         <div class="mb-3">
                             <label for="simpleinput" class="form-label">Title</label>
-                            <input type="text" name="title" id="simpleinput" class="form-control">
+                            <input type="text" name="title" id="simpleinput" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="col-6">
                         <div class="mb-3">
                             <label for="simpleinput" class="form-label">Proponent (Researcher)</label>
-                            <input type="text" name="proponent" id="simpleinput" class="form-control">
+                            <input type="text" name="proponent" id="simpleinput" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="col-6">
                         <div class="mb-3">
                             <label for="example-select" class="form-label">Date Of Approval</label>
-                            <input type="text" class="form-control date" name="dateofapproval" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
+                            <input type="text" class="form-control date" name="dateofapproval" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true" required>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="mb-3">
                             <label for="example-select" class="form-label">Target Completion</label>
-                            <input type="text" class="form-control date" name="targetcompletion" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
+                            <input type="text" class="form-control date" name="targetcompletion" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true" required>
                         </div>
                     </div>
 
                     <div class="col-12">
                         <div class="mb-3">
                             <label for="simpleinput" class="form-label">Description</label>
-                            <input type="text" name="description" id="simpleinput" class="form-control">
+                            <input type="text" name="description" id="simpleinput" class="form-control" required>
                         </div>
                     </div>
                 </div>
