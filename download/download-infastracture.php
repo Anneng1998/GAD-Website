@@ -7,8 +7,8 @@
     $filename_sql = mysqli_query($db, "SELECT * FROM tbl_infactracture WHERE fldID = '$id'");
     $filename_fetch = mysqli_fetch_array($filename_sql);
 
-    $filename_1 = "files/infastracture/".$filename_fetch['fldHGDG'];
-    $filename_2 = "files/infastracture/".$filename_fetch['fldCopyOfProposal'];
+    $filename_1 = "../files/infastracture/".$filename_fetch['fldHGDG'];
+    $filename_2 = "../files/infastracture/".$filename_fetch['fldCopyOfProposal'];
     $title = $filename_fetch['fldTitle'];
 
     $files = array($filename_1, $filename_2);
@@ -38,5 +38,3 @@
     header('Content-disposition: attachment; filename='.$title.'.zip');
     header('Content-type: application/zip');
     readfile($tmp_file);
-
-    // gagana kaya hahaha

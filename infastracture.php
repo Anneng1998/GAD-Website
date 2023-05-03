@@ -92,7 +92,7 @@
 
                                 <a class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#update<?php echo $infastracture_data['fldID'] ?>"><i class="dripicons-document-edit"></i></a>
 
-                                <a href="download/download-infastracture.php?id=<?php echo $infastracture_data['fldID'] ?>" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i><a>
+                                <a href="download-infastracture.php?id=<?php echo $infastracture_data['fldID'] ?>" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i><a>
 
                                 <a class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#done<?php echo $infastracture_data['fldID'] ?>"><i class="dripicons-checkmark"></i></a>
                             </td>
