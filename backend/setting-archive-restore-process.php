@@ -16,6 +16,10 @@
 
         $update_query = mysqli_query($db, "update tbl_basedresearch set fldStatus = 'unarchive' WHERE fldUID = '$id'");
 
+    } elseif ($from == 'tbl_infactracture') {
+
+        $update_query = mysqli_query($db, "update tbl_infactracture set fldStatus = 'unarchive' WHERE fldUID = '$id'");
+
     } elseif ($from == 'tbl_iec') {
 
         $update_query = mysqli_query($db, "update tbl_iec set fldStatus = 'unarchive' WHERE fldUID = '$id'");
