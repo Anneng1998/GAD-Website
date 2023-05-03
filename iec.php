@@ -26,7 +26,6 @@
             <th>Description</th>
             <th>Assigned Units</th>
             <th>Date</th>
-            <th>File</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -48,15 +47,16 @@
             </td>
             <td><?php echo $iec_data['fldUnits'] ?></td>
             <td><?php echo $iec_data['fldDate'] ?></td>
-            <td>
-                <?php
-                    $view = '<a class="view" data-bs-toggle="modal" data-bs-target="#view'.$iec_data['fldID'].'"> View</a>';
+            <!-- <td>
 
-                    $desc = $iec_data['fldFile'];
-                    echo mb_strimwidth($desc, 0, 0, $view);    
-                ?>
-            </td>
+                    // $view = '<a class="view" data-bs-toggle="modal" data-bs-target="#view'.$iec_data['fldID'].'"> View</a>';
+
+                    // $desc = $iec_data['fldFile'];
+                    // echo mb_strimwidth($desc, 0, 0, $view);    
+                ?> -->
+            <!-- </td> --> 
             <td>
+                    <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#preview<?php echo $iec_data['fldID'] ?>"><i class="dripicons-preview"></i></button>
                     <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#delete<?php echo $iec_data['fldID'] ?>"><i class="dripicons-trash"></i></button>
                     <button class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#edit<?php echo $iec_data['fldID'] ?>"><i class="dripicons-document-edit"></i></button>
                     <a href="#" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i></a>
@@ -67,6 +67,7 @@
             include 'backend/iec-edit.php';
             include 'backend/iec-delete.php';
             include 'backend/iec-view.php';
+            include 'backend/iec-preview.php';
             }
         ?>
     </tbody>
