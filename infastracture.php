@@ -146,7 +146,7 @@
                             </td>
                             <td>
                                 <a class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#cview<?php echo $infastracture_data['fldID'] ?>"><i class="dripicons-preview"></i></a>
-                                <a href="download/download-infastracture-complete.php?id=<?php echo $infastracture_data['fldID'] ?>" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i><a>
+                                <a href="download/downlaod-infastracture-complete.php?id=<?php echo $infastracture_data['fldID'] ?>" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i><a>
                             </td>
                         </tr>
                         <?php
