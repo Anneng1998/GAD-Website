@@ -45,11 +45,11 @@ if(isset($_POST['upload'])){
             echo "<script>alert('All fields are required!');window.location.href = 'infastracture.php';</script>";
         } else {
 
-            $AR_new_name = 'Copy_of_Proposal'.$title.'.'.$AR_file_ex_loc;
+            $AR_new_name = 'Copy_of_Proposal'.'.'.$title.'.'.$AR_file_ex_loc;
             $AR_video_path_sa_buhay_niya = 'files/infastracture/'.$AR_new_name;
             move_uploaded_file($AR_file_tmp, $AR_video_path_sa_buhay_niya);
 
-            $hgdg_new_name = 'Accomplishment_HGDG'.$title.'.'.$hgdg_file_ex_loc;
+            $hgdg_new_name = 'Accomplishment_HGDG'.'.'.$title.'.'.$hgdg_file_ex_loc;
             $hgdg_video_path_sa_buhay_niya = 'files/infastracture/'.$hgdg_new_name;
             move_uploaded_file($hgdg_file_tmp, $hgdg_video_path_sa_buhay_niya);
 

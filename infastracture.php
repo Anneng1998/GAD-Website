@@ -74,13 +74,14 @@
                             <td>
                                 <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target=""><i class="dripicons-preview"></i></button>
                                 <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle=""modaldata-bs-target=""><i class="dripicons-trash"></i></button>
-                                <button class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle=""modaldata-bs-target=""><i class="dripicons-document-edit"></i></button>
+                                <button class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#update<?php echo $infastracture_data['fldID'] ?>"><i class="dripicons-document-edit"></i></button>
                                 <a href="#" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i><a>
                                 <a class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#done<?php echo $infastracture_data['fldID'] ?>"><i class="dripicons-checkmark"></i></a>
                             </td>
                         </tr>
                         <?php
                             include 'backend/infastracture-complete.php';
+                            include 'backend/infastracture-edit.php';
                             }
                         ?>
                     </tbody>
