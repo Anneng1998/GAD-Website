@@ -64,7 +64,7 @@
                 <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#preview<?php echo $videodata['fldID'] ?>"><i class="dripicons-preview"></i></button>
                 <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#delete<?php echo $videodata['fldID'] ?>"><i class="dripicons-trash"></i></button>
                 <button class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#edit<?php echo $videodata['fldID'] ?>"><i class="dripicons-document-edit"></i></button>
-                <a href="download.php?id=<?php echo $videodata['fldID'] ?>" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i></a>
+                <a href="download-video.php?id=<?php echo $videodata['fldID'] ?>" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i></a>
             </td>
         </tr>
         <?php
