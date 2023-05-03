@@ -125,7 +125,7 @@
                             <td><?php echo $infastracture_data['fldDateCompleted'] ?></td>
                             <td>
                                 <?php 
-                                    $see = '<a class="seebtn" data-bs-toggle="modal" data-bs-target="#seemore'.$infastracture_data['fldID'].'"> See More</a>';
+                                    $see = '<a class="seebtn" data-bs-toggle="modal" data-bs-target="#cseemore'.$infastracture_data['fldID'].'"> See More</a>';
                                     $desc = $infastracture_data['fldDescription'];
                                     echo mb_strimwidth($desc, 0, 100, $see);
                                 ?>
@@ -138,6 +138,7 @@
                         <?php
                             include 'backend/infastracture-complete.php';
                             include 'backend/infastracture-complete-view.php';
+                            include 'backend/infastracture-complete-seemore.php';
                             }
                         ?>
                     </tbody>
