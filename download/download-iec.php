@@ -8,7 +8,7 @@
     $filename_fetch = mysqli_fetch_array($filename_sql);
 
     $filename_1 = "../files/IEC/".$filename_fetch['fldFile'];
-    $title = $filename_fetch['fldTitle'];
+    $title = $filename_fetch['fldtitle'];
 
     $files = array($filename_1);
 
