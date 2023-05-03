@@ -43,11 +43,12 @@
            <td>
                 <a class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target=""><i class="dripicons-trash"></i></a>
                 <a class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target=""><i class="dripicons-document-edit"></i></a>
-                <a class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target=""><i class="dripicons-preview"></i></a>
+                <a class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#view<?php echo $report_data['fldID'] ?>"><i class="dripicons-preview"></i></a>
                 <a href="download/download-report.php?id=<?php echo $report_data['fldID'] ?>" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i><a>
            </td>
         </tr>
             <?php
+                include 'backend/report-view.php';
                 }
             ?>
     </tbody>
