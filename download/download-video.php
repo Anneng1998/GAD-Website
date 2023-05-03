@@ -10,7 +10,7 @@
     $filename = $filename_fetch['fldFileName'];
     $title = $filename_fetch['fldTitle'];
 
-    $files = array("files/video/".$filename);
+    $files = array("../files/video/".$filename);
 
     # create new zip opbject
     $zip = new ZipArchive();
