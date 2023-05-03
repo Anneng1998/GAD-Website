@@ -4,7 +4,7 @@
     include 'include/navbar.php';
 ?>
 
-<style>
+<!-- <style>
     body > div.wrapper > div.content-page > div > div.card.d-block > div:nth-child(2) > div.col-sm-2.mb-2.mb-sm-0 {
         padding: 0 21px;
     }
@@ -18,7 +18,7 @@
 
 
 <br><br>
-<div class="card d-block" style="box-shadow: 1px 2px 5px #333;">
+<div class="card d-block" style="box-shadow: 1px 2px 5px #333;"> -->
 
 
  <!-- start page title -->
@@ -88,7 +88,7 @@
         ?>
     </tbody>
 </table>
-        </div>
+        <!-- </div> -->
 
 <?php 
 include 'backend/iec-upload.php';
