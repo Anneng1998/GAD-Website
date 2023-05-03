@@ -53,7 +53,7 @@ if(isset($_POST['planupload'])){
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header modal-colored-header bg-primary">
-                <h4 class="modal-title" id="primary-header-modalLabel">Add Video</h4>
+                <h4 class="modal-title" id="primary-header-modalLabel">ADD DETAILS</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
             </div>
 
@@ -62,17 +62,17 @@ if(isset($_POST['planupload'])){
             <div class="modal-body">
 
                 <div class="mb-3">
-                    <label for="simpleinput" class="form-label">Title</label>
-                    <input type="text" name="plantitle" id="simpleinput" class="form-control">
+                    <label for="simpleinput" class="form-label">Title</label><span class="text-danger"> *</span>
+                    <input type="text" name="plantitle" id="simpleinput" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="simpleinput" class="form-label">Academic Year</label>
-                    <input type="text" name="planacademic" id="simpleinput" class="form-control">
+                    <label for="simpleinput" class="form-label">Academic Year</label> <span class="text-danger"> *</span>
+                    <input type="text" name="planacademic" id="simpleinput" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="simpleinput" class="form-label">Attach File</label>
+                    <label for="simpleinput" class="form-label">Attach File</label> <span class="text-danger"> *</span>
                     <div class="fallback">
                         <input name="file" type="file" accept="xlsx" multiple />
                     </div>

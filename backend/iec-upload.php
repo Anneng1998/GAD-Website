@@ -60,7 +60,7 @@ if(isset($_POST['upload'])){
             <div class="modal-body">
 
                 <div class="mb-3">
-                        <label for="example-select" class="form-label">Categories</label>
+                        <label for="example-select" class="form-label">Categories</label><span class="text-danger"> *</span>
                         <select class="form-select" name="categories" id="example-select">
                             <option value= "">SELECT</option>
                             <option value = "Newsletter">Newsletter</option>
@@ -72,17 +72,17 @@ if(isset($_POST['upload'])){
                 </div>
 
                 <div class="mb-3">
-                    <label for="simpleinput" class="form-label">Title</label>
-                    <input type="text" name="title" id="simpleinput" class="form-control" require>
+                    <label for="simpleinput" class="form-label">Title</label><span class="text-danger"> *</span>
+                    <input type="text" name="title" id="simpleinput" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
-                    <label for="simpleinput" class="form-label">Description</label>
-                    <input type="text" name="description" id="simpleinput" class="form-control" require>
+                    <label for="simpleinput" class="form-label">Description</label><span class="text-danger"> *</span>
+                    <input type="text" name="description" id="simpleinput" class="form-control" required>
                 </div>
 
                 <div class="mb-3">
-                        <label for="example-select" class="form-label">Assigned Units</label>
+                        <label for="example-select" class="form-label">Assigned Units</label><span class="text-danger"> *</span>
                         <select class="form-select" name="units" id="example-select">
                             <option value= "">SELECT</option>
                             <option value = "GAD">GAD</option>
@@ -96,12 +96,12 @@ if(isset($_POST['upload'])){
                 </div>
 
                 <div class="mb-3">
-                        <label for="example-select" class="form-label">Date Uploaded</label>
-                        <input type="text" class="form-control date" name="date" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
+                        <!-- <label for="example-select" class="form-label">Date Uploaded</label><span class="text-danger"> *</span> -->
+                        <input type="hidden" class="form-control date" name="date" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
                 </div>
 
                 <div class="mb-3">
-                    <label for="simpleinput" class="form-label">Attach File</label>
+                    <label for="simpleinput" class="form-label">Attach File</label><span class="text-danger"> *</span>
                     <div class="fallback">
                         <input name="file" type="file" accept="pdf" multiple />
                     </div>

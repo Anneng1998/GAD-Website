@@ -4,6 +4,21 @@
     include 'include/navbar.php';
 ?>
 
+<style>
+    body > div.wrapper > div.content-page > div > div.card.d-block > div:nth-child(2) > div.col-sm-2.mb-2.mb-sm-0 {
+        padding: 0 21px;
+    }
+    #v-pills-home > div.page-title-box {
+        padding: 0 15px;
+    }
+    body > div.wrapper > div.content-page > div > div.card.d-block > div:nth-child(2) > div.col-sm-10 {
+        padding: 14px 21px;
+    }
+</style>
+
+
+<br><br>
+<div class="card d-block" style="box-shadow: 1px 2px 5px #333;">
 
  <!-- start page title -->
  <div class="row">

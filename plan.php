@@ -3,7 +3,21 @@
     include 'include/sidebar.php';
     include 'include/navbar.php';
 ?>
+<style>
+    body > div.wrapper > div.content-page > div > div.card.d-block > div:nth-child(2) > div.col-sm-2.mb-2.mb-sm-0 {
+        padding: 0 21px;
+    }
+    #v-pills-home > div.page-title-box {
+        padding: 0 15px;
+    }
+    body > div.wrapper > div.content-page > div > div.card.d-block > div:nth-child(2) > div.col-sm-10 {
+        padding: 14px 21px;
+    }
+</style>
 
+
+<br><br>
+<div class="card d-block" style="box-shadow: 1px 2px 5px #333;">
 
  <!-- start page title -->
  <div class="row">
@@ -49,7 +63,6 @@
                 <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#delete<?php echo $plan_data['fldID'] ?>"><i class="dripicons-trash"></i></button>
                 <button class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#edit<?php echo $plan_data['fldID'] ?>"><i class="dripicons-document-edit"></i></button>
                 <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#view<?php echo $plan_data['fldID'] ?>"><i class="dripicons-preview"></i></button>
-                <button class="btn btn-success shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#download<?php echo $plan_data['fldID'] ?>"><i class="dripicons-download"></i></button>
             </td>
         </tr>
         <?php
@@ -59,6 +72,7 @@
         ?>
     </tbody>
 </table>
+</div>
 
 <?php 
 include 'backend/plan-upload.php';
