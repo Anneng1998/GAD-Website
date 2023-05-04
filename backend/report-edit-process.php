@@ -132,7 +132,9 @@ if(isset($_POST['update'])){
             $check_file_sql = mysqli_query($db, $check_file_qry);
             $check_file_fetch = mysqli_fetch_array($check_file_sql);
 
-            
+            $A_new_name = 'Official_Program'.'.'.$title.'.'.$A_file_ex_loc;
+            $A_video_path_sa_buhay_niya = '../files/report/'.$A_new_name;
+            move_uploaded_file($A_file_tmp, $A_video_path_sa_buhay_niya);
 
             $B_new_name = 'Official_Program'.'.'.$title.'.'.$B_file_ex_loc;
             $B_video_path_sa_buhay_niya = '../files/report/'.$B_new_name;

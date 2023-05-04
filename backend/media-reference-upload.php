@@ -64,12 +64,12 @@ if(isset($_POST['mediaupload'])){
             <div class="modal-body">
 
                 <div class="mb-3">
-                    <label for="simpleinput" class="form-label">Title</label>
+                    <label for="simpleinput" class="form-label">Title</label><span class="text-danger"> *</span>
                     <input type="text" name="videotitle" id="simpleinput" class="form-control">
                 </div>
 
                 <div class="mb-3">
-                    <label for="simpleinput" class="form-label">Description</label>
+                    <label for="simpleinput" class="form-label">Description</label><span class="text-danger"> *</span>
                     <input type="text" name="videodescription" id="simpleinput" class="form-control">
                 </div>
 

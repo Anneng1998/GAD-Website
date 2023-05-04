@@ -4,7 +4,17 @@
     include 'include/navbar.php';
 ?>
 
+<style>
+    body > div.wrapper > div.content-page > div > div.card.d-block > div.row > div > div {
+        padding: 0 15px;
+    }
+    #alternative-page-datatable_wrapper {
+        padding: 0 15px;
+    }
+</style>
 
+<br><br>
+<div class="card d-block" style="box-shadow: 1px 2px 5px #333;">
 
  <!-- start page title -->
  <div class="row">
@@ -22,12 +32,12 @@
 <table id="alternative-page-datatable" class="table dt-responsive nowrap">
     <thead>
         <tr>
-            <th>Title</th>
-            <th>Description</th>
+            <th>Project Title</th>
+            <th>Component Project Title</th>
+            <th>Total Budget Requested</th>
+            <th>Duration</th>
+            <th>Funding Scheme</th>
             <th>Research</th>
-            <th>Target Date Completion</th>
-            <th>Copy Paper</th>
-            <th>Accomplished Paper</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -38,37 +48,16 @@
         ?>
         <tr>
             <td><?php echo $research_data['fldTitle'] ?></td>
-            <td>
-                <?php 
-                    $see = '<a class="seebtn" data-bs-toggle="modal" data-bs-target="#seemore'.$research_data['fldID'].'"> See More</a>';
-
-                    $desc = $research_data['fldDescription'];
-                    echo mb_strimwidth($desc, 0, 100, $see);
-                ?>
-            </td>
+            <td><?php echo $research_data['fldDescription'] ?></td>
+            <td><?php echo $research_data['fldBudget'] ?></td>
+            <td><?php echo $research_data['fldDuration'] ?></td>
+            <td><?php echo $research_data['fldFund'] ?></td>
             <td><?php echo $research_data['fldResearch'] ?></td>
-            <td><?php echo $research_data['fldDateCompletion'] ?></td>
             <td>
-                <?php
-                    $view = '<a class="view" data-bs-toggle="modal" data-bs-target="#view'.$research_data['fldID'].'"> View</a>';
-
-                    $desc = $research_data['fldCopyofProposal'];
-                    echo mb_strimwidth($desc, 0, 0, $view);    
-                ?>  
-            </td>
-            <td>
-                <?php
-                    $viewhgdg = '<a class="viewhgdg" data-bs-toggle="modal" data-bs-target="#viewhgdg'.$research_data['fldID'].'"> View</a>';
-
-                    $desc = $research_data['fldChecklist'];
-                    echo mb_strimwidth($desc, 0, 0, $viewhgdg);    
-                ?> 
-            </td>
-            <td>
+                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#view<?php echo $research_data['fldID'] ?>"><i class="dripicons-preview"></i></button>
                 <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#delete<?php echo $research_data['fldID'] ?>"><i class="dripicons-trash"></i></button>
                 <button class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#edit<?php echo $research_data['fldID'] ?>"><i class="dripicons-document-edit"></i></button>
-                <a href="#" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i></a>
-                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#complete<?php echo $research_data['fldID'] ?>"><i class="dripicons-checkmark"></i></button>
+                <a href="download/download-based.php?id=<?php echo $research_data['fldID'] ?>" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i></a>
             </td>
         </tr>
         <?php
