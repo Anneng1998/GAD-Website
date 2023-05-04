@@ -6,7 +6,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
             </div>
 
-            <form action="report.php" method="GET">
+            <form action="backend/report-edit-process.php?id=<?php echo $report_data['fldID'] ?>" method="POST" id="myAwesomeDropzone" enctype="multipart/form-data">
 
             <div class="modal-body">
 

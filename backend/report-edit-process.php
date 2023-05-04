@@ -123,56 +123,127 @@ if(isset($_POST['update'])){
 
 
     $title_checking = mysqli_query($db, "Select * from tbl_report where fldTitle = '$title'");
-    if (mysqli_num_rows($title_checking) > 0) {
-        echo "<script>alert('Title already exists');window.location.href = 'report.php';</script>";
-    } else {
+ 
         if($title == "" && $descriptions == "" ) {
-            echo "<script>alert('All fields are required!');window.location.href = 'report.php';</script>";
+            echo "<script>alert('All fields are required!');window.location.href = '../report.php';</script>";
         } else {
 
-            $A_new_name = 'Approved_Activity'.'.'.$title.'.'.$A_file_ex_loc;
-            $A_video_path_sa_buhay_niya = 'files/report/'.$A_new_name;
-            move_uploaded_file($A_file_tmp, $A_video_path_sa_buhay_niya);
+            $check_file_qry = "SELECT fldFile1,fldFile2,fldFile3,fldFile4,fldFile5,fldFile6,fldFile7,fldFile8 FROM tbl_report WHERE fldID = '$id'";
+            $check_file_sql = mysqli_query($db, $check_file_qry);
+            $check_file_fetch = mysqli_fetch_array($check_file_sql);
+
+            
 
             $B_new_name = 'Official_Program'.'.'.$title.'.'.$B_file_ex_loc;
-            $B_video_path_sa_buhay_niya = 'files/report/'.$B_new_name;
+            $B_video_path_sa_buhay_niya = '../files/report/'.$B_new_name;
             move_uploaded_file($B_file_tmp, $B_video_path_sa_buhay_niya);
 
             $C_new_name = 'Highlights'.'.'.$title.'.'.$C_file_ex_loc;
-            $C_video_path_sa_buhay_niya = 'files/report/'.$C_new_name;
+            $C_video_path_sa_buhay_niya = '../files/report/'.$C_new_name;
             move_uploaded_file($C_file_tmp, $C_video_path_sa_buhay_niya);
 
             $D_new_name = 'Attendance_Sheet'.'.'.$title.'.'.$D_file_ex_loc;
-            $D_video_path_sa_buhay_niya = 'files/report/'.$D_new_name;
+            $D_video_path_sa_buhay_niya = '../../files/report/'.$D_new_name;
             move_uploaded_file($D_file_tmp, $D_video_path_sa_buhay_niya);
 
             $E_new_name = 'Invitation'.'.'.$title.'.'.$E_file_ex_loc;
-            $E_video_path_sa_buhay_niya = 'files/report/'.$E_new_name;
+            $E_video_path_sa_buhay_niya = '../files/report/'.$E_new_name;
             move_uploaded_file($E_file_tmp, $E_video_path_sa_buhay_niya);
 
             $F_new_name = 'Overall_Activity'.'.'.$title.'.'.$F_file_ex_loc;
-            $F_video_path_sa_buhay_niya = 'files/report/'.$F_new_name;
+            $F_video_path_sa_buhay_niya = '../files/report/'.$F_new_name;
             move_uploaded_file($F_file_tmp, $F_video_path_sa_buhay_niya);
 
             $G_new_name = 'Accomplished_Evaluation'.'.'.$title.'.'.$G_file_ex_loc;
-            $G_video_path_sa_buhay_niya = 'files/report/'.$G_new_name;
+            $G_video_path_sa_buhay_niya = '../files/report/'.$G_new_name;
             move_uploaded_file($G_file_tmp, $G_video_path_sa_buhay_niya);
 
             $H_new_name = 'Signed_Certificate'.'.'.$title.'.'.$H_file_ex_loc;
-            $H_video_path_sa_buhay_niya = 'files/report/'.$H_new_name;
+            $H_video_path_sa_buhay_niya = '../files/report/'.$H_new_name;
             move_uploaded_file($H_file_tmp, $H_video_path_sa_buhay_niya);
 
-            $random = random_int(100000, 999999);
-            $UniqueID = 'REPORT'.$random;
+            
+            if ($A_file_name == '') {
+                $A_new_name = $check_file_fetch['fldFile1'];
+            } else {
+                $A_new_name = 'Approved_Activity'.'.'.$title.'.'.$A_file_ex_loc;
+                $A_video_path_sa_buhay_niya = '../files/report/'.$A_new_name;
+                move_uploaded_file($A_file_tmp, $A_video_path_sa_buhay_niya);
+            }
 
-            $report_insert = "INSERT INTO tbl_report (fldUID, fldTitle, fldDescription, fldFile1, fldFile2, fldFile3, fldFile4, fldFile5, fldFile6, fldFile7, fldFile8, fldStatus, fldFrom) VALUES ('$UniqueID', '$title', '$descriptions', '$A_new_name', '$B_new_name', '$C_new_name', '$D_new_name', '$E_new_name', '$F_new_name', '$G_new_name', '$H_new_name', 'unarchive', 'tbl_report')";
+            if ($B_file_name == '') {
+                $B_new_name = $check_file_fetch['fldFile2'];
+            } else {
+                $B_new_name = 'Official_Program'.'.'.$title.'.'.$B_file_ex_loc;
+                $B_video_path_sa_buhay_niya = '../files/report/'.$B_new_name;
+                move_uploaded_file($B_file_tmp, $B_video_path_sa_buhay_niya);
+            }
 
-            $insert_report_qry = mysqli_query($db, $report_insert);
+            if ($C_file_name == '') {
+                $C_new_name = $check_file_fetch['fldFile3'];
+            } else {
+                $C_new_name = 'Highlights'.'.'.$title.'.'.$C_file_ex_loc;
+                $C_video_path_sa_buhay_niya = '../files/report/'.$C_new_name;
+                move_uploaded_file($C_file_tmp, $C_video_path_sa_buhay_niya);
+            }
 
-            echo "<script>alert('New data has been added successfully');window.location.href = 'report.php';</script>";
+            if ($D_file_name == '') {
+                $D_new_name = $check_file_fetch['fldFile4'];
+            } else {
+                $D_new_name = 'Attendance_Sheet'.'.'.$title.'.'.$D_file_ex_loc;
+                $D_video_path_sa_buhay_niya = '../files/report/'.$D_new_name;
+                move_uploaded_file($D_file_tmp, $D_video_path_sa_buhay_niya);
+            }
+
+            if ($E_file_name == '') {
+                $E_new_name = $check_file_fetch['fldFile5'];
+            } else {
+                $E_new_name = 'Invitation'.'.'.$title.'.'.$E_file_ex_loc;
+                $E_video_path_sa_buhay_niya = '../files/report/'.$E_new_name;
+                move_uploaded_file($E_file_tmp, $E_video_path_sa_buhay_niya);
+            }
+
+            if ($F_file_name == '') {
+                $F_new_name = $check_file_fetch['fldFile6'];
+            } else {
+                $F_new_name = 'Overall_Activity'.'.'.$title.'.'.$F_file_ex_loc;
+                $F_video_path_sa_buhay_niya = '../files/report/'.$F_new_name;
+                move_uploaded_file($F_file_tmp, $F_video_path_sa_buhay_niya);
+            }
+
+            if ($G_file_name == '') {
+                $G_new_name = $check_file_fetch['fldFile7'];
+            } else {
+                $G_new_name = 'Accomplished_Evaluation'.'.'.$title.'.'.$G_file_ex_loc;
+                $G_video_path_sa_buhay_niya = '../files/report/'.$G_new_name;
+                move_uploaded_file($G_file_tmp, $G_video_path_sa_buhay_niya);
+            }
+
+            if ($H_file_name == '') {
+                $H_new_name = $check_file_fetch['fldFile8'];
+            } else {
+                $H_new_name = 'Signed_Certificate'.'.'.$title.'.'.$H_file_ex_loc;
+                $H_video_path_sa_buhay_niya = '../files/report/'.$H_new_name;
+                move_uploaded_file($H_file_tmp, $H_video_path_sa_buhay_niya);
+            }
+
+            $update_report = mysqli_query($db, "UPDATE tbl_report SET
+            fldTitle = '$title',
+            fldDescription = '$descriptions',
+            fldFile1 = '$A_new_name',
+            fldFile2 = '$B_new_name',
+            fldFile3 = '$C_new_name',
+            fldFile4 = '$D_new_name',
+            fldFile5 = '$E_new_name',
+            fldFile6 = '$F_new_name',
+            fldFile7 = '$G_new_name',
+            fldFile8 = '$H_new_name' WHERE fldID = '$id'
+            ");
+
+            echo "<script>alert('Data has been update');window.location.href = '../report.php';</script>";
+
 
         }
     }
-}
 
 ?>
