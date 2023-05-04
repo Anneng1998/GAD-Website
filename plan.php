@@ -48,9 +48,9 @@
             <td><?php echo $plan_data['fldAcademic'] ?></td>
             <td><?php echo $plan_data['fldDateUploaded'] ?></td>
             <td>
+                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#view<?php echo $plan_data['fldID'] ?>"><i class="dripicons-preview"></i></button>
                 <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#delete<?php echo $plan_data['fldID'] ?>"><i class="dripicons-trash"></i></button>
                 <button class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#edit<?php echo $plan_data['fldID'] ?>"><i class="dripicons-document-edit"></i></button>
-                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#view<?php echo $plan_data['fldID'] ?>"><i class="dripicons-preview"></i></button>
             </td>
         </tr>
         <?php
