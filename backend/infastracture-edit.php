@@ -16,35 +16,35 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="simpleinput" class="form-label">Title</label>
-                            <input type="text" name="title" id="simpleinput" class="form-control" value="<?php echo $infastracture_data['fldTitle']?>">
+                            <label for="simpleinput" class="form-label">Title</label><span class="text-danger"> *</span>
+                            <input type="text" name="title" id="simpleinput" class="form-control" value="<?php echo $infastracture_data['fldTitle']?>" required>
                         </div>
                     </div>
 
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="simpleinput" class="form-label">Proponent (Researcher)</label>
-                            <input type="text" name="proponent" id="simpleinput" class="form-control" value="<?php echo $infastracture_data['fldProponents']?>">
+                            <label for="simpleinput" class="form-label">Proponent (Researcher)</label><span class="text-danger"> *</span>
+                            <input type="text" name="proponent" id="simpleinput" class="form-control" value="<?php echo $infastracture_data['fldProponents']?>" required>
                         </div>
                     </div>
 
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="example-select" class="form-label">Date Of Approval</label>
+                            <label for="example-select" class="form-label">Date Of Approval</label><span class="text-danger"> *</span>
                             <input type="text" class="form-control date" name="dateofapproval" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true" value="<?php echo $infastracture_data['fldDateofApproval']?>">
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="example-select" class="form-label">Target Completion</label>
+                            <label for="example-select" class="form-label">Target Completion</label><span class="text-danger"> *</span>
                             <input type="text" class="form-control date" name="targetcompletion" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true" value="<?php echo $infastracture_data['fldTargetCompletion']?>">
                         </div>
                     </div>
 
                     <div class="col-12">
                         <div class="mb-3">
-                            <label for="simpleinput" class="form-label">Description</label>
-                            <input type="text" name="description" id="simpleinput" class="form-control" value="<?php echo $infastracture_data['fldDescription']?>">
+                            <label for="simpleinput" class="form-label">Description</label><span class="text-danger"> *</span>
+                            <input type="text" name="description" id="simpleinput" class="form-control" value="<?php echo $infastracture_data['fldDescription']?>" required>
                         </div>
                     </div>
                 </div>
