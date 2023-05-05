@@ -63,7 +63,7 @@
 <div class ="row">
     <div class = "col-2">
         <div class="mb-3">
-            <label for="example-select" class="form-label">Gender</label><span class="text-danger"> *<span>
+            <label for="example-select" class="form-label">Sex</label><span class="text-danger"> *<span>
             <select class="form-select" name="gender" id="example-select">
                 <option value= "">SELECT</option>
                 <option value = "Female">Female</option>
