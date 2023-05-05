@@ -110,7 +110,7 @@
                                 <select class="form-control select2" data-toggle="select2" name="dept">
                                     <option value="administrator">Administrator</option>
                                     <option value="registar">Registrar</option>
-                                    <option value="roe">ROE</option>
+                                    <option value="rde">RDE</option>
                                     <option value="hr">HR</option>
                                     <option value="gad">GAD</option>
                                     <option value="it">IT</option>
