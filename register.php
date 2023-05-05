@@ -17,7 +17,7 @@
         // echo $pass;
         // echo $repass;
 
-        $check_id = "Select * from tbl_users where fldIdNumber = '$idNumber' ";
+        $check_id = mysqli_query($db,"Select * from tbl_users where fldIdNumber = '$idNumber' ");
 
         if (mysqli_num_rows($check_id) > 0) {
             echo "<script>alert('Identification Number already exists');window.location.href = 'register.php';</script>";
