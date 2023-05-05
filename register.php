@@ -17,9 +17,11 @@
         // echo $pass;
         // echo $repass;
 
-        
+        $check_id = "Select * from tbl_users where fldIdNumber = '$idNumber' ";
 
-        if ($idNumber == '' || $fname == '' || $email == '' || $pass == '' || $repass = '' || $depart = '') {
+        if (mysqli_num_rows($check_id) > 0) {
+            echo "<script>alert('Identification Number already exists');window.location.href = 'register.php';</script>";
+        }elseif ($idNumber == '' || $fname == '' || $email == '' || $pass == '' || $repass = '' || $depart = '') {
             echo "<script>alert('All fields are required');window.location.href = 'register.php';</script>";
         }
         elseif ($id_length != 9) {
