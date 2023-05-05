@@ -32,7 +32,7 @@
         <!--- Sidemenu -->
         <?php
         // echo $dept; 
-        if ($dept == 'administration'){
+        if ($dept == 'administrator'){
             include 'sidebar/admin.php';
         }elseif ($dept == 'registar'){
             include 'sidebar/registrar.php';
