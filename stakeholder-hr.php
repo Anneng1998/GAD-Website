@@ -29,9 +29,9 @@
 </div>     
 <!-- end page title -->
 
-<h1 class="page-title" style="text-align:center;">STUDENT PERSONAL DATA SHEET</h1>
+<h1 class="page-title" style="text-align:center;">FACULTY PROFILE</h1>
 <br>
-<h3 class="page-title" style="text-align:center;">Student Information</h3>
+<h3 class="page-title" style="text-align:center;">Employee Information</h3>
 
 <div class ="row">
     <div class="col-3">
@@ -183,59 +183,28 @@
     </div>
 </div>
 
-<h4 class="page-title" style="text-align:center;">Educational Attainment</h4>
+<h3 class="page-title" style="text-align:center;">Educational Attainment</h3>
+<br>
 
 <div class ="row">
-    <div class = "col-2">
+    <div class = "col-5">
         <div class="mb-3">
-            <label for="example-select" class="form-label">Department</label><span class="text-danger"> *<span>
+            <label for="example-select" class="form-label">Highest Educational Attainment</label><span class="text-danger"> *<span>
             <select class="form-select" name="dept" id="example-select">
                 <option value= "">SELECT</option>
-                <option value = "DAS">DAS</option>
-                <option value = "DEPTEL">DEPTEL</option>
-                <option value = "BM">BM</option>
-                <option value = "DIT">DIT</option>
+                <option value = "Bachelor">Bachelor Degre</option>
+                <option value = "Master">Master Degree</option>
+                <option value = "Doctorate">Doctorate Degree</option>
+                <option value = "UnitsM">Units in Masters</option>
+                <option value = "UnitsD">Units in Doctorate</option>
             </select>
         </div>
     </div>
 
-    <div class = "col-6">
+    <div class="col-3">
         <div class="mb-3">
-            <label for="example-select" class="form-label">Program</label><span class="text-danger"> *<span>
-            <select class="form-select" name="program" id="example-select">
-                <option value= "">SELECT</option>
-                <option value = "c1">BS Hospitality Management</option>
-                <option value = "c2">BS Business Management</option>
-                <option value = "c3">BS in Computer Science</option>
-                <option value = "c4">Bachelor of Early Childhood Education</option>
-                <option value = "c5">Bachelor of Secondary Education</option>
-                <option value = "c6">BS Information Technology</option>
-            </select>
-        </div>
-    </div>
-
-    <div class = "col-2">
-        <div class="mb-3">
-            <label for="example-select" class="form-label">Year Level</label><span class="text-danger"> *<span>
-            <select class="form-select" name="year" id="example-select">
-                <option value= "">SELECT</option>
-                <option value = "First">First Year</option>
-                <option value = "Second">Second Year</option>
-                <option value = "Third">Third Year</option>
-                <option value = "Fourth">Fourth Year</option>
-                <option value = "Fifth">Fifth Year</option>
-            </select>
-        </div>
-    </div>
-
-    <div class = "col-2">
-        <div class="mb-3">
-            <label for="example-select" class="form-label">Student Status</label><span class="text-danger"> *<span>
-            <select class="form-select" name="gender" id="example-select">
-                <option value= "">SELECT</option>
-                <option value = "Regular">Regular</option>
-                <option value = "Irregular">Irregular</option>
-            </select>
+            <label for="simpleinput" class="form-label">Course</label><span class="text-danger"> *</span>
+            <input type="number" name="course" id="simpleinput" class="form-control"  required>
         </div>
     </div>
 

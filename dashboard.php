@@ -4,6 +4,17 @@
     include 'include/navbar.php';
 ?>
 
+<style>
+    body > div.wrapper > div.content-page > div > div.card.d-block > div.row > div > div {
+        padding: 0 15px;
+    }
+    #alternative-page-datatable_wrapper {
+        padding: 0 15px;
+    }
+</style>
+
+<br><br>
+<div class="card d-block" style="box-shadow: 1px 2px 5px #333;">
 
  <!-- start page title -->
  <div class="row">
@@ -18,11 +29,70 @@
 </div>     
 <!-- end page title --> 
 
-<?php
-    // echo $_SESSION['email'];
-    // echo '<br>';
-    // echo $_SESSION['status'];
-?>
+
+<div class="row" style="padding: 15px;">
+    <div class="col-3">
+        <div class="card bg-success text-white mb-0" style="height: 113px;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label style="text-align: center;">Academic Employee</label>
+                    </div>
+                    <div class="col-6">
+                        <label style="text-align: center;font-size: -webkit-xxx-large;">50</label>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end card-->
+    </div>
+
+    <div class="col-3">
+        <div class="card bg-danger text-white mb-0" style="height: 113px;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label>Non-Academic Employee</label>
+                    </div>
+                    <div class="col-6">
+                        <label style="text-align: center;font-size: -webkit-xxx-large;">50</label>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end card-->
+    </div>
+
+    <div class="col-3">
+        <div class="card bg-warning text-white mb-0" style="height: 113px;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label>Student</label>
+                    </div>
+                    <div class="col-6">
+                        <label style="text-align: center;font-size: -webkit-xxx-large;">50</label>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end card-->
+    </div>
+
+    <div class="col-3">
+        <div class="card bg-primary text-white mb-0" style="height: 113px;">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <label>External Clients</label>
+                    </div>
+                    <div class="col-6">
+                        <label style="text-align: center;font-size: -webkit-xxx-large;">50</label>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- end card-->
+    </div>
+</div>
+
+
 
 <?php include 'include/footer.php'?>
 
