@@ -4,7 +4,7 @@
     include 'include/navbar.php';
 ?>
 
-
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <style>
     body > div.wrapper > div.content-page > div > div.card.d-block > div.row > div > div {
         padding: 0 15px;
@@ -13,6 +13,7 @@
         padding: 0 15px;
     }
 </style>
+
 
 <br><br>
 <div class="card d-block" style="box-shadow: 1px 2px 5px #333;">
@@ -176,10 +177,66 @@
     </div>
 </div>
 
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#checkbox2').change(function () {
+            if (!this.checked) 
+            //  ^
+            $('#autoUpdate1').fadeIn('fast');
+            else 
+                $('#autoUpdate1').fadeOut('fast');
+        });
+    });
+</script>
+
 <div class="mt-3">
     <div class="form-check" style="padding: 15px; margin: 20px;">
-        <input type="checkbox" class="form-check-input" id="customCheck1">
-        <label class="form-check-label" for="customCheck1">Permnent address same as Residential Address</label>
+        <input type="checkbox" class="form-check-input" id="checkbox2">
+        <label class="form-check-label">Permnent address same as Residential Address</label>
+    </div>
+</div>
+
+<div id="autoUpdate1" class="autoUpdate1" style="padding:15px;">
+    <div class = "row">
+        <div class="col-3">
+            <div class="mb-3">
+                <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
+                <input type="text" name="address1" id="simpleinput" class="form-control"  required>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="mb-3">
+                <label for="simpleinput" class="form-label">Street</label><span class="text-danger"> *</span>
+                <input type="text" name="address2" id="simpleinput" class="form-control"  required>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="mb-3">
+                <label for="simpleinput" class="form-label">Subdivision/Village</label><span class="text-danger"> *</span>
+                <input type="text" name="address3" id="simpleinput" class="form-control"  required>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="mb-3">
+                <label for="simpleinput" class="form-label">City/Municipality</label><span class="text-danger"> *</span>
+                <input type="text" name="address4" id="simpleinput" class="form-control"  required>
+            </div>
+        </div>
+    </div>
+
+    <div class = "row">
+        <div class="col-5">
+            <div class="mb-3">
+                <label for="simpleinput" class="form-label">Province</label><span class="text-danger"> *</span>
+                <input type="text" name="address5" id="simpleinput" class="form-control"  required>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="mb-3">
+                <label for="simpleinput" class="form-label">Zip Code</label><span class="text-danger"> *</span>
+                <input type="number" name="address6" id="simpleinput" class="form-control"  required>
+            </div>
+        </div>
     </div>
 </div>
 
@@ -303,7 +360,6 @@
 </div>
 
 <?php 
-include 'backend/based-research-upload.php';
 include 'include/footer.php';
 
 ?>
