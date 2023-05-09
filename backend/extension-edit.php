@@ -1,16 +1,16 @@
-<div id="edit<?php echo $research_data['fldID'] ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel" aria-hidden="true">
+<div id="edit<?php echo $extension_data['fldID'] ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="primary-header-modalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header modal-colored-header bg-warning">
-                <h4 class="modal-title" id="primary-header-modalLabel">EDIT GAD BASED RESEARCH</h4>
+                <h4 class="modal-title" id="primary-header-modalLabel">EDIT EXTENSION PROJECT</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
             </div>
 
-            <form action="backend/based-research-edit-process.php?id=<?php echo $research_data['fldID'] ?>" method="POST" id="myAwesomeDropzone" enctype="multipart/form-data">
+            <form action="backend/extension-edit-process.php?id=<?php echo $extension_data['fldID'] ?>" method="POST" id="myAwesomeDropzone" enctype="multipart/form-data">
 
             <?php
-                $id = $research_data['fldID'];
-                $edit_qry = mysqli_query($db, "Select * from tbl_basedresearch where fldID = '$id' ");
+                $id = $extension_data['fldID'];
+                $edit_qry = mysqli_query($db, "Select * from tbl_extension where fldID = '$id' ");
                 $edit_qry_fetch = mysqli_fetch_array($edit_qry);
             ?>
 
@@ -89,29 +89,29 @@
                 <div class="row">
                     <div class="col-6">
                         <h6>Copy of Proposal</h6>
-                        <a class="btn btn-danger btn-sm form-control" href="files/based-research/<?php echo $research_data['fldProposal'] ?>" target="_blank">
-                            <?php echo $research_data['fldProposal'] ?>
+                        <a class="btn btn-danger btn-sm form-control" href="files/extension/<?php echo $extension_data['fldProposal'] ?>" target="_blank">
+                            <?php echo $extension_data['fldProposal'] ?>
                         </a>
                     </div>
 
                     <div class="col-6">
                         <h6>Accomplished HGDG Design</h6>
-                        <a class="btn btn-danger btn-sm form-control" href="files/based-research/<?php echo $research_data['fldHgdg'] ?>" target="_blank">
-                            <?php echo $research_data['fldHgdg'] ?>
+                        <a class="btn btn-danger btn-sm form-control" href="files/extension/<?php echo $extension_data['fldHgdg'] ?>" target="_blank">
+                            <?php echo $extension_data['fldHgdg'] ?>
                         </a>
                     </div>
 
                     <div class="col-6">
                         <h6>Copy of Paper</h6>
-                        <a class="btn btn-danger btn-sm form-control" href="files/based-research/<?php echo $research_data['fldPaper'] ?>" target="_blank">
-                            <?php echo $research_data['fldPaper'] ?>
+                        <a class="btn btn-danger btn-sm form-control" href="files/extension/<?php echo $extension_data['fldPaper'] ?>" target="_blank">
+                            <?php echo $extension_data['fldPaper'] ?>
                         </a>
                     </div>
 
                     <div class="col-6">
                         <h6>Accomplished PIMME Checklist</h6>
-                        <a class="btn btn-danger btn-sm form-control" href="files/based-research/<?php echo $research_data['fldPIMME'] ?>" target="_blank">
-                            <?php echo $research_data['fldPIMME'] ?>
+                        <a class="btn btn-danger btn-sm form-control" href="files/extension/<?php echo $extension_data['fldPIMME'] ?>" target="_blank">
+                            <?php echo $extension_data['fldPIMME'] ?>
                         </a>
                     </div>
                     

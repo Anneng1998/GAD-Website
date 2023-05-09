@@ -119,6 +119,7 @@
                                     <option value="educ">EDUC</option>
                                     <option value="bm">BM</option>
                                     <option value="das">DAS</option>
+                                    <option value="move">MOVE Katropa</option>
                                 </select>
                             </div>
                             <div class="mb-3">

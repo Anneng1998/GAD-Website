@@ -73,79 +73,34 @@ if(isset($_POST['mediaupload'])){
 
 
     if($title == "" || $component == "" || $duration == "" || $budget == "" || $fund == "" || $research == ""){
-        echo "<script>alert('Fill all fields correctly');window.location.href = 'based-research.php';</script>";
+        echo "<script>alert('Fill all fields correctly');window.location.href = 'extension.php';</script>";
     }else{
         $random = random_int(100000, 999999);
         $UniqueID = 'BR'.$random;
 
         $Proposal_new_name = 'Copy_of_Proposal'.'.'.$title.'.'.$Proposal_file_ex_loc;
-        $Proposal_video_path_sa_buhay_niya = 'files/based-research/'.$Proposal_new_name;
+        $Proposal_video_path_sa_buhay_niya = 'files/extension/'.$Proposal_new_name;
         move_uploaded_file($Proposal_file_tmp, $Proposal_video_path_sa_buhay_niya);
 
         $HGDG_new_name = 'Accomplished_HGDG_Design'.'.'.$title.'.'.$HGDG_file_ex_loc;
-        $HGDG_video_path_sa_buhay_niya = 'files/based-research/'.$HGDG_new_name;
+        $HGDG_video_path_sa_buhay_niya = 'files/extension/'.$HGDG_new_name;
         move_uploaded_file($HGDG_file_tmp, $HGDG_video_path_sa_buhay_niya);
 
         $paper_new_name = 'Copy of Paper'.'.'.$title.'.'.$paper_file_ex_loc;
-        $paper_video_path_sa_buhay_niya = 'files/based-research/'.$paper_new_name;
+        $paper_video_path_sa_buhay_niya = 'files/extension/'.$paper_new_name;
         move_uploaded_file($paper_file_tmp, $paper_video_path_sa_buhay_niya);
 
         $PIMME_new_name = 'Accomplished_PIMME_Checklist'.'.'.$title.'.'.$PIMME_file_ex_loc;
-        $PIMME_video_path_sa_buhay_niya = 'files/based-research/'.$PIMME_new_name;
+        $PIMME_video_path_sa_buhay_niya = 'files/extension/'.$PIMME_new_name;
         move_uploaded_file($PIMME_file_tmp, $PIMME_video_path_sa_buhay_niya);
 
-        $insert_research = "INSERT INTO tbl_basedresearch (fldUID, fldTitle, fldDescription, fldResearch, fldDFrom, fldDTo, fldDuration, fldBudget, fldFund, fldProposal, fldHgdg, fldPaper, fldPIMME, fldStatus, fldFrom) VALUES ('$UniqueID', '$title', '$component', '$research', '$from', '$to', '$duration', '$budget', '$fund', '$Proposal_new_name', '$HGDG_new_name', '$paper_new_name', '$PIMME_new_name', 'unarchive', 'tbl_basedresearch')";
+        $insert_research = "INSERT INTO tbl_extension (fldUID, fldTitle, fldDescription, fldResearch, fldDFrom, fldDTo, fldDuration, fldBudget, fldFund, fldProposal, fldHgdg, fldPaper, fldPIMME, fldStatus, fldFrom) VALUES ('$UniqueID', '$title', '$component', '$research', '$from', '$to', '$duration', '$budget', '$fund', '$Proposal_new_name', '$HGDG_new_name', '$paper_new_name', '$PIMME_new_name', 'unarchive', 'tbl_extension')";
 
         $insert_research_qry = mysqli_query($db, $insert_research);
 
-        echo "<script>alert('New data has been added successfully');window.location.href = 'based-research.php';</script>";
+        echo "<script>alert('New data has been added successfully');window.location.href = 'extension.php';</script>";
     }
 
-    // //checking ng title
-
-    // if ($research == 'COMPLETED') {
-    //     echo 'true';
-    // } else {
-    //     echo 'false';
-    // }
-
-    // $CopyofProposal_title_check = mysqli_query($db, "SELECT * FROM tbl_basedresearch WHERE fldTitle = '$title'");
-    // $HDGDchecklist_title_check = mysqli_query($db, "SELECT * FROM tbl_basedresearch WHERE fldTitle = '$title'");
-
-
-
-
-    // if (mysqli_num_rows($CopyofProposal_title_check) > 0) {
-    //     echo "<script>alert('Invalid Title');window.location.href = 'based-research.php';</script>";
-    // } elseif (mysqli_num_rows($HDGDchecklist_title_check) > 0) {
-    //     echo "<script>alert('Invalid Title');window.location.href = 'based-research.php';</script>";
-    // } else {
-    //     if($title == "" && $description == ""){
-    //         echo "<script>alert('All fields are required');window.location.href = 'based-research.php';</script>";
-    //     } else {
-    //         if ($CopyofProposal_fileSizeRound < 100 && $HDGDchecklist_fileSizeRound < 100) {
-    
-    //             $CopyofProposal_new_name = $title.'.'.$CopyofProposal_file_ex_loc;
-    //             $CopyofProposal_video_path_sa_buhay_niya = 'files/based-research-copy-of-proposal/'.$CopyofProposal_file_name;
-    //             move_uploaded_file($CopyofProposal_file_tmp, $CopyofProposal_video_path_sa_buhay_niya);
-
-
-    //             $HDGDchecklist_new_name = $title.'.'.$HDGDchecklist_file_ex_loc;
-    //             $HDGDchecklist_video_path_sa_buhay_niya = 'files/based-research-hgdg/'.$HDGDchecklist_file_name;
-    //             move_uploaded_file($HDGDchecklist_file_tmp, $HDGDchecklist_video_path_sa_buhay_niya);
-
-    //             $random = random_int(100000, 999999);
-    //             $UniqueID = 'BR'.$random;
-    
-    //             $insert_based_research = "INSERT INTO tbl_basedresearch (fldUID, fldTitle, fldDescription, fldResearch, fldDateCompletion, fldCopyofProposal, fldChecklist, fldStatus, fldFrom) VALUES ('$UniqueID', '$title', '$description', 'PROPOSAL', '$today', '$CopyofProposal_file_name','$HDGDchecklist_file_name', 'unarchive', 'tbl_basedresearch')";
-    //             $insert_based_research_qry = mysqli_query($db, $insert_based_research);
-    
-    //             echo "<script>alert('New video has been added successfully');window.location.href = 'based-research.php';</script>";
-    //         } else {
-    //             echo "<script>alert('Too much love');window.location.href = 'based-research.php';</script>";
-    //         }
-    //     }
-    // }
 }
 
 ?>
@@ -156,11 +111,11 @@ if(isset($_POST['mediaupload'])){
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header modal-colored-header bg-primary">
-                <h4 class="modal-title" id="primary-header-modalLabel">ADD GAD BASED RESEARCH</h4>
+                <h4 class="modal-title" id="primary-header-modalLabel">ADD EXTENSION PROJECT</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
             </div>
 
-            <form action="based-research.php" method="post" class="dropzone" id="myAwesomeDropzone" enctype="multipart/form-data">
+            <form action="extension.php" method="post" class="dropzone" id="myAwesomeDropzone" enctype="multipart/form-data">
 
             <div class="modal-body">
 

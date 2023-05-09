@@ -54,7 +54,7 @@
             <td><?php echo $research_data['fldFund'] ?></td>
             <td><?php echo $research_data['fldResearch'] ?></td>
             <td>
-                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#view<?php echo $research_data['fldID'] ?>"><i class="dripicons-preview"></i></button>
+                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#views<?php echo $research_data['fldID'] ?>"><i class="dripicons-preview"></i></button>
                 <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#delete<?php echo $research_data['fldID'] ?>"><i class="dripicons-trash"></i></button>
                 <button class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#edit<?php echo $research_data['fldID'] ?>"><i class="dripicons-document-edit"></i></button>
                 <a href="download/download-based.php?id=<?php echo $research_data['fldID'] ?>" class="btn btn-success shadow btn-xs sharp me-1"><i class="dripicons-download"></i></a>
@@ -63,8 +63,9 @@
         <?php
             include 'backend/based-research-complete.php';
             include 'backend/based-research-complete-form.php';
-            include 'backend/based-research-proposal-view.php';
-            include 'backend/based-research-hdgd-view.php';
+            include 'backend/based-research-view.php';
+            // include 'backend/based-research-proposal-view.php';
+            // include 'backend/based-research-hdgd-view.php';
             include 'backend/based-research-delete.php';
             include 'backend/based-research-seemore.php';
             include 'backend/based-research-edit.php';

@@ -43,8 +43,8 @@
     </div>
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Middle Name</label><span class="text-danger"> *</span>
-            <input type="text" name="mname" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Middle Name</label>
+            <input type="text" name="mname" id="simpleinput" class="form-control">
         </div>
     </div>
     <div class="col-3">
@@ -55,8 +55,8 @@
     </div>
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Extension Name</label><span class="text-danger"> *</span>
-            <input type="text" name="Ename" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Extension Name</label>
+            <input type="text" name="Ename" id="simpleinput" class="form-control">
         </div>
     </div>
 </div>
@@ -81,7 +81,6 @@
                 <option value = "Single">Single</option>
                 <option value = "Married">Married</option>
                 <option value = "Widowed">Widowed</option>
-                <option value = "Divorced">Divorced</option>
                 <option value = "Separated">Separated</option>
             </select>
         </div>
@@ -96,8 +95,8 @@
 
     <div class="col-4">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Religion</label><span class="text-danger"> *</span>
-            <input type="text" name="religion" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Religion</label>
+            <input type="text" name="religion" id="simpleinput" class="form-control">
         </div>
     </div>
 </div>
@@ -112,22 +111,22 @@
 
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Plae of Birth</label><span class="text-danger"> *</span>
-            <input type="text" name="place" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Plae of Birth</label>
+            <input type="text" name="place" id="simpleinput" class="form-control">
         </div>
     </div>
 
     <div class="col-4">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Mobile Number</label><span class="text-danger"> *</span>
-            <input type="number" name="mobile" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Mobile Number</label>
+            <input type="number" name="mobile" id="simpleinput" class="form-control">
         </div>
     </div>
 
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Email Address</label><span class="text-danger"> *</span>
-            <input type="email" name="email" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Email Address &#40; if any &#41;</label>
+            <input type="email" name="email" id="simpleinput" class="form-control">
         </div>
     </div>
 </div>
@@ -138,8 +137,8 @@
 <div class = "row">
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
-            <input type="text" name="address1" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">House/Block/Lot No.</label>
+            <input type="text" name="address1" id="simpleinput" class="form-control">
         </div>
     </div>
     <div class="col-3">
@@ -150,8 +149,8 @@
     </div>
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Subdivision/Village</label><span class="text-danger"> *</span>
-            <input type="text" name="address3" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Subdivision/Village</label>
+            <input type="text" name="address3" id="simpleinput" class="form-control">
         </div>
     </div>
     <div class="col-3">
@@ -197,45 +196,44 @@
 </div>
 
 <div id="autoUpdate1" class="autoUpdate1" style="padding:15px;">
-    <div class = "row">
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
-                <input type="text" name="address1" id="simpleinput" class="form-control"  required>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Street</label><span class="text-danger"> *</span>
-                <input type="text" name="address2" id="simpleinput" class="form-control"  required>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Subdivision/Village</label><span class="text-danger"> *</span>
-                <input type="text" name="address3" id="simpleinput" class="form-control"  required>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">City/Municipality</label><span class="text-danger"> *</span>
-                <input type="text" name="address4" id="simpleinput" class="form-control"  required>
-            </div>
+<div class = "row">
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">House/Block/Lot No.</label>
+            <input type="text" name="address1" id="simpleinput" class="form-control">
         </div>
     </div>
-
-    <div class = "row">
-        <div class="col-5">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Province</label><span class="text-danger"> *</span>
-                <input type="text" name="address5" id="simpleinput" class="form-control"  required>
-            </div>
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Street</label><span class="text-danger"> *</span>
+            <input type="text" name="address2" id="simpleinput" class="form-control"  required>
         </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Zip Code</label><span class="text-danger"> *</span>
-                <input type="number" name="address6" id="simpleinput" class="form-control"  required>
-            </div>
+    </div>
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Subdivision/Village</label>
+            <input type="text" name="address3" id="simpleinput" class="form-control">
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">City/Municipality</label><span class="text-danger"> *</span>
+            <input type="text" name="address4" id="simpleinput" class="form-control"  required>
+        </div>
+    </div>
+</div>
+
+<div class = "row">
+    <div class="col-5">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Province</label><span class="text-danger"> *</span>
+            <input type="text" name="address5" id="simpleinput" class="form-control"  required>
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Zip Code</label><span class="text-danger"> *</span>
+            <input type="number" name="address6" id="simpleinput" class="form-control"  required>
         </div>
     </div>
 </div>
@@ -321,7 +319,19 @@
                 <label>if YES, please specify:</label>
             </div>
             <div class = "col-8">
-                <input type="text" name="yes" id="simpleinput" class="form-control" >
+                <select class="form-select" name="disablity" id="example-select">
+                    <option value= "">SELECT</option>
+                    <option value = "">Deaf &#40; Hard of hearing &#41; </option>
+                    <option value = "">Intellectual Disability</option>
+                    <option value = "">Learning Disability</option>
+                    <option value = "">Mental Disability</option>
+                    <option value = "">Orthopedic Disability</option>
+                    <option value = "">Physical Disability</option>
+                    <option value = "">Psychosocial Disability</option>
+                    <option value = "">Speech and Language</option>
+                    <option value = "">Impairment</option>
+                    <option value = "">Visual Disability</option>
+                </select>
             </div>
         </div>
     </div>
@@ -340,10 +350,43 @@
                 <label class="form-check-label" for="customRadio4">NO</label>
             </div>
         </div>
-    </div>
-    
+    </div> 
 </div>
-    <br><br>
+
+<div class="row">
+    <div class="col-6">
+        <div class="mt-2">
+            <label class="form-check form-check-inline">Are you a working student?</label>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="customRadio3" name="customRadio1" class="form-check-input">
+                <label class="form-check-label" for="customRadio3">YES</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="customRadio4" name="customRadio1" class="form-check-input">
+                <label class="form-check-label" for="customRadio4">NO</label>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <div class="mt-2">
+            <label class="form-check form-check-inline">Are you Single Parent?</label>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="customRadio3" name="customRadio1" class="form-check-input">
+                <label class="form-check-label" for="customRadio3">YES</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input type="radio" id="customRadio4" name="customRadio1" class="form-check-input">
+                <label class="form-check-label" for="customRadio4">NO</label>
+            </div>
+        </div>
+    </div> 
+</div>
+
+
+    <br><br><br><br><br><br><br><br>
     <div class="row">
         <div class="col-8">
 
@@ -356,7 +399,7 @@
             <br>
         </div>
     </div>
-    <br>
+
 </div>
 
 <?php 

@@ -28,62 +28,70 @@
                     <input type="text" name="planacademic" id="simpleinput" class="form-control" value="<?php echo $edit_qry_fetch['fldDescription']?>" disabled>
                 </div>
 
-                <div class="col-6">
-                        <h6>Approved Activity Proposal/ Letter/ Memorandum</h6>
-                        <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile1'] ?>" target="_blank">
-                            <?php echo $report_data['fldFile1'] ?>
-                        </a>
+                <div class = "row">
+
+                    <div class="col-6">
+                            <h6>Approved Activity Proposal/ Letter/ Memorandum</h6>
+                            <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile1'] ?>" target="_blank">
+                                <?php echo $report_data['fldFile1'] ?>
+                            </a>
+                    </div>
+
+                    <div class="col-6">
+                            <h6>Official Program</h6>
+                            <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile2'] ?>" target="_blank">
+                                <?php echo $report_data['fldFile2'] ?>
+                            </a>
+                    </div>
                 </div>
 
-                <div class="col-6">
-                        <h6>Official Program</h6>
-                        <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile2'] ?>" target="_blank">
-                            <?php echo $report_data['fldFile2'] ?>
-                        </a>
+                <div class = "row">
+                    <div class="col-6">
+                            <h6>Highlights of the activity with Photos</h6>
+                            <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile3'] ?>" target="_blank">
+                                <?php echo $report_data['fldFile3'] ?>
+                            </a>
+                    </div>
+
+                    <div class="col-6">
+                            <h6>Attendance Sheet</h6>
+                            <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile4'] ?>" target="_blank">
+                                <?php echo $report_data['fldFile4'] ?>
+                            </a>
+                    </div>
                 </div>
 
-                <div class="col-6">
-                        <h6>Highlights of the activity with Photos</h6>
-                        <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile3'] ?>" target="_blank">
-                            <?php echo $report_data['fldFile3'] ?>
-                        </a>
+                <div class = "row">
+                    <div class="col-6">
+                            <h6>Copy of Invitation Letters to Speak/s</h6>
+                            <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile5'] ?>" target="_blank">
+                                <?php echo $report_data['fldFile5'] ?>
+                            </a>
+                    </div>
+
+                    <div class="col-6">
+                            <h6>Summary of Overall Activity evaluation</h6>
+                            <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile6'] ?>" target="_blank">
+                                <?php echo $report_data['fldFile6'] ?>
+                            </a>
+                    </div>
                 </div>
 
-                <div class="col-6">
-                        <h6>Attendance Sheet</h6>
-                        <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile4'] ?>" target="_blank">
-                            <?php echo $report_data['fldFile4'] ?>
-                        </a>
-                </div>
+                <div class = "row">
+                    <div class="col-6">
+                            <h6>Sample Copy of Accomplished evaluation</h6>
+                            <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile7'] ?>" target="_blank">
+                                <?php echo $report_data['fldFile7'] ?>
+                            </a>
+                    </div>
 
-                <div class="col-6">
-                        <h6>Copy of Invitation Letters to Speak/s</h6>
-                        <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile5'] ?>" target="_blank">
-                            <?php echo $report_data['fldFile5'] ?>
-                        </a>
+                    <div class="col-6">
+                            <h6>Copy of Signed Certificate for Resource Speaker</h6>
+                            <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile8'] ?>" target="_blank">
+                                <?php echo $report_data['fldFile8'] ?>
+                            </a>
+                    </div>
                 </div>
-
-                <div class="col-6">
-                        <h6>Summary of Overall Activity evaluation</h6>
-                        <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile6'] ?>" target="_blank">
-                            <?php echo $report_data['fldFile6'] ?>
-                        </a>
-                </div>
-
-                <div class="col-6">
-                        <h6>Sample Copy of Accomplished evaluation</h6>
-                        <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile7'] ?>" target="_blank">
-                            <?php echo $report_data['fldFile7'] ?>
-                        </a>
-                </div>
-
-                <div class="col-6">
-                        <h6>Copy of Signed Certificate for Resource Speaker</h6>
-                        <a class="btn btn-danger btn-sm form-control" href="files/report/<?php echo $report_data['fldFile8'] ?>" target="_blank">
-                            <?php echo $report_data['fldFile8'] ?>
-                        </a>
-                </div>
-
                 
 
             </div>

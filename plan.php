@@ -33,7 +33,7 @@
     <thead>
         <tr>
             <th>Title</th>
-            <th>Acdemic Year</th>
+            <th>Academic Year</th>
             <th>Date Uploaded</th>
             <th>Action</th>
         </tr>

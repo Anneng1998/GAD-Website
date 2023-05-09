@@ -75,34 +75,34 @@
         $D_file_ex_loc = strtolower($D_file_ex);
 
         if($title == "" || $component == "" || $duration == "" || $budget == "" || $fund == "" || $research == ""){
-            echo "<script>alert('Fill all fields correctly');window.location.href = 'based-research.php';</script>";
+            echo "<script>alert('Fill all fields correctly');window.location.href = 'extension.php';</script>";
         }else{
 
-            $check_file_qry = "SELECT fldProposal, fldHgdg,fldPaper,fldPIMME FROM tbl_basedresearch WHERE fldID = '$id'";
+            $check_file_qry = "SELECT fldProposal, fldHgdg,fldPaper,fldPIMME FROM tbl_extensionWHERE fldID = '$id'";
             $check_file_sql = mysqli_query($db, $check_file_qry);
             $check_file_fetch = mysqli_fetch_array($check_file_sql);
 
             $A_new_name = 'Copy_of_Proposal'.'.'.$title.'.'.$A_file_ex_loc;
-            $A_video_path_sa_buhay_niya = '../files/based-research/'.$A_new_name;
+            $A_video_path_sa_buhay_niya = '../files/extension/'.$A_new_name;
             move_uploaded_file($A_file_tmp, $A_video_path_sa_buhay_niya);
 
             $B_new_name = 'Accomplished_HGDG_Design'.'.'.$title.'.'.$B_file_ex_loc;
-            $B_video_path_sa_buhay_niya = '../files/based-research/'.$B_new_name;
+            $B_video_path_sa_buhay_niya = '../files/extension/'.$B_new_name;
             move_uploaded_file($B_file_tmp, $B_video_path_sa_buhay_niya);
 
             $C_new_name = 'Copy of Paper'.'.'.$title.'.'.$C_file_ex_loc;
-            $C_video_path_sa_buhay_niya = '../files/based-research/'.$C_new_name;
+            $C_video_path_sa_buhay_niya = '../files/extension/'.$C_new_name;
             move_uploaded_file($C_file_tmp, $C_video_path_sa_buhay_niya);
 
             $D_new_name = 'Accomplished_PIMME_Checklist'.'.'.$title.'.'.$D_file_ex_loc;
-            $D_video_path_sa_buhay_niya = '../../files/based-research/'.$D_new_name;
+            $D_video_path_sa_buhay_niya = '../../files/extension/'.$D_new_name;
             move_uploaded_file($D_file_tmp, $D_video_path_sa_buhay_niya);
 
             if ($A_file_name == '') {
                 $A_new_name = $check_file_fetch['fldProposal'];
             } else {
                 $A_new_name = 'Copy_of_Proposal'.'.'.$title.'.'.$A_file_ex_loc;
-                $A_video_path_sa_buhay_niya = '../files/based-research/'.$A_new_name;
+                $A_video_path_sa_buhay_niya = '../files/extension/'.$A_new_name;
                 move_uploaded_file($A_file_tmp, $A_video_path_sa_buhay_niya);
             }
 
@@ -110,7 +110,7 @@
                 $B_new_name = $check_file_fetch['fldHgdg'];
             } else {
                 $B_new_name = 'Accomplished_HGDG_Design'.'.'.$title.'.'.$B_file_ex_loc;
-                $B_video_path_sa_buhay_niya = '../files/based-research/'.$B_new_name;
+                $B_video_path_sa_buhay_niya = '../files/extension/'.$B_new_name;
                 move_uploaded_file($B_file_tmp, $B_video_path_sa_buhay_niya);
             }
 
@@ -118,7 +118,7 @@
                 $C_new_name = $check_file_fetch['fldPaper'];
             } else {
                 $C_new_name = 'Copy of Paper'.'.'.$title.'.'.$C_file_ex_loc;
-                $C_video_path_sa_buhay_niya = '../files/based-research/'.$C_new_name;
+                $C_video_path_sa_buhay_niya = '../files/extension/'.$C_new_name;
                 move_uploaded_file($C_file_tmp, $C_video_path_sa_buhay_niya);
             }
 
@@ -126,11 +126,11 @@
                 $D_new_name = $check_file_fetch['fldPIMME'];
             } else {
                 $D_new_name = 'Accomplished_PIMME_Checklist'.'.'.$title.'.'.$D_file_ex_loc;
-                $D_video_path_sa_buhay_niya = '../files/based-research/'.$D_new_name;
+                $D_video_path_sa_buhay_niya = '../files/extension/'.$D_new_name;
                 move_uploaded_file($D_file_tmp, $D_video_path_sa_buhay_niya);
             }
 
-            $update_based = mysqli_query($db, "UPDATE tbl_basedresearch SET
+            $update_based = mysqli_query($db, "UPDATE tbl_extensionSET
             fldTitle = '$title',
             fldDescription = '$component',
             fldResearch = '$research',
@@ -145,25 +145,10 @@
             fldPIMME = '$D_new_name' where fldID = '$id'
             ") ;
 
-            echo "<script>alert('Updated Successfully');window.location.href = '../based-research.php';</script>";
+            echo "<script>alert('Updated Successfully');window.location.href = '../extension.php';</script>";
 
         }
     }
 
-    // if(isset($_GET['research-update'])){
-    //     $id = $_GET['researchid'];
-    //     $newtitle = $_GET['researchtitle'];
-    //     $newdesc = $_GET['researchdescription'];
-    //     $newtype = $_GET['researchtype'];
-    //     $newdate = $_GET['completiondate'];
-
-    //     if($newtitle == "" && $newdesc == ""){
-    //         echo "<script>alert('All fields are required');window.location.href = 'based-research.php';</script>";
-    //     }else{
-    //         $update_qry = mysqli_query($db, "UPDATE tbl_basedresearch SET fldTitle='$newtitle', fldDescription='$newdesc', fldResearch='$newtype', fldDateCompletion='$newdate' WHERE fldID = '$id'");
-    //         echo "<script>alert('Updated Successfully');window.location.href = '../based-research.php';</script>";
-    //     }
-        
-    // }
 
 ?>
