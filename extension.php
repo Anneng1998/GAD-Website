@@ -30,8 +30,6 @@
 <!-- end page title -->
 
 <?php 
-include 'backend/based-research-upload.php';
 include 'include/footer.php';
-
 ?>
 
