@@ -31,7 +31,7 @@
 </div>     
 <!-- end page title -->
 
-<h1 class="page-title" style="text-align:center;">ACADEMIC EMPLOYEE PERSONAL DATA SHEET</h1>
+<h1 class="page-title" style="text-align:center;">EXTERNAL CLIENT PERSONAL DATA SHEET</h1>
 <br>
 <h3 class="page-title" style="text-align:center;">Employee Information</h3>
 
@@ -267,19 +267,6 @@
         </div>
     </div>
 
-    <div class = "col-4">
-        <div class="mb-3">
-            <label for="example-select" class="form-label">Designation</label><span class="text-danger"> *<span>
-            <select class="form-select" name="designation" id="example-select" required>
-                <option value= "">SELECT</option>
-                <option value = "Instruction">Instruction</option>
-                <option value = "Assistant">Assistant Processor</option>
-                <option value = "Associate">Associate Professor</option>
-                <option value = "Professor">Professor</option>
-            </select>
-        </div>
-    </div>
-
 </div>
 
 <h4 class="page-title" style="text-align:center;">Other Information</h4>
@@ -495,21 +482,10 @@
             }
         });
     });
-
-    $(function() {
-        $("input[name='children']").click(function() {
-            if ($("#cY").is(":checked")) {
-                $("#childrenYN").show();
-            } else {
-                $("#childrenYN").hide();
-            }
-        });
-    });
     
 </script>
 
 <?php 
-include 'backend/based-research-upload.php';
 include 'include/footer.php';
 ?>
 

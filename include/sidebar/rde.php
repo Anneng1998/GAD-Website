@@ -25,7 +25,7 @@
             </li>
 
             <li class="side-nav-item">
-                <a href="stakeholder-hr.php" //class="side-nav-link"">
+                <a href="stakeholder-rde.php" //class="side-nav-link"">
                     <i class="uil-user-circle"></i>
                     <span> Stakeholder Profiling </span>
                 </a>
