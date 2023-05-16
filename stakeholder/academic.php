@@ -25,6 +25,7 @@ if (isset($_POST['save'])){
 
     $insert_employee = "INSERT INTO employee_information (
                             fldID, 
+                            stake_status,
                             fname, 
                             cname, 
                             lname, 
@@ -39,6 +40,7 @@ if (isset($_POST['save'])){
                             email) 
                         VALUES (
                             '$UniqueID', 
+                            'ACADEMIC',
                             '$fname', 
                             '$mname', 
                             '$lname', 
