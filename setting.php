@@ -17,11 +17,11 @@
                 <i class="mdi mdi-account-circle d-md-none d-block"></i>
                 <span class="d-none d-md-block">Archive Data</span>
             </a>
-            <a class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
+            <!-- <a class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings"
                 aria-selected="false">
                 <i class="mdi mdi-settings-outline d-md-none d-block"></i>
                 <span class="d-none d-md-block">Back up and Restore</span>
-            </a>
+            </a> -->
         </div>
     </div> <!-- end col-->
 
@@ -112,7 +112,7 @@
 
             <!-- END Archive Data -->
 
-            <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+            <!-- <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
             <h2>Table 3</h2>
                 <table id="row-callback-datatable" class="table w-100 nowrap">
                     <thead>
@@ -145,7 +145,7 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div> -->
         </div> <!-- end tab-content-->
     </div> <!-- end col-->
 </div>

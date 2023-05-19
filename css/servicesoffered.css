@@ -1,0 +1,35 @@
+body{
+	margin: 0;
+	padding: 0;
+
+}
+
+
+.accordion span{
+    color: #404040;
+}
+
+.accordion {
+    cursor: pointer;
+}
+
+.accordion:hover {
+    
+    transition: 0.5s;
+
+}
+.panel {
+    z-index: 1;
+    height: auto;
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+
+.panel-box {
+
+    margin: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}

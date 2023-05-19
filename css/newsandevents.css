@@ -1,0 +1,160 @@
+	.centered {
+		background-color: rgba(255, 255, 255, 0.8);
+		padding: 50px;
+		position: absolute;
+		bottom: 50px;
+		width: 90%;
+		left: 16px;
+		height: 200px;
+	}
+
+	#carousel img{
+
+
+		height: 700px;
+	}
+	#signup-content {
+		margin-top: -40px;
+		padding: 30px;
+	}
+	#signup-content .input-text {
+		border-bottom: 1px solid #335e90;
+		border-left: unset;
+		border-right: unset;
+		border-top: unset;
+		padding: 5px;
+		width: 100%;
+	}
+	#signup-content .input-text:focus {
+		outline: unset;
+		border-bottom: 2px solid #335e90;
+	}
+	#image-right img {
+		margin-left: 15px;
+		height: 568px;
+	}
+
+	.cen{
+		width: 100%;
+
+		padding: 30px;
+	}
+	.cen h3 {
+
+		color: black;
+		font-size: 40px;
+		letter-spacing: 1px;
+		font-weight: bold;
+
+	}
+	.cen h4 {
+		color: #335e90;
+		letter-spacing: 1px;
+
+	}
+	#car-btn {
+		margin-top: 20px;
+		border: 1px solid #335e90;
+		padding: 10px;
+		background: #335e90;
+		width: 63%;
+		border-radius: 5px;
+		color:  white;
+		font-size: 15px;
+	}
+
+	.bottomright {
+
+		position: fixed;
+		bottom: 8px;
+		right: 16px;
+		font-size: 18px;
+	}
+
+	.fa-arrow-up {
+		padding: 10px; background: #335e90; color: white; border: unset; border-radius: 50%; opacity: 0.3;
+	}
+	.fa-arrow-up:hover {
+		opacity: 0.7;
+		transition: 0.3s;
+	}
+
+	.med-serv li{
+		list-style: circle;
+		margin: 10px;
+	}
+	.event {
+		padding: 10px;
+		border: 1px solid lightgray;
+		border-radius: 5px;
+	}
+	.img-event {
+		height: 250px;
+	}
+/*t
+/*tablet*/
+
+@media only screen and (max-width: 1024px) {
+	#carousel img{
+		width: 100%;
+		height: 500px;
+	}
+}
+/*phone*/
+@media only screen and (max-width: 600px) {
+
+	#carousel img{
+		width: 100%;
+		height: 300px;
+	}
+
+
+}
+/*Bootstrap Carousel Fade Transition (for Bootstrap 3.3.x)
+  CSS from:       http://codepen.io/transportedman/pen/NPWRGq
+  and:            http://stackoverflow.com/questions/18548731/bootstrap-3-carousel-fading-to-new-slide-instead-of-sliding-to-new-slide
+  Inspired from:  http://codepen.io/Rowno/pen/Afykb*/
+  .carousel-fade .carousel-inner .item {
+  	opacity: 0;
+  	transition-property: opacity;
+  }    
+  .carousel-fade .carousel-inner .active {
+  	opacity: 1;
+  }    
+  .carousel-fade .carousel-inner .active.left,
+  .carousel-fade .carousel-inner .active.right {
+  	left: 0;
+  	opacity: 0;
+  	z-index: 1;
+  }    
+  .carousel-fade .carousel-inner .next.left,
+  .carousel-fade .carousel-inner .prev.right {
+  	opacity: 1;
+  }    
+  .carousel-fade .carousel-control {
+  	z-index: 2;
+  }
+
+/*WHAT IS NEW IN 3.3: "Added transforms to improve carousel performance in modern browsers."
+  Need to override the 3.3 new styles for modern browsers & apply opacity*/
+  @media all and (transform-3d), (-webkit-transform-3d) {
+  	.carousel-fade .carousel-inner > .item.next,
+  	.carousel-fade .carousel-inner > .item.active.right {
+  		opacity: 0;
+  		-webkit-transform: translate3d(0, 0, 0);
+  		transform: translate3d(0, 0, 0);
+  	}
+  	.carousel-fade .carousel-inner > .item.prev,
+  	.carousel-fade .carousel-inner > .item.active.left {
+  		opacity: 0;
+  		-webkit-transform: translate3d(0, 0, 0);
+  		transform: translate3d(0, 0, 0);
+  	}
+  	.carousel-fade .carousel-inner > .item.next.left,
+  	.carousel-fade .carousel-inner > .item.prev.right,
+  	.carousel-fade .carousel-inner > .item.active {
+  		opacity: 1;
+  		-webkit-transform: translate3d(0, 0, 0);
+  		transform: translate3d(0, 0, 0);
+  	}
+  }

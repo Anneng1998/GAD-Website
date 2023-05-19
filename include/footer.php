@@ -26,6 +26,7 @@
         <script src="assets/js/app.min.js"></script>
 
         <!-- third party js -->
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
         <script src="assets/js/vendor/jquery.dataTables.min.js"></script>
         <script src="assets/js/vendor/dataTables.bootstrap5.js"></script>
         <script src="assets/js/vendor/dataTables.responsive.min.js"></script>
@@ -37,7 +38,7 @@
         <script src="assets/js/vendor/buttons.print.min.js"></script>
         <script src="assets/js/vendor/dataTables.keyTable.min.js"></script>
         <script src="assets/js/vendor/dataTables.select.min.js"></script>
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        
         <!-- third party js ends -->
 
         <!-- demo app -->

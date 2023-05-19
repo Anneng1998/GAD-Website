@@ -1,0 +1,153 @@
+	@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+	* {
+		font-family: 'Poppins', sans-serif;
+
+	}
+
+
+	@media only screen and (max-width: 2560px) {
+		#top-nav {
+			background-color: 	#7030A0;
+			padding: 30px;
+		}
+		#top-nav h2, #top-nav h5{
+			color: white;
+		}
+		#navbar {
+
+			background-color: white;
+			border-radius: 0px;
+			border: unset;
+			padding: 10px;
+		}
+		#nav-logo {
+			height: 70px;
+			border-radius: 50%;
+			float: left;
+		}
+		#navbar-brand {
+			display: none;
+		}
+		#myNavbar {
+			margin-top: -10px;
+		}
+		#myNavbar li a{
+			color: black;
+		}
+		#myNavbar #active a{
+			font-weight: #7030A0;
+			color: #7030A0;
+			border-bottom: 2px solid #7030A0;
+		/*	background-color: #335e90;
+			border-bottom-left-radius: 5px;
+			border-bottom-right-radius: 5px;*/
+		}
+		#myNavbar li a:hover{
+			transition: 0.3s;
+			color: #7030A0;
+		}
+	}
+
+
+	/*tablet*/
+
+	@media only screen and (max-width: 1024px) {
+		#top-nav {
+			display: none;
+		}
+		#navbar {
+			background-color:#7030A0;
+		}
+		#navbar-brand {
+			display: block;
+			padding: 0px;
+		}
+		#navbar-brand img{
+			float: left;
+			height: 55px;
+		}
+		#navbar-brand h2{
+			color: white;
+			float: right;
+			font-size: 19px;
+		}
+		#myNavbar{
+			margin-top: 20px;
+		}
+		#navbar-toggle{
+			background-color: white;
+		}
+		#navbar-toggle:focus {
+			background-color: white;
+		}
+		#myNavbar li a{
+
+			color: white;
+		}
+		#myNavbar li a:focus {
+			background-color:  #7030A0;
+			color: white;
+		}
+		#myNavbar #active a{
+			background-color: white;
+			color: #7030A0;	
+		}
+		#myNavbar li a:hover{
+			background-color: white;
+			color: #7030A0;	
+		}
+		#dropdown-menu  {
+				background-color: #7030A0;
+		}
+	}
+/*phone*/
+@media only screen and (max-width: 600px) {
+
+	#top-nav {
+		display: none;
+	}
+	#navbar {
+
+		background-color:	#7030A0;
+	}
+	#navbar-brand {
+
+		display: block;
+		padding: 0px;
+	}
+	#navbar-brand img{
+		float: left;
+		height: 55px;
+	}
+	#navbar-brand h2{
+		color: white;
+		float: right;
+		font-size: 19px;
+	}
+	#myNavbar{
+		margin-top: 20px;
+	}	#navbar-toggle{
+		background-color: white;
+	}
+	#navbar-toggle:focus {
+		background-color: white;
+	}
+	#myNavbar li a{
+		background-color: #7030A0;
+		color: white;
+	}
+	#myNavbar #active a{
+			background-color: white;
+		color: #7030A0;
+		border-radius: 0px;	
+	}
+	#myNavbar li a:hover{
+		transition: 0.3s;
+		background-color: white;
+		color: #7030A0;	
+	}
+
+}
