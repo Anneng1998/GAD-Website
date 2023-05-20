@@ -9,6 +9,8 @@ if (isset($_POST['save'])){
     $random = random_int(100000, 999999);
     $UniqueID = 'SHA'.$random;
 
+    $sameaddress = $_POST['sameaddress'];
+
     $fname = $_POST['fname'];
     $mname = $_POST['mname'];
     $lname = $_POST['lname'];
@@ -56,6 +58,8 @@ if (isset($_POST['save'])){
 
 $insert_qry = mysqli_query($db, $insert_employee);
 
+if ($sameaddress == 'on') {
+
     $cno = $_POST['cno'];
     $cstreet = $_POST['cstreet'];
     $csubdivision = $_POST['csubdivision'];
@@ -80,7 +84,54 @@ $insert_qry = mysqli_query($db, $insert_employee);
                             '$cprovince',
                             '$czip')";
 
-$insert_qry1 = mysqli_query($db, $insert_contact);
+    $insert_qry1 = mysqli_query($db, $insert_contact);
+
+    $insert_permanent = "INSERT INTO permanent_address (
+        fldID,
+        house,	
+        street,
+        village,
+        city,
+        province,
+        zip)
+    VALUES (
+            '$UniqueID',
+            '$cno',
+            '$cstreet',
+            '$csubdivision',
+            '$ccity',
+            '$cprovince',
+            '$czip')";
+
+    $insert_qry2 = mysqli_query($db, $insert_permanent);
+    
+} else {
+
+    $cno = $_POST['cno'];
+    $cstreet = $_POST['cstreet'];
+    $csubdivision = $_POST['csubdivision'];
+    $ccity = $_POST['ccity'];
+    $cprovince = $_POST['cprovince'];
+    $czip = $_POST['czip'];
+
+    $insert_contact = "INSERT INTO contact_information (
+                            fldID,
+                            house,	
+                            street,
+                            village,
+                            city,
+                            province,
+                            zip)
+                        VALUES (
+                            '$UniqueID',
+                            '$cno',
+                            '$cstreet',
+                            '$csubdivision',
+                            '$ccity',
+                            '$cprovince',
+                            '$czip')";
+
+    $insert_qry1 = mysqli_query($db, $insert_contact);
 
     $pno = $_POST['pno'];
     $pstreet = $_POST['pstreet'];
@@ -106,7 +157,8 @@ $insert_qry1 = mysqli_query($db, $insert_contact);
                                 '$pprovince',
                                 '$pzip')";
 
-$insert_qry2 = mysqli_query($db, $insert_permanent);
+    $insert_qry2 = mysqli_query($db, $insert_permanent);
+}
 
     $dept = $_POST['dept'];
     $course = $_POST['course'];

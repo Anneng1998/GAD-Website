@@ -38,8 +38,14 @@
                     <div class="col-6">
                         <label style="text-align: center;">Academic Employee</label>
                     </div>
+                    <?php 
+                    
+                    $count_query = mysqli_query($db, "SELECT COUNT(*) as total FROM employee_information WHERE stake_status = 'ACADEMIC'");
+                    $count_view = mysqli_fetch_array($count_query);
+                    
+                    ?>
                     <div class="col-6">
-                        <label style="text-align: center;font-size: -webkit-xxx-large;">50</label>
+                        <label style="text-align: center;font-size: -webkit-xxx-large;"><?php echo $count_view['total']; ?></label>
                     </div>
                 </div>
             </div>
@@ -53,8 +59,14 @@
                     <div class="col-6">
                         <label>Non-Academic Employee</label>
                     </div>
+                    <?php 
+                    
+                    $count_query = mysqli_query($db, "SELECT COUNT(*) as total FROM employee_information WHERE stake_status = 'NON-ACADEMIC'");
+                    $count_view = mysqli_fetch_array($count_query);
+                    
+                    ?>
                     <div class="col-6">
-                        <label style="text-align: center;font-size: -webkit-xxx-large;">50</label>
+                        <label style="text-align: center;font-size: -webkit-xxx-large;"><?php echo $count_view['total']; ?></label>
                     </div>
                 </div>
             </div>
@@ -68,8 +80,14 @@
                     <div class="col-6">
                         <label>Student</label>
                     </div>
+                    <?php 
+                    
+                    $count_query = mysqli_query($db, "SELECT COUNT(*) as total FROM employee_information WHERE stake_status = 'STUDENT'");
+                    $count_view = mysqli_fetch_array($count_query);
+                    
+                    ?>
                     <div class="col-6">
-                        <label style="text-align: center;font-size: -webkit-xxx-large;">50</label>
+                        <label style="text-align: center;font-size: -webkit-xxx-large;"><?php echo $count_view['total']; ?></label>
                     </div>
                 </div>
             </div>
@@ -83,8 +101,14 @@
                     <div class="col-6">
                         <label>External Clients</label>
                     </div>
+                    <?php 
+                    
+                    $count_query = mysqli_query($db, "SELECT COUNT(*) as total FROM employee_information WHERE stake_status = 'ACADEMIC'");
+                    $count_view = mysqli_fetch_array($count_query);
+                    
+                    ?>
                     <div class="col-6">
-                        <label style="text-align: center;font-size: -webkit-xxx-large;">50</label>
+                        <label style="text-align: center;font-size: -webkit-xxx-large;"><?php echo $count_view['total']; ?></label>
                     </div>
                 </div>
             </div>

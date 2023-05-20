@@ -31,6 +31,13 @@
             </li>
 
             <li class="side-nav-item">
+                <a href="stakeholder-list.php" //class="side-nav-link"">
+                    <i class="uil-user-circle"></i>
+                    <span> Stakeholder Profiling </span>
+                </a>
+            </li>
+
+            <li class="side-nav-item">
                 <a href="report.php" //class="side-nav-link"">
                     <i class="uil-chart-pie"></i>
                     <span> Report </span>

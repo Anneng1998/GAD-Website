@@ -36,7 +36,7 @@
 <h3 class="page-title" style="text-align:center;">Employee Information</h3>
 
 
-<form action="stakeholder/non-academic.php" method="post" class="dropzone" id="myAwesomeDropzone" enctype="multipart/form-data">
+<form action="stakeholder/academic.php" method="post" class="dropzone" id="myAwesomeDropzone" enctype="multipart/form-data">
 
 
 
@@ -188,9 +188,9 @@
         $('#checkbox1').change(function () {
             if (!this.checked) 
             //  ^
-            $('#autoUpdate').fadeIn('fast');
+            $('#autoUpdate').show();
             else 
-                $('#autoUpdate').fadeOut('fast');
+                $('#autoUpdate').remove();
         });
     });
 </script>
@@ -227,6 +227,7 @@
             <div class="mb-3">
                 <label for="simpleinput" class="form-label">City/Municipality</label><span class="text-danger"> *</span>
                 <input type="text" name="pcity" id="simpleinput" class="form-control"  required>
+                <input type="hidden" name="sameaddress" class="form-check-input" value="off">
             </div>
         </div>
     </div>

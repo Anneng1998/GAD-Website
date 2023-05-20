@@ -42,7 +42,7 @@ if (isset($_POST['save'])){
                             email) 
                         VALUES (
                             '$UniqueID', 
-                            'ACADEMIC',
+                            'RDE',
                             '$fname', 
                             '$mname', 
                             '$lname', 
@@ -161,19 +161,23 @@ if ($sameaddress == 'on') {
 }
 
     $dept = $_POST['dept'];
-    $course = $_POST['course'];
-    $designation = $_POST['designation'];
+    $program = $_POST['program'];
+    $year = $_POST['year'];
+    $status = $_POST['status'];
 
-    $insert_educational = "INSERT INTO educational_information (
+    $insert_educational = "INSERT INTO student_education_information (
                                 fldID,
-                                educational,
-                                course,
-                                designation)	
-                        VALUES (
+                                department,
+                                program,
+                                years,
+                                statuss)
+                            VALUES (
                                 '$UniqueID',
                                 '$dept',
-                                '$course',
-                                '$designation')";
+                                '$program',
+                                '$year',
+                                '$status'
+                            )";
 
 $insert_qry3 = mysqli_query($db, $insert_educational);
 
@@ -182,9 +186,7 @@ $insert_qry3 = mysqli_query($db, $insert_educational);
     $fourP = $_POST['fourP'];
     $ws = $_POST['ws'];
     $sp = $_POST['sp'];
-    $spouse = $_POST['spouse'];
-    $sStatus = $_POST['sStatus'];
-    $children = $_POST['children'];
+    
 
     $insert_other = "INSERT INTO other_information (
                                 fldID,
@@ -192,57 +194,21 @@ $insert_qry3 = mysqli_query($db, $insert_educational);
                                 disability_type,
                                 fourps,
                                 working_student,
-                                single_parent,
-                                spouse,
-                                spouse_type,
-                                children)
+                                single_parent
                             VALUES (
                                 '$UniqueID',
                                 '$disability',
                                 '$disability1',
                                 '$fourP',
                                 '$ws',
-                                '$sp',
-                                '$spouse',
-                                '$sStatus',
-                                '$children')";
+                                '$sp')";
 
 $insert_qry4 = mysqli_query($db, $insert_other);
 
-    $childname = $_POST['childname'];
-    $childgender = $_POST['childgender'];
-    $childage = $_POST['childage'];
-    $childstatus = $_POST['childstatus'];
-
     
-    // foreach 
-    foreach ($childname as $index => $you) {
-        echo $_childname = $you;
-        echo '<br>';
-        echo $_childgender = $childgender[$index];
-        echo '<br>';
-        echo $_childage = $childage[$index];
-        echo '<br>';
-        echo $_childstatus = $childstatus[$index];
-        echo '<br>';
-
-
-        $foreach_sql = mysqli_query($db, "INSERT INTO children_list (
-                                        fldID, 
-                                        names, 
-                                        sex,
-                                        age,
-                                        cstatus) 
-                                    VALUES (
-                                        '$UniqueID', 
-                                        '$_childname', 
-                                        '$_childgender', 
-                                        '$_childage', 
-                                        '$_childstatus')");
-    }
         
     
-        echo "<script>alert('New data has been added successfully');window.location.href = '../stakeholder-hr.php';</script>";
+        echo "<script>alert('New data has been added successfully');window.location.href = '../stakeholder.php';</script>";
 
 
     }
