@@ -60,7 +60,7 @@ include "database/db.php";
 			<div class="col-md-4" >
 				<?php 
 				$not_stat = "ARCHIVED";
-				$events_sql = $db->prepare("SELECT * FROM tbl_events WHERE status !=? ORDER BY id ASC");
+				$events_sql = $db->prepare("SELECT * FROM tbl_events WHERE statuss !=? ORDER BY id ASC");
 				$events_sql->bind_param('s',$not_stat);
 				$events_sql->execute();
 				$events_sql_result = $events_sql->get_result();
@@ -71,7 +71,7 @@ include "database/db.php";
 					<?php while($events_row = $events_sql_result->fetch_assoc()){ ?>
 						<div class="event">
 							<center>
-								<img src="admin/<?php echo ($events_row['image']); ?>" class="img img-responsive img-event"/>
+								<img src="files/events/<?php echo ($events_row['images']); ?>" class="img img-responsive img-event"/>
 							</center>
 							<h4 ><b><?php echo $events_row['event_title']; ?></b>&nbsp;<span style="color: gray;font-size: 12px"><?php echo $events_row['date_created'];?></span></h4>
 							<br>
@@ -90,7 +90,7 @@ include "database/db.php";
 			<div class="col-md-6">
 				<?php 
 				$not_stat = "ARCHIVED";
-				$newsupdates_sql = $db->prepare("SELECT * FROM tbl_news WHERE status !=? ORDER BY id ASC");
+				$newsupdates_sql = $db->prepare("SELECT * FROM tbl_news WHERE statuss !=? ORDER BY id ASC");
 				$newsupdates_sql->bind_param('s',$not_stat);
 				$newsupdates_sql->execute();
 				$newsupdates_sql_result = $newsupdates_sql->get_result();
