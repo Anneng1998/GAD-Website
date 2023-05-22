@@ -278,8 +278,8 @@
             <label for="example-select" class="form-label">Designation</label><span class="text-danger"> *<span>
             <select class="form-select" name="designation" id="example-select" required>
                 <option value= "">SELECT</option>
-                <option value = "Instruction">Instruction</option>
-                <option value = "Assistant">Assistant Processor</option>
+                <option value = "Instructor">Instructor</option>
+                <option value = "Assistant">Assistant Professor</option>
                 <option value = "Associate">Associate Professor</option>
                 <option value = "Professor">Professor</option>
             </select>
