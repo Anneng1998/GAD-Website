@@ -14,7 +14,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>GAD_RMS</title>
+        <title>CvSU-CCC GAD Unit</title>
+        <link rel="icon" type="images/x-icon" href="img/gad_logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- App favicon -->
         <link rel="shortcut icon" href="assets/images/favicon.ico">
