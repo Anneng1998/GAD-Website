@@ -103,7 +103,7 @@
                     </div>
                     <?php 
                     
-                    $count_query = mysqli_query($db, "SELECT COUNT(*) as total FROM employee_information WHERE stake_status = 'ACADEMIC'");
+                    $count_query = mysqli_query($db, "SELECT COUNT(*) as total FROM employee_information WHERE stake_status = 'RDE'");
                     $count_view = mysqli_fetch_array($count_query);
                     
                     ?>

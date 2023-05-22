@@ -15,7 +15,7 @@ if(isset($_POST['resetpass'])) {
             $id =  $_SESSION['id'];
             $md5Password = md5($npass);
             $update_pass_qry = mysqli_query($db,"UPDATE tbl_users SET fldPassword = '$md5Password' where fldIdNumber = '$id'");
-            echo "<script>alert('Change password successfully. You can now login');window.location.href = 'index.php';</script>";
+            echo "<script>alert('Change password successfully. You can now login');window.location.href = 'login.php';</script>";
 
         }else{
             echo "<script>alert('Password not match');window.location.href = 'reset-password.php';</script>";

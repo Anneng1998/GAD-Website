@@ -30,12 +30,12 @@
                 </a>
             </li>
 
-            <li class="side-nav-item">
+            <!-- <li class="side-nav-item">
                 <a href="stakeholder-list.php" //class="side-nav-link"">
                     <i class="uil-user-circle"></i>
                     <span> Stakeholder Profiling </span>
                 </a>
-            </li>
+            </li> -->
 
             <li class="side-nav-item">
                 <a href="report.php" //class="side-nav-link"">
@@ -83,6 +83,20 @@
                 <a href="infastracture.php" //class="side-nav-link""">
                     <i class="uil-parcel"></i>
                     <span> Infastructure Project </span>
+                </a>
+            </li>
+
+            <li class="side-nav-item">
+                <a href="message.php" //class="side-nav-link""">
+                    <i class="uil-parcel"></i>
+                    <span> Messages </span>
+                </a>
+            </li>
+
+            <li class="side-nav-item">
+                <a href="news.php" //class="side-nav-link""">
+                    <i class="uil-parcel"></i>
+                    <span> News and Update </span>
                 </a>
             </li>
         </ul>
