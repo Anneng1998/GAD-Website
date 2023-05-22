@@ -60,7 +60,7 @@ include "database/db.php";
 			<div class="col-md-4" >
 				<?php 
 				$not_stat = "ARCHIVED";
-				$events_sql = $db->prepare("SELECT * FROM tbl_events WHERE statuss !=? ORDER BY id ASC");
+				$events_sql = $db->prepare("SELECT * FROM tbl_events WHERE statuss = 'unarchive' ORDER BY id ASC");
 				$events_sql->bind_param('s',$not_stat);
 				$events_sql->execute();
 				$events_sql_result = $events_sql->get_result();
@@ -90,7 +90,7 @@ include "database/db.php";
 			<div class="col-md-6">
 				<?php 
 				$not_stat = "ARCHIVED";
-				$newsupdates_sql = $db->prepare("SELECT * FROM tbl_news WHERE statuss !=? ORDER BY id ASC");
+				$newsupdates_sql = $db->prepare("SELECT * FROM tbl_news WHERE statuss = 'unarchive' ORDER BY id ASC");
 				$newsupdates_sql->bind_param('s',$not_stat);
 				$newsupdates_sql->execute();
 				$newsupdates_sql_result = $newsupdates_sql->get_result();
