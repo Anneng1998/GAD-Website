@@ -42,7 +42,7 @@ if (isset($_POST['save'])){
                             email) 
                         VALUES (
                             '$UniqueID', 
-                            'RDE',
+                            'STUDENT',
                             '$fname', 
                             '$mname', 
                             '$lname', 
