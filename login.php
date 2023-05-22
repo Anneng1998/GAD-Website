@@ -56,6 +56,10 @@ if(isset($_POST['login'])) {
         <style>
             .auth-fluid{
                 background: #727cf5;
+                background-image: url('img/gad logo.jpg');
+                background-image: url(img/gad logo.jpg);
+                background-position: center;
+                background-size: contain;
             }
         </style>
     </head>
@@ -103,7 +107,6 @@ if(isset($_POST['login'])) {
                 </div> <!-- end .align-items-center.d-flex.h-100-->
             </div>
         </div>
-
 
         <!-- bundle -->
         <script src="assets/js/vendor.min.js"></script>
