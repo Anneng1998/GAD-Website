@@ -23,8 +23,8 @@
                 <div class="page-title-right">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#primary-header-modal">Add New</button>
                 <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#warning-header-modal">Add Events</button>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#primary-header-modal">View News Information</button>
-                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#primary-header-modal">View Events Information</button>    
+                <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#primary1-header-modal">View News Information</button>
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#warning1-header-modal">View Events Information</button>     -->
             </div>
                 <h4 class="page-title">News and Updates</h4>
             </div>
@@ -39,7 +39,7 @@
 
             <?php
                 $news_query = mysqli_query($db, "Select * from tbl_news where statuss = 'unarchive' order by id");
-            foreach ($news_query as $news_data){
+                foreach ($news_query as $news_data){
             ?>
 
             <div class="card d-block" style="box-shadow: 1px 2px 5px #333; margin: 20px;">
@@ -53,10 +53,15 @@
                         <p class="card-text"><?php echo $news_data['news_desc'] ?></p>
                         <p class="card-text"><?php echo $news_data['news_vid_link'] ?></p>
                     </div>
+                    <div class="card-footer text-muted">
+                        <button style = "float: right;" title="DELETE" class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#newsdelete<?php echo $news_data['id'] ?>"><i class="dripicons-trash"></i></button>
+                        <button style = "float: right;" title="EDIT" class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target=""><i class="dripicons-document-edit"></i></button>
+                    </div>
                 </div>
             
             </div><br>
             <?php
+                include 'backend/news-delete.php';
                 }
             ?>
     
@@ -69,7 +74,7 @@
 
             <?php
                 $events_query = mysqli_query($db, "Select * from tbl_events where statuss = 'unarchive' order by id");
-            foreach ($events_query as $events_data){
+                foreach ($events_query as $events_data){
             ?>
 
             <div class="card d-block" style="box-shadow: 1px 2px 5px #333; margin: 20px;">
@@ -80,11 +85,16 @@
                     <h2 class="card-title"><?php echo $events_data['date_created'] ?></h2>
                     <p class="card-text"><?php echo $events_data['event_desc'] ?></p>
                 </div>
+                <div class="card-footer text-muted">
+                    <button style = "float: right;" title="DELETE" class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#eventsdelete<?php echo $events_data['id'] ?>"><i class="dripicons-trash"></i></button>
+                    <button style = "float: right;" title="EDIT" class="btn btn-warning shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target=""><i class="dripicons-document-edit"></i></button>
+                </div>
             </div>
                             
             </div><br>
 
             <?php
+                include 'backend/event-delete.php';
                 }
             ?>
 
@@ -99,5 +109,7 @@
 <?php 
     include 'backend/news-add.php';
     include 'backend/event-add.php';
+    include 'backend/news-view.php';
+    include 'backend/event-view.php';
     include 'include/footer.php';
 ?>

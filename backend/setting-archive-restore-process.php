@@ -32,6 +32,13 @@
 
         $update_query = mysqli_query($db, "update tbl_extension set fldStatus = 'unarchive' WHERE fldUID = '$id'");
 
+    } elseif ($from == 'tbl_news') {
+
+        $update_query = mysqli_query($db, "update tbl_news set statuss = 'unarchive' WHERE fldUID = '$id'");
+
+    } elseif ($from == 'tbl_events') {
+
+        $update_query = mysqli_query($db, "update tbl_events set statuss = 'unarchive' WHERE fldUID = '$id'");
     }
 
     echo "<script>alert('data has been restore successfully');window.location.href = '../setting.php';</script>";
