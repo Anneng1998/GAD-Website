@@ -11,9 +11,9 @@ if(isset($_POST['resetpass'])) {
         echo "<script>alert('All fields are required');window.location.href = 'reset-password.php';</script>";
     } else {
         if($npass == $cpass){
-            echo $email =  $_SESSION['email'];
-            echo $id =  $_SESSION['id'];
-            echo $md5Password = md5($npass);
+            $email =  $_SESSION['email'];
+            $id =  $_SESSION['id'];
+            $md5Password = md5($npass);
             $update_pass_qry = mysqli_query($db,"UPDATE tbl_users SET fldPassword = '$md5Password' where fldIdNumber = '$id'" );
             echo "<script>alert('Change password successfully. You can now login');window.location.href = 'login.php';</script>";
 
