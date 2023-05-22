@@ -39,7 +39,7 @@
         </tr>
     </thead>
     <tbody>
-    <?php
+        <?php
             $plan_query = mysqli_query($db, "Select * from tbl_planbudget where fldStatus = 'unarchive' order by fldID");
             foreach ($plan_query as $plan_data){
         ?>
