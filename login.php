@@ -56,10 +56,12 @@ if(isset($_POST['login'])) {
         <style>
             .auth-fluid{
                 background: #727cf5;
-                background-image: url('img/gad logo.jpg');
-                background-image: url(img/gad logo.jpg);
-                background-position: center;
+                background-image: url('img/gad_logo.png');
+                background-repeat: no-repeat;
                 background-size: contain;
+                background-position: 70%;
+                position: relative;
+                z-index: 1; */
             }
         </style>
     </head>
