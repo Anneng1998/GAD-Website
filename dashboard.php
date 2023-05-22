@@ -114,7 +114,56 @@
             </div>
         </div> <!-- end card-->
     </div>
-</div>
+    </div>
+</div> 
+    <table class="table table-dark mb-0">
+        <thead>
+            <tr>
+                <th>Faculty</th>
+                <th>Male</th>
+                <th>Female</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Ph. D</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ph. D Units</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>MA / MS</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>BS / BA</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>BS / BA Units</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table> 
 
 
 
