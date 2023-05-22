@@ -17,7 +17,7 @@ if(isset($_POST['addevents'])){
 
     $img_ex_loc = strtolower($img_ex);
 
-    $allow_ex = array("mp4");
+    $allow_ex = array("jpg");
 
 
     if($title == "" && $descriptions == ""){
