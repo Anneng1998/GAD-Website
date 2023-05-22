@@ -54,30 +54,34 @@ include "database/db.php";
 
 
 	<br><br><br>
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
 			<div class="col-md-1" ></div>
 			<div class="col-md-4" >
-				
-				<h3>Programs and Events</h3>
+				<?php 
+				$not_stat = "unarchive";
+				$events_sql = $db->prepare("SELECT * FROM tbl_events WHERE statuss = 'unarchive' ORDER BY id ASC");
+				$events_sql->bind_param('s',$not_stat);
+				$events_sql->execute();
+				$events_sql_result = $events_sql->get_result();
+				if ($events_sql_result->num_rows  > 0) {
+					?> 
+
+					
+					<h3>Programs and Events</h3>
 					<hr>
-					<?php
-                    $news_query = mysqli_query($db, "Select * from tbl_news where statuss = 'unarchive' order by id");
-                    foreach ($news_query as $news_data)
-					if (mysqli_num_rows($news_query) > 0)
-					{
-                	?>
-						<div class="card">
-                            <div class="card-header">
-                                <h2> <?php echo $news_data['news_title'] ?> </h2>
-                            </div>
-                            <div class="card-body">
-                                <h5 class="card-title"><?php echo $news_data['news_date'] ?></h5>
-                                <p class="card-text"><?php echo $news_data['news_desc'] ?></p>
-                                <p class="card-text"><?php echo $news_data['news_vid_link'] ?></p>
-                            </div>
-                        </div>
-						<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+					<?php while($events_row = $events_sql_result->fetch_assoc()){ ?>
+						<div class="event">
+							<center>
+								<img src="files/events/<?php echo ($events_row['images']); ?>" class="img img-responsive img-event"/>
+							</center>
+							<h4 ><b><?php echo $events_row['event_title']; ?></b>&nbsp;<span style="color: gray;font-size: 12px"><?php echo $events_row['date_created'];?></span></h4>
+							<br>
+							<p style="text-align:justify;"><?php echo $events_row['event_desc'];?></p>
+							<br>
+						</div>
+						<br>
+					<?php } ?>
 					<?php
 				}else {
 					echo "<h2>No events as of today.</h2>";
@@ -86,28 +90,35 @@ include "database/db.php";
 			</div>
 			
 			<div class="col-md-6">
-				<h3>Latest News</h3>
-				<hr>
+				<?php 
+				$not_stat = "unarchive";
+				$newsupdates_sql = $db->prepare("SELECT * FROM tbl_news WHERE statuss = 'unarchive' ORDER BY id ASC");
+				$newsupdates_sql->bind_param('s',$not_stat);
+				$newsupdates_sql->execute();
+				$newsupdates_sql_result = $newsupdates_sql->get_result();
+				if ($newsupdates_sql_result->num_rows  > 0) {
+					?> 
+					<h3>Latest News</h3>
+					<hr>
+					<?php while($newsupdates_row = $newsupdates_sql_result->fetch_assoc()){ ?>
+						<div class="event">
+							<?php if ($newsupdates_row['news_vid_link']) {
+								$news_link = $newsupdates_row['news_vid_link'];
+								echo "<div class='fb-video' data-href='$news_link' data-width='500' data-show-text='false'>
+								</div>";
+							}?>
+							<h4><b><?php echo $newsupdates_row['news_title']; ?></b>&nbsp;<span style="color: gray;font-size: 12px"><?php echo $newsupdates_row['news_date'];?></span></h4>
+							<p ><?php echo $newsupdates_row['news_desc'];?></p>
+							<br>
+						</div>
+						<br>
+					<?php } ?>
+
 					<?php
-                    $news_query = mysqli_query($db, "Select * from tbl_events where statuss = 'unarchive' order by id");
-                    foreach ($news_query as $events_data)
-					if (mysqli_num_rows($news_query) > 0)
-					{
-                	?>
-						<div class="card" >
-                            <img class="card-img-top" src="files/events/<?php echo $events_data['images'] ?>" alt="Card image cap" style="max-width:100%;">
-                            <div class="card-body">
-                                <h2 class="card-title"><?php echo $events_data['event_title'] ?></h2>
-                                <h5 class="card-title"><?php echo $events_data['date_created'] ?></h5>
-                                <p class="card-text"><?php echo $events_data['event_desc'] ?></p>
-                            </div>
-                        </div>
-						<hr style="height:2px;border-width:0;color:gray;background-color:gray">
-					<?php
-					}else {
-						echo "<h2>No events as of today.</h2>";
-					}
-					?>
+				}else {
+					echo "<h2>No news and updates as of today.</h2>";
+				}
+				?>
 			</div>
 		</div>
 	</div>

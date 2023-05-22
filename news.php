@@ -83,7 +83,7 @@
                         <div class="card d-block" style="box-shadow: 1px 2px 5px #333; margin: 20px;">
 
                             <div class="card" >
-                                <img class="card-img-top" src="files/events/<?php echo $events_data['images'] ?>" alt="Card image cap" style="height:">
+                                <img class="card-img-top" src="files/events/<?php echo $events_data['images'] ?>" alt="Card image cap" style="max-width:100%;">
                                 <div class="card-body">
                                     <h2 class="card-title"><?php echo $events_data['event_title'] ?></h2>
                                     <h5 class="card-title"><?php echo $events_data['date_created'] ?></h5>
