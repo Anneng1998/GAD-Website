@@ -120,47 +120,95 @@
         <thead>
             <tr>
                 <th>Faculty</th>
-                <th>Male</th>
                 <th>Female</th>
+                <th>Male</th>
                 <th>Total</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td>Ph. D</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                $count_phdf = mysqli_query($db, "select count(*) as FemalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'FEMALE' and b.educational = 'Ph. D'");
+                $phd_view = mysqli_fetch_array($count_phdf);
+                $count_phdm = mysqli_query($db, "select count(*) as MalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'MALE' and b.educational = 'Ph. D'");
+                $phd_view1 = mysqli_fetch_array($count_phdm);
+                $count_phdt = mysqli_query($db, "select count(*) as total from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and b.educational = 'Ph. D'");
+                $phd_view2 = mysqli_fetch_array($count_phdt);
+                ?>
+                <td><?php echo $phd_view['FemalePHD']; ?></td>
+                <td><?php echo $phd_view1['MalePHD']; ?></td>
+                <td><?php echo $phd_view2['total']; ?></td>
             </tr>
             <tr>
                 <td>Ph. D Units</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                $count_phdf = mysqli_query($db, "select count(*) as FemalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'FEMALE' and b.educational = 'Ph. D Units'");
+                $phd_view = mysqli_fetch_array($count_phdf);
+                $count_phdm = mysqli_query($db, "select count(*) as MalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'MALE' and b.educational = 'Ph. D Units'");
+                $phd_view1 = mysqli_fetch_array($count_phdm);
+                $count_phdt = mysqli_query($db, "select count(*) as total from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and b.educational = 'Ph. D Units'");
+                $phd_view2 = mysqli_fetch_array($count_phdt);
+                ?>
+                <td><?php echo $phd_view['FemalePHD']; ?></td>
+                <td><?php echo $phd_view1['MalePHD']; ?></td>
+                <td><?php echo $phd_view2['total']; ?></td>
             </tr>
             <tr>
                 <td>MA / MS</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                $count_phdf = mysqli_query($db, "select count(*) as FemalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'FEMALE' and b.educational = 'MA/MS'");
+                $phd_view = mysqli_fetch_array($count_phdf);
+                $count_phdm = mysqli_query($db, "select count(*) as MalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'MALE' and b.educational = 'MA/MS'");
+                $phd_view1 = mysqli_fetch_array($count_phdm);
+                $count_phdt = mysqli_query($db, "select count(*) as total from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and b.educational = 'MA/MS'");
+                $phd_view2 = mysqli_fetch_array($count_phdt);
+                ?>
+                <td><?php echo $phd_view['FemalePHD']; ?></td>
+                <td><?php echo $phd_view1['MalePHD']; ?></td>
+                <td><?php echo $phd_view2['total']; ?></td>
+            </tr>
+            <tr>
+                <td>MA / MS Units</td>
+                <?php
+                $count_phdf = mysqli_query($db, "select count(*) as FemalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'FEMALE' and b.educational = 'MA/MS Units'");
+                $phd_view = mysqli_fetch_array($count_phdf);
+                $count_phdm = mysqli_query($db, "select count(*) as MalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'MALE' and b.educational = 'MA/MS Units'");
+                $phd_view1 = mysqli_fetch_array($count_phdm);
+                $count_phdt = mysqli_query($db, "select count(*) as total from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and b.educational = 'MA/MS Units'");
+                $phd_view2 = mysqli_fetch_array($count_phdt);
+                ?>
+                <td><?php echo $phd_view['FemalePHD']; ?></td>
+                <td><?php echo $phd_view1['MalePHD']; ?></td>
+                <td><?php echo $phd_view2['total']; ?></td>
             </tr>
             <tr>
                 <td>BS / BA</td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>BS / BA Units</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                $count_phdf = mysqli_query($db, "select count(*) as FemalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'FEMALE' and b.educational = 'BS/BA'");
+                $phd_view = mysqli_fetch_array($count_phdf);
+                $count_phdm = mysqli_query($db, "select count(*) as MalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'MALE' and b.educational = 'BS/BA'");
+                $phd_view1 = mysqli_fetch_array($count_phdm);
+                $count_phdt = mysqli_query($db, "select count(*) as total from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and b.educational = 'BS/BA'");
+                $phd_view2 = mysqli_fetch_array($count_phdt);
+                ?>
+                <td><?php echo $phd_view['FemalePHD']; ?></td>
+                <td><?php echo $phd_view1['MalePHD']; ?></td>
+                <td><?php echo $phd_view2['total']; ?></td>
             </tr>
             <tr>
                 <td>Total</td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <?php
+                $count_phdf = mysqli_query($db, "select count(*) as FemalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'FEMALE'");
+                $phd_view = mysqli_fetch_array($count_phdf);
+                $count_phdm = mysqli_query($db, "select count(*) as MalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'MALE'");
+                $phd_view1 = mysqli_fetch_array($count_phdm);
+                $count_phdt = mysqli_query($db, "select count(*) as total from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC'");
+                $phd_view2 = mysqli_fetch_array($count_phdt);
+                ?>
+                <td><?php echo $phd_view['FemalePHD']; ?></td>
+                <td><?php echo $phd_view1['MalePHD']; ?></td>
+                <td><?php echo $phd_view2['total']; ?></td>
             </tr>
         </tbody>
     </table> 

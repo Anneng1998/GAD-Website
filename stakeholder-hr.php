@@ -257,11 +257,11 @@
             <label for="example-select" class="form-label">Highest Educational Attainment</label><span class="text-danger"> *<span>
             <select class="form-select" name="dept" id="example-select">
                 <option value= "">SELECT</option>
-                <option value = "Bachelor">Bachelor Degre</option>
-                <option value = "Master">Master Degree</option>
-                <option value = "Doctorate">Doctorate Degree</option>
-                <option value = "UnitsM">Units in Masters</option>
-                <option value = "UnitsD">Units in Doctorate</option>
+                <option value = "BS/BA">BS/BA</option>
+                <option value = "MA/MS Units">MA/MS Units</option>
+                <option value = "MA/MS">MA/MS</option>
+                <option value = "Ph. D Units">Ph. D Units</option>
+                <option value = "Ph. D">Ph. D</option>
             </select>
         </div>
     </div>
