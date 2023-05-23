@@ -12,7 +12,7 @@
 
             <div class="modal-footer">
                 <form action="backend/media-reference-delete-process.php?id=<?php echo $videodata['fldID'] ?>" method="post">
-                    <button name="delete-video" class="btn btn-danger">Archieve</button>
+                    <button name="delete-video" class="btn btn-danger">archive</button>
                 </form>
             </div>
         </div><!-- /.modal-content -->

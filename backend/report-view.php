@@ -2,7 +2,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header modal-colored-header bg-warning">
-                <h4 class="modal-title" id="info-header-modalLabel">VIEW DETAILS PLAN and BUDGET</h4>
+                <h4 class="modal-title" id="info-header-modalLabel">VIEW REPORT</h4>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
             </div>
 

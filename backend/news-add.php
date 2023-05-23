@@ -8,13 +8,31 @@ if(isset($_POST['addnews'])){
     $descriptions = str_replace("'", "\'", $description);
     $link = $_POST['link'];
 
+    $img_name = $_FILES['file']['name'];
+    $img_size = $_FILES['file']['size'];
+    $img_tmp = $_FILES['file']['tmp_name'];
+    $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
+
+    $fileSizeRound = round($img_size / 1024 / 1024);
+    $fileSize = $fileSizeRound.' MB';
+
+    $img_ex_loc = strtolower($img_ex);
+
+    $allow_ex = array("jpg");
+
+
     if($title == "" && $descriptions == ""){
         echo "<script>alert('All fields are required');window.location.href = 'news.php';</script>";
     } else {
+
+            $new_name = $title.'.'.$img_ex_loc;
+            $img_path_sa_buhay_niya = 'files/news/'.$new_name;
+            move_uploaded_file($img_tmp, $img_path_sa_buhay_niya);
+
             $random = random_int(100000, 999999);
             $UniqueID = 'N'.$random;
 
-            $insert_news = "INSERT INTO tbl_news (fldUID, news_title, news_date, news_desc, news_vid_link, statuss, fldFrom) VALUES ('$UniqueID', '$title', '$today', '$descriptions', '$link', 'unarchive', 'tbl_news')";
+            $insert_news = "INSERT INTO tbl_news (fldUID, news_title, news_date, news_desc, imagess, news_vid_link, statuss, fldFrom) VALUES ('$UniqueID', '$title', '$today', '$descriptions', '$new_name', '$link', 'unarchive', 'tbl_news')";
             $insert_qry = mysqli_query($db, $insert_news); 
 
             echo "<script>alert('New news has been added successfully');window.location.href = 'news.php';</script>";
@@ -44,6 +62,14 @@ if(isset($_POST['addnews'])){
                     <label for="simpleinput" class="form-label">Description</label> <span class="text-danger"> *</span>
                     <input type="text" name="description" id="simpleinput" class="form-control" required>
                 </div>
+
+                <div class="mb-3">
+                    <label for="simpleinput" class="form-label">Attach Image</label>
+                    <div class="fallback">
+                        <input name="file" type="file" accept="image/png, image/gif, image/jpeg" multiple />
+                    </div>
+                        <span class="text-muted font-13">(Accepted file type: .JPG)</span>
+                </div> 
 
                 <div class="mb-3">
                     <label for="simpleinput" class="form-label">Link(Optional)</label>

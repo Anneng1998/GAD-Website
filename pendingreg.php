@@ -33,10 +33,11 @@
             <td><?php echo $user_data['fldDepartment'] ?></td>
             <td>
                 <button class="btn btn-success shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#accept<?php echo $user_data['fldIdNumber'] ?>"><i class=""></i>ACCEPT</button>
-                <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target=""><i class=""></i>REJECT</button>
+                <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#reject<?php echo $user_data['fldIdNumber'] ?>"><i class=""></i>REJECT</button>
             </td>
         </tr>
         <?php
+            include 'backend/pendingreg-reject.php';
             include 'backend/pendingreg-accept.php';
             }
         ?>

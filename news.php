@@ -24,7 +24,7 @@
                     <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#primary1-header-modal">View News Information</button>
                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#warning1-header-modal">View Events Information</button>     -->
                 </div>
-                <h4 class="page-title">News and Updates</h4>
+                <h4 class="page-title">News and Events</h4>
             </div>
         </div>
     </div>
@@ -46,6 +46,22 @@
 
                         <div class="card">
                             <div class="card-header">
+                                <?php 
+                                    $itolitrato = $news_data['imagess'];
+
+                                    if ( $itolitrato == ''){
+                                ?>
+                                    <img src="files/news/no-image-available.jpeg" class="card-img-top" alt="..." style="width: 150px;height: 200px;margin-left: 30%;padding: 10px;">
+                                <?php       
+                                    }else{
+                                ?>
+                                    <img src="files/news/<?php echo $news_data['imagess'] ?>" class="card-img-top" alt="..." style="width: 150px;height: 200px;margin-left: 30%;padding: 10px;">
+                                <?php
+                                    }
+
+                                ?>
+
+                               
                                 <h2> <?php echo $news_data['news_title'] ?> </h2>
                             </div>
                             <div class="card-body">
@@ -83,7 +99,23 @@
                         <div class="card d-block" style="box-shadow: 1px 2px 5px #333; margin: 20px;">
 
                             <div class="card" >
-                                <img class="card-img-top" src="files/events/<?php echo $events_data['images'] ?>" alt="Card image cap" style="max-width:100%;">
+                                <?php 
+                                        $itolitrato = $events_data['images'];
+
+                                        if ( $itolitrato == ''){
+                                    ?>
+                                        <img src="files/events/no-image-available.jpeg" class="card-img-top" alt="..." style="width: 150px;height: 200px;align-self: center;padding: 10px;">
+                                    <?php       
+                                        }else{
+                                    ?>
+                                        <img src="files/events/<?php echo $events_data['images'] ?>" class="card-img-top" alt="..." style="width: 150px;height: 200px;align-self: center;padding: 10px;">
+                                    <?php
+                                        }
+
+                                ?>
+
+                       
+                                
                                 <div class="card-body">
                                     <h2 class="card-title"><?php echo $events_data['event_title'] ?></h2>
                                     <h5 class="card-title"><?php echo $events_data['date_created'] ?></h5>

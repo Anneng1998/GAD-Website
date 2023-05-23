@@ -84,34 +84,34 @@ if(isset($_POST['upload'])){
                 <div class="row">
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="simpleinput" class="form-label">Title</label>
+                            <label for="simpleinput" class="form-label">Title</label><span class="text-danger"> *</span>
                             <input type="text" name="title" id="simpleinput" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="simpleinput" class="form-label">Proponent (Researcher)</label>
+                            <label for="simpleinput" class="form-label">Proponent (Researcher)</label><span class="text-danger"> *</span>
                             <input type="text" name="proponent" id="simpleinput" class="form-control" required>
                         </div>
                     </div>
 
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="example-select" class="form-label">Date Of Approval</label>
+                            <label for="example-select" class="form-label">Date Of Approval</label><span class="text-danger"> *</span>
                             <input type="text" class="form-control date" name="dateofapproval" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true" required>
                         </div>
                     </div>
                     <div class="col-6">
                         <div class="mb-3">
-                            <label for="example-select" class="form-label">Target Completion</label>
+                            <label for="example-select" class="form-label">Target Completion</label><span class="text-danger"> *</span>
                             <input type="text" class="form-control date" name="targetcompletion" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true" required>
                         </div>
                     </div>
 
                     <div class="col-12">
                         <div class="mb-3">
-                            <label for="simpleinput" class="form-label">Description</label>
+                            <label for="simpleinput" class="form-label">Description</label><span class="text-danger"> *</span>
                             <input type="text" name="description" id="simpleinput" class="form-control" required>
                         </div>
                     </div>
@@ -121,12 +121,14 @@ if(isset($_POST['upload'])){
                     <label for="inputEmail3" class="col-6 col-form-label">Copy of Proposal</label>
                     <div class="col-6 fallback">
                         <input name="proposal" type="file" accept="pdf" multiple />
+                        <h6> File type accepted (PDF) </h6>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="inputEmail3" class="col-6 col-form-label">Accomplished HGDG Design</label>
+                    <label for="inputEmail3" class="col-6 col-form-label">Accomplished HGDG Design Checklist</label>
                     <div class="col-6 fallback">
                         <input name="hgdg" type="file" accept="pdf" multiple />
+                        <h6> File type accepted (PDF) </h6>
                     </div>
                 </div>
 

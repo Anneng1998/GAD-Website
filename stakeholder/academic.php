@@ -67,7 +67,7 @@ if ($sameaddress == 'on') {
     $cprovince = $_POST['cprovince'];
     $czip = $_POST['czip'];
 
-    $insert_contact = "INSERT INTO contact_information (
+    $insert_contact = "INSERT INTO  contact_information (
                             fldID,
                             house,	
                             street,
@@ -191,7 +191,6 @@ $insert_qry3 = mysqli_query($db, $insert_educational);
                                 disability,
                                 disability_type,
                                 fourps,
-                                working_student,
                                 single_parent,
                                 spouse,
                                 spouse_type,
@@ -201,7 +200,6 @@ $insert_qry3 = mysqli_query($db, $insert_educational);
                                 '$disability',
                                 '$disability1',
                                 '$fourP',
-                                '$ws',
                                 '$sp',
                                 '$spouse',
                                 '$sStatus',

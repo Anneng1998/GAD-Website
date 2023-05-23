@@ -1,10 +1,9 @@
-<?php 
+<?php
+    include 'database/db.php'; 
     include 'include/header.php';
     include 'include/sidebar.php';
     include 'include/navbar.php';
 ?>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 <style>
     body > div.wrapper > div.content-page > div > div.card.d-block > div.row > div > div {
@@ -15,54 +14,51 @@
     }
 </style>
 
-
 <br><br>
-<div class="card d-block" style="box-shadow: 1px 2px 5px #333;">
 
- <!-- start page title -->
- <div class="row">
-    <div class="col-12">
-        <div class="page-title-box">
-            <div class="page-title-right">
-            </div>
-            <h4 class="page-title">STAKEHOLDER PROFILING</h4>
-        </div>
-    </div>
-</div>     
-<!-- end page title -->
+<?php 
+    $id = $_GET['id']; 
+    echo $id;
 
-<h1 class="page-title" style="text-align:center;">NON-ACADEMIC EMPLOYEE PERSONAL DATA SHEET</h1>
+?>
+
+<div class="card d-block" style="box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, .12);"> <br>
+
+<h1 class="page-title" style="text-align:center;">ACADEMIC EMPLOYEE PERSONAL DATA SHEET</h1>
 <br>
 <h3 class="page-title" style="text-align:center;">Employee Information</h3>
 
 
-<form action="stakeholder/non-academic.php" method="post" class="dropzone" id="myAwesomeDropzone" enctype="multipart/form-data">
+<form action="" method="GET" class="dropzone" id="myAwesomeDropzone" enctype="multipart/form-data">
 
-
+<?php
+    $view_query = mysqli_query($db, "Select * from employee_information where fldID = '$id'");
+    foreach ($view_query as $view_data){
+?>
 
 <div class ="row">
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">First Name</label><span class="text-danger"> *</span>
-            <input type="text" name="fname" id="simpleinput" class="form-control"  required>
+            <input type="text" name="fname" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $view_data['fname'] ?>">
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Middle Name</label>
-            <input type="text" name="mname" id="simpleinput" class="form-control"  >
+            <input type="text" name="mname" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $view_data['cname'] ?>"  >
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Last Name</label><span class="text-danger"> *</span>
-            <input type="text" name="lname" id="simpleinput" class="form-control"  required>
+            <input type="text" name="lname" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $view_data['lname'] ?>">
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Extension Name</label>
-            <input type="text" name="Ename" id="simpleinput" class="form-control"  >
+            <input type="text" name="Ename" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $view_data['exname'] ?>"  >
         </div>
     </div>
 </div>
@@ -71,39 +67,28 @@
     <div class = "col-2">
         <div class="mb-3">
             <label for="example-select" class="form-label">Sex</label><span class="text-danger"> *<span>
-            <select class="form-select" name="gender" id="example-select">
-                <option value= "">SELECT</option>
-                <option value = "Female">Female</option>
-                <option value = "Male">Male</option>
-            </select>
+            <input type="text" name="Ename" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $view_data['sex'] ?>"  >
         </div>
     </div>
 
     <div class = "col-2">
         <div class="mb-3">
             <label for="example-select" class="form-label">Civil Status</label><span class="text-danger"> *<span>
-            <select class="form-select" name="civil" id="example-select">
-                <option value= "">SELECT</option>
-                <option value = "Single">Single</option>
-                <option value = "Married">Married</option>
-                <option value = "Widowed">Widowed</option>
-                <option value = "Divorced">Divorced</option>
-                <option value = "Separated">Separated</option>
-            </select>
+            <input type="text" name="Ename" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $view_data['cstatus'] ?>"  >
         </div>
     </div>
 
     <div class="col-4">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Citizenship</label><span class="text-danger"> *</span>
-            <input type="text" name="citizenship" id="simpleinput" class="form-control"  required>
+            <input type="text" name="citizenship" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $view_data['citizen'] ?>"  >
         </div>
     </div>
 
     <div class="col-4">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Religion</label>
-            <input type="text" name="religion" id="simpleinput" class="form-control"  >
+            <input type="text" name="religion" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $view_data['religion'] ?>"   >
         </div>
     </div>
 </div>
@@ -112,31 +97,40 @@
     <div class="col-2">
         <div class="mb-3">
             <label for="example-select" class="form-label">Date of Birth</label><span class="text-danger"> *</span>
-            <input type="text" class="form-control date" name="birthday" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
+            <input type="text" class="form-control date" name="birthday" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true" readonly="true"  value="<?php echo $view_data['dob'] ?>"  >
         </div>
     </div>
 
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Place of Birth</label>
-            <input type="text" name="place" id="simpleinput" class="form-control"  >
+            <label for="simpleinput" class="form-label">Place of Birth</label>>
+            <input type="text" name="place" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $view_data['pob'] ?>"    >
         </div>
     </div>
 
     <div class="col-4">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Mobile Number</label>
-            <input type="number" name="mobile" id="simpleinput" class="form-control"  >
+            <input type="number" name="mobile" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $view_data['mobile'] ?>"  >
         </div>
     </div>
 
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Email Address</label>
-            <input type="email" name="email" id="simpleinput" class="form-control"  >
+            <input type="email" name="email" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $view_data['email'] ?>"   >
         </div>
     </div>
 </div>
+
+<?php
+    }
+?>
+
+<?php
+    $view_query = mysqli_query($db, "Select * from contact_information where fldID = '$id'");
+    foreach ($view_query as $view_data){
+?>
 
 <h4 class="page-title" style="text-align:center;">Contact Information</h4>
 <h5 class="page-title" style="padding: 15px;">Residential Address</h5>
@@ -145,25 +139,25 @@
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
-            <input type="text" name="cno" id="simpleinput" class="form-control"  required>
+            <input type="text" name="cno" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $view_data['house'] ?>"   >
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Street</label><span class="text-danger"> *</span>
-            <input type="text" name="cstreet" id="simpleinput" class="form-control"  required>
+            <input type="text" name="cstreet" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $view_data['street'] ?>"   >
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Subdivision/Village</label><span class="text-danger"> *</span>
-            <input type="text" name="csubdivision" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Subdivision/Village</label>
+            <input type="text" name="csubdivision" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $view_data['village'] ?>"   >
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">City/Municipality</label><span class="text-danger"> *</span>
-            <input type="text" name="ccity" id="simpleinput" class="form-control"  required>
+            <input type="text" name="ccity" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $view_data['city'] ?>"   >
         </div>
     </div>
 </div>
@@ -172,81 +166,71 @@
     <div class="col-5">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Province</label><span class="text-danger"> *</span>
-            <input type="text" name="cprovince" id="simpleinput" class="form-control"  required>
+            <input type="text" name="cprovince" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $view_data['province'] ?>"   >
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Zip Code</label><span class="text-danger"> *</span>
-            <input type="number" name="czip" id="simpleinput" class="form-control"  required>
+            <input type="number" name="czip" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $view_data['zip'] ?>"   >
         </div>
     </div>
 </div>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#checkbox1').change(function () {
-            if (!this.checked) 
-            //  ^
-            $('#autoUpdate').show();
-            else 
-                $('#autoUpdate').remove();
-        });
-    });
-</script>
+<?php
+    }
+?>
 
+<?php
+    $view_query = mysqli_query($db, "Select * from permanent_address where fldID = '$id'");
+    foreach ($view_query as $view_data){
+?>
 
-<div class="mt-3">
-    <div class="form-check" style="padding: 15px; margin: 20px;">
-        <input type="checkbox" id="checkbox1" name="sameaddress" class="form-check-input">
-        <label class="form-check-label" for="sameaddress">Permanent address same as Residential Address</label>
+<div class = "row">
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
+            <input type="text" name="cno" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $view_data['house'] ?>"   >
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Street</label><span class="text-danger"> *</span>
+            <input type="text" name="cstreet" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $view_data['street'] ?>"   >
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Subdivision/Village</label>
+            <input type="text" name="csubdivision" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $view_data['village'] ?>"   >
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">City/Municipality</label><span class="text-danger"> *</span>
+            <input type="text" name="ccity" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $view_data['city'] ?>"   >
+        </div>
     </div>
 </div>
 
-<div id="autoUpdate" class="autoUpdate" style="padding:15px;">
-    <div class = "row">
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
-                <input type="text" name="pno" id="simpleinput" class="form-control"  required>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Street</label><span class="text-danger"> *</span>
-                <input type="text" name="pstreet" id="simpleinput" class="form-control"  required>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Subdivision/Village</label><span class="text-danger"> *</span>
-                <input type="text" name="psubdivision" id="simpleinput" class="form-control"  required>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">City/Municipality</label><span class="text-danger"> *</span>
-                <input type="text" name="pcity" id="simpleinput" class="form-control"  required>
-                <input type="hidden" name="sameaddress" class="form-check-input" value="off">
-            </div>
+<div class = "row">
+    <div class="col-5">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Province</label><span class="text-danger"> *</span>
+            <input type="text" name="cprovince" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $view_data['province'] ?>"   >
         </div>
     </div>
-
-    <div class = "row" >
-        <div class="col-5">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Province</label><span class="text-danger"> *</span>
-                <input type="text" name="pprovince" id="simpleinput" class="form-control"  required>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Zip Code</label><span class="text-danger"> *</span>
-                <input type="number" name="pzip" id="simpleinput" class="form-control"  required>
-            </div>
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Zip Code</label><span class="text-danger"> *</span>
+            <input type="number" name="czip" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $view_data['zip'] ?>"   >
         </div>
     </div>
 </div>
+
+<?php
+    }
+?>
 
 <h3 class="page-title" style="text-align:center;">Educational Attainment</h3>
 <br>
@@ -257,10 +241,7 @@
             <label for="example-select" class="form-label">Highest Educational Attainment</label><span class="text-danger"> *<span>
             <select class="form-select" name="dept" id="example-select">
                 <option value= "">SELECT</option>
-                <option value = "Elementary">Elementary Graduate</option>
-                <option value = "Highschool">Highschool Graduate</option>
-                <option value = "Senior">Senior High Graduate</option>
-                <option value = "Bachelor">Bachelor Graduate</option>
+                <option value = "BS/BA">BS/BA</option>
                 <option value = "MA/MS Units">MA/MS Units</option>
                 <option value = "MA/MS">MA/MS</option>
                 <option value = "Ph. D Units">Ph. D Units</option>
@@ -273,6 +254,19 @@
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Course</label><span class="text-danger"> *</span>
             <input type="text" name="course" id="simpleinput" class="form-control"  required>
+        </div>
+    </div>
+
+    <div class = "col-4">
+        <div class="mb-3">
+            <label for="example-select" class="form-label">Designation</label><span class="text-danger"> *<span>
+            <select class="form-select" name="designation" id="example-select" required>
+                <option value= "">SELECT</option>
+                <option value = "Instructor">Instructor</option>
+                <option value = "Assistant">Assistant Professor</option>
+                <option value = "Associate">Associate Professor</option>
+                <option value = "Professor">Professor</option>
+            </select>
         </div>
     </div>
 
@@ -447,8 +441,7 @@
     </div>
     <div class="col-4">
         <div class="" style="float: right">
-            <button class="btn btn-primary " name="save"><i class="mdi mdi-account-circle"></i> Save Information </button>
-            <button class="btn btn-dark" type="submit" name="cancel"><i class="mdi mdi-account-circle"></i> Cancel </button>
+            <button class="btn btn-dark" type="submit" name="cancel"><i class="mdi mdi-account-circle"></i> BACK </button>
         </div>
         <br>
     </div>
@@ -457,89 +450,9 @@
 </form>
 
 <br>
+
+
 </div>
-
-
-
-
-<script type="text/javascript">
-
-    $(function() {
-        $("input[name='spouse']").click(function() {
-            if ($("#chkYes").is(":checked")) {
-                $("#dvPinNo").show();
-            } else {
-                $("#dvPinNo").hide();
-            }
-        });
-    });
-
-    $(function() {
-        $("input[name='disability']").click(function() {
-            if ($("#disabilityY").is(":checked")) {
-                $("#disabilitychoices").show();
-            } else {
-                $("#disabilitychoices").hide();
-            }
-        });
-    });
-
-  
-    $("input[name='children']").click(function() {
-        if ($("#cY").is(":checked")) {
-            $("#childrenYN").show();
-            console.log('True');
-        } else {
-            $("#childrenYN").hide();
-            console.log('False');
-        }
-    });
-
-    console.log('hello');
-
-
-    $(document).on('click', '.remove-btn', function () {
-        $(this).closest('.mainform').remove();
-    });
-
-    $(document).on('click', '#newchild', function () {
-        $('#mainsection').append('<div class="mainform">\
-            <div class="row">\
-                <div class="col-3">\
-                    <div class="mb-3">\
-                        <input type="text" name="childname[]" id="simpleinput" class="form-control">\
-                    </div>\
-                </div>\
-                <div class="col-3">\
-                    <select class="form-select" name="childgender[]" id="example-select">\
-                        <option value= "">SELECT</option>\
-                        <option value = "Female">Female</option>\
-                        <option value = "Male">Male</option>\
-                    </select>\
-                </div>\
-                <div class="col-1">\
-                    <div class="mb-3">\
-                        <input type="text" name="childage[]" id="simpleinput" class="form-control">\
-                    </div>\
-                </div>\
-                <div class="col-3">\
-                    <select class="form-select" name="childstatus[]" id="example-select">\
-                        <option value= "">SELECT</option>\
-                        <option value = "Studying">Studying</option>\
-                        <option value = "Not">Not Studying</option>\
-                    </select>\
-                </div>\
-                <div class="col-2">\
-                    <button class="remove-btn btn btn-danger">Remove</button>\
-                </div>\
-            </div>\
-        </div>');
-    });
-    
-</script>
-
 <?php 
-include 'backend/based-research-upload.php';
 include 'include/footer.php';
 ?>
-

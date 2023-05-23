@@ -239,7 +239,7 @@ if(isset($_POST['mediaupload'])){
                     </div>
 
                     <div class="row mb-3">
-                        <label for="inputEmail3" class="col-6 col-form-label">Accomplished HGDG Design</label>
+                        <label for="inputEmail3" class="col-6 col-form-label">Accomplished HGDG Design Checklist</label>
                         <div class="col-6 fallback">
                             <input name="file2" type="file" accept="pdf" multiple />
                         </div>

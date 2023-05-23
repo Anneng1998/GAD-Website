@@ -39,19 +39,20 @@
     </thead>
     <tbody>
         <?php
-            $plan_query = mysqli_query($db, "Select * from employee_information where stake_status = 'STUDENT' order by fldID");
-            foreach ($plan_query as $plan_data){
+            $view_query = mysqli_query($db, "Select * from employee_information where stake_status = 'STUDENT' order by fldID");
+            foreach ($view_query as $view_data){
         ?>
         <tr>
-            <td><?php echo $plan_data['fname'] ?></td>
-            <td><?php echo $plan_data['lname'] ?></td>
-            <td><?php echo $plan_data['mobile'] ?></td>
-            <td><?php echo $plan_data['email'] ?></td>
+            <td><?php echo $view_data['fname'] ?></td>
+            <td><?php echo $view_data['lname'] ?></td>
+            <td><?php echo $view_data['mobile'] ?></td>
+            <td><?php echo $view_data['email'] ?></td>
             <td>
-                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#view<?php echo $plan_data['id'] ?>"><i class="dripicons-preview"></i></button>
+                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#view<?php echo $view_data['id'] ?>"><i class="dripicons-preview"></i></button>
             </td>
         </tr>
         <?php
+            include 'stakeholder/stakeholder-student-view.php';
             }
         ?>
     </tbody>

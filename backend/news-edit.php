@@ -23,6 +23,20 @@
                         <input type="text" name="description" id="simpleinput" class="form-control" value="<?php echo $news_data['news_desc']?>">
                     </div>
 
+                    <?php 
+                        $itolitrato = $news_data['imagess'];
+                        if ( $itolitrato == ''){
+                        ?>
+                            <img src="files/news/no-image-available.jpeg" class="card-img-top" alt="..." style="width: 150px;height: 200px;margin-left: 30%;padding: 10px;">
+                        <?php       
+                            }else{
+                        ?>
+                            <img src="files/news/<?php echo $news_data['imagess'] ?>" class="card-img-top" alt="..." style="width: 150px;height: 200px;margin-left: 30%;padding: 10px;">
+                        <?php
+                            }
+                    ?>
+
+
                     <div class="mb-3">
                         <label for="simpleinput" class="form-label">Link(Optional)</label>
                         <input type="text" name="link" id="simpleinput" class="form-control" value="<?php echo $news_data['news_vid_link']?>">

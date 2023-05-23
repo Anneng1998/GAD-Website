@@ -98,17 +98,21 @@
                         <tr>
                             <td><?php echo $data['fldTitle'] ?></td>
                             <td>
-                                <a class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target=""><i class="dripicons-trash"></i></a>
+                                <a class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#adelete<?php echo $data['fldUID'] ?>"><i class="dripicons-trash"></i></a>
                                 <a class="btn btn-primary shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#restore<?php echo $data['fldUID'] ?>"><i class="dripicons-export"></i></a>
                             </td>
                         </tr>
                     </tbody>
                     <?php 
+                        include 'backend/setting-archieve-delete.php';
                         include 'backend/setting-archieve-restore.php';
                         }
                     ?>
                 </table>
+               
             </div>
+            <?php ?>
+            
 
             <!-- END Archive Data -->
 
@@ -151,5 +155,6 @@
 </div>
 <!-- end row-->
 <?php 
+    include 'backend/setting-clean.php';
     include 'include/footer.php';
 ?>

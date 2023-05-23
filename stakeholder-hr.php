@@ -49,8 +49,8 @@
     </div>
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Middle Name</label><span class="text-danger"> *</span>
-            <input type="text" name="mname" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Middle Name</label>
+            <input type="text" name="mname" id="simpleinput" class="form-control"  >
         </div>
     </div>
     <div class="col-3">
@@ -61,8 +61,8 @@
     </div>
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Extension Name</label><span class="text-danger"> *</span>
-            <input type="text" name="Ename" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Extension Name</label>
+            <input type="text" name="Ename" id="simpleinput" class="form-control"  >
         </div>
     </div>
 </div>
@@ -102,8 +102,8 @@
 
     <div class="col-4">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Religion</label><span class="text-danger"> *</span>
-            <input type="text" name="religion" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Religion</label>
+            <input type="text" name="religion" id="simpleinput" class="form-control"  >
         </div>
     </div>
 </div>
@@ -118,22 +118,22 @@
 
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Plae of Birth</label><span class="text-danger"> *</span>
-            <input type="text" name="place" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Place of Birth</label>>
+            <input type="text" name="place" id="simpleinput" class="form-control"  >
         </div>
     </div>
 
     <div class="col-4">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Mobile Number</label><span class="text-danger"> *</span>
-            <input type="number" name="mobile" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Mobile Number</label>
+            <input type="number" name="mobile" id="simpleinput" class="form-control">
         </div>
     </div>
 
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Email Address</label><span class="text-danger"> *</span>
-            <input type="email" name="email" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Email Address</label>
+            <input type="email" name="email" id="simpleinput" class="form-control"  >
         </div>
     </div>
 </div>
@@ -156,8 +156,8 @@
     </div>
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Subdivision/Village</label><span class="text-danger"> *</span>
-            <input type="text" name="csubdivision" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Subdivision/Village</label>
+            <input type="text" name="csubdivision" id="simpleinput" class="form-control"  >
         </div>
     </div>
     <div class="col-3">
@@ -198,8 +198,8 @@
 
 <div class="mt-3">
     <div class="form-check" style="padding: 15px; margin: 20px;">
-        <input type="checkbox" id="checkbox1" name="sameadd" class="form-check-input">
-        <label class="form-check-label" for="sameadd">Permnent address same as Residential Address</label>
+        <input type="checkbox" id="checkbox1" name="sameaddress" class="form-check-input">
+        <label class="form-check-label" for="sameaddress">Permanent address same as Residential Address</label>
     </div>
 </div>
 
@@ -340,22 +340,6 @@
             <div class="form-check form-check-inline">
                 <input type="radio" id="4PN" name="fourP" value="NO" class="form-check-input">
                 <label class="form-check-label" value="NO">NO</label>
-            </div>
-        </div>
-    </div> 
-</div>
-
-<div class="row">
-    <div class="col-6">
-        <div class="mt-2">
-            <label class="form-check form-check-inline">Are you a working student?</label>
-            <div class="form-check form-check-inline">
-                <input type="radio" id="wsY" name="ws" value="YES" class="form-check-input">
-                <label class="form-check-label" value="wsY">YES</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input type="radio" id="wsN" name="ws" value="NO" class="form-check-input">
-                <label class="form-check-label" value="wsN">NO</label>
             </div>
         </div>
     </div> 

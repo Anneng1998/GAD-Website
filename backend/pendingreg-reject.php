@@ -1,4 +1,4 @@
-<div id="delete<?php echo $plan_data['fldID'] ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="info-header-modalLabel" aria-hidden="true">
+<div id="reject<?php echo $user_data['fldIdNumber'] ?>" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="info-header-modalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header modal-colored-header bg-danger">
@@ -7,12 +7,12 @@
             </div>
 
             <div class="modal-body">
-                Are you sure you want to archive this data?
+                Are you sure to reject this user to access the site?
             </div>
 
             <div class="modal-footer">
-                <form action="backend/plan-delete-process.php?id=<?php echo $plan_data['fldID'] ?>" method="post">
-                    <button name="delete-video" class="btn btn-danger">archive</button>
+                <form action="backend/pendingreg-reject-process.php?id=<?php echo $user_data['fldIdNumber'] ?>" method="post">
+                    <button name="delete-video" class="btn btn-danger">REJECT</button>
                 </form>
             </div>
         </div><!-- /.modal-content -->
