@@ -74,7 +74,7 @@ include "database/db.php";
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $news_data['news_date'] ?></h5>
                                 <p class="card-text"><?php echo $news_data['news_desc'] ?></p>
-                                <p class="card-text"><?php echo $news_data['news_vid_link'] ?></p>
+                                <p class="card-text" href="<?php echo $news_data['news_vid_link'] ?>">Click the Video</p>
                             </div>
                         </div>
 						<hr style="height:2px;border-width:0;color:gray;background-color:gray">
@@ -113,9 +113,64 @@ include "database/db.php";
 	</div>
 	<br><br><br>
 
+	<legend></legend>
+
 	<div class="container">
 		<div class="row">
-			<legend>Services Offered</legend>
+			<div class="col-md-6"  style="padding: 20px;">
+				<li class="dropdown">
+					<h3 class="dropdown-toggle" data-toggle="dropdown" href="#">Seminar/Workshop/Training on<span class="fa fa-caret-down"></span></h3>
+					<ul class="dropdown-menu dropdown-menu-right"  id="dropdown-menu">
+						<li><a href="#">Gender and Sensitivity</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Gender Analysis and GA Tools</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Harmonized GAD Guidelines</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Gender Mainstreaming Evaluation Framework</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Gender Mainstreaming</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Integration of GAD in Instruction</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Integration of GAD in Research</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Integration of GAD in Extension</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Responsible Parenthood and Family Planning</a></li>
+					</ul>
+				</li>
+			</div>
+			<div class="col-md-6"  style="padding: 20px;">
+				<li class="dropdown">
+					<h3 class="dropdown-toggle" data-toggle="dropdown" href="#">Orientation on <span class="fa fa-caret-down"></span></h3>
+					<ul class="dropdown-menu dropdown-menu-right"  id="dropdown-menu">
+						<li><a href="#">Gender and Development</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Anti-Sexual Harrasment Act of 1995 (RA 7877) </a></li>
+						<li class="divider"></li>
+						<li><a href="#">Anti-Violence Against Women and their Children Act of 2005 (RA 9262)</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Anti-Rape Law of 1997 (RA 8353)</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Anti-Trafficking in Persons Act of 2003 (RA 9208)</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Anti-Bullying Act of 2013 (RA 10627)</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Sexual Orientation, Gender Identity and Expression</a></li>
+						<li class="divider"></li>
+						<li><a href="#">Magna Carta of Women</a></li>
+						<li class="divider"></li>
+						<li><a href="#">MOVE Katropa</a></li>
+					</ul>
+				</li>
+			</div>
+		</div>
+	</div>
+
+	<!-- <div class="container-fluid">
+		<div class="row">
+			<legend></legend>
 					<div class="col-md-6"  style="padding: 20px;">
 						<h4 class="accordion " style="color:#335e90"> Seminar/Workshop/Training on <span class="fa fa-caret-down"></span></h4>
 						<div class="panel panel_boxs ">
@@ -150,7 +205,7 @@ include "database/db.php";
 					</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<br><br><br>
 
