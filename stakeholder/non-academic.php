@@ -162,7 +162,6 @@ if ($sameaddress == 'on') {
 
     $dept = $_POST['dept'];
     $course = $_POST['course'];
-    // $designation = $_POST['designation'];
 
     $insert_educational = "INSERT INTO educational_information (
                                 fldID,

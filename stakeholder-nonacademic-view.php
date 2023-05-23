@@ -24,7 +24,7 @@
 
 <div class="card d-block" style="box-shadow: 0 0.3rem 0.8rem rgba(0, 0, 0, .12);"> <br>
 
-<h1 class="page-title" style="text-align:center;">ACADEMIC EMPLOYEE PERSONAL DATA SHEET</h1>
+<h1 class="page-title" style="text-align:center;">NON - ACADEMIC EMPLOYEE PERSONAL DATA SHEET</h1>
 <br>
 <h3 class="page-title" style="text-align:center;">Employee Information</h3>
 
@@ -288,11 +288,9 @@
     if (mysqli_num_rows($view_query) > 0) {
         $educational = $view_data['educational'];
         $course = $view_data['course'];
-        $designation = $view_data['designation'];
     } else {
         $educational = '';
         $course = '';
-        $designation = '';
     }
 ?>
 
@@ -311,13 +309,6 @@
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Course</label><span class="text-danger"> *</span>
             <input type="text" name="course" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $course?>" >
-        </div>
-    </div>
-
-    <div class = "col-4">
-        <div class="mb-3">
-            <label for="example-select" class="form-label">Designation</label><span class="text-danger"> *<span>
-            <input type="text" name="course" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $designation?>" >
         </div>
     </div>
 
@@ -386,7 +377,7 @@
     </div>
     <div class="col-4">
         <div class="" style="float: right">
-            <a href="stakeholder-hr-list.php" type="button" class="btn btn-dark" ><i class="mdi mdi-account-circle"></i> BACK </a>
+            <a href="stakeholder-hr2-list.php" type="button" class="btn btn-dark" ><i class="mdi mdi-account-circle"></i> BACK </a>
         </div>
         <br>
     </div>

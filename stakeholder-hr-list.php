@@ -48,7 +48,7 @@
             <td><?php echo $view_data['mobile'] ?></td>
             <td><?php echo $view_data['email'] ?></td>
             <td>
-                <a class="btn btn-info shadow btn-xs sharp me-1"><i class="dripicons-preview"></i></a>
+                <a href="stakeholder-academic-view.php?id=<?php echo $view_data['fldID'] ?>" class="btn btn-info shadow btn-xs sharp me-1"><i class="dripicons-preview"></i></a>
             </td>
         </tr>
         <?php
