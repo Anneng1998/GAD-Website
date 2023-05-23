@@ -886,7 +886,7 @@
                 <table class="table table-warning mb-0">
                     <thead>
                         <tr>
-                            <th>External Clients</th>
+                            <th>Students</th>
                             <th>Female</th>
                             <th>Male</th>
                         </tr>
