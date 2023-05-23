@@ -400,8 +400,8 @@
         </div>
         <div class="col-4">
             <div class="" style="float: right">
-                <button class="btn btn-primary " type="submit" name="add"><i class="mdi mdi-account-circle"></i> Save Information </button>
-                <button class="btn btn-dark" type="submit" name="add"><i class="mdi mdi-account-circle"></i> Cancel </button>
+                <button class="btn btn-primary " type="submit" name="save"><i class="mdi mdi-account-circle"></i> Save Information </button>
+                <button class="btn btn-dark" type="submit" name="cancel"><i class="mdi mdi-account-circle"></i> Cancel </button>
             </div>
             <br>
         </div>
@@ -426,6 +426,5 @@
 
 <?php 
 include 'include/footer.php';
-
 ?>
 
