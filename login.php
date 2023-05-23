@@ -20,7 +20,7 @@ if(isset($_POST['login'])) {
             if ($user_status == 'PENDING') {
                 echo "<script>alert('Your account is still inactive');window.location.href = 'login.php';</script>";
             } else {
-                // $_SESSION['status'] = 'ACTIVE';
+                // $_SESSION['status'] = 'ACTIVE'; 
                 $_SESSION['email'] = $check_account_fetch['fldEmail'];
                 $_SESSION['name'] = $check_account_fetch['fldName'];
                 $_SESSION['id'] = $check_account_fetch['fldIdNumber'];

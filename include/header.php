@@ -1,12 +1,18 @@
 <?php
+    
+    
     include 'database/db.php';
 
     session_start();
 
-    $name = $_SESSION['id'];
-    $call_name_qry = "Select * from tbl_users where fldIdNumber = '$name'";
-    $call_qry = mysqli_query($db, $call_name_qry);
-    $call_name_fetch = mysqli_fetch_array($call_qry);
+    if ($_SESSION['id'] != '') {
+        $name = $_SESSION['id'];
+
+        $call_name_qry = "Select * from tbl_users where fldIdNumber = '$name'";
+        $call_qry = mysqli_query($db, $call_name_qry);
+        $call_name_fetch = mysqli_fetch_array($call_qry);
+    }
+
 
 ?>
 
