@@ -79,7 +79,7 @@ if(isset($_POST['planupload'])){
                     <div class="dz-message needsclick">
                         <i class="h1 text-muted dripicons-cloud-upload"></i>
                         <h3>Drop files here or click to upload.</h3>
-                        <span class="text-muted font-13">(Accepted file type: EXCEL)</span>
+                        <span class="text-muted font-13">(Accepted file type: EXCEL or XLS File Only)</span>
                     </div>
                 </div>
 

@@ -87,7 +87,6 @@
                 <option value = "Single">Single</option>
                 <option value = "Married">Married</option>
                 <option value = "Widowed">Widowed</option>
-                <option value = "Divorced">Divorced</option>
                 <option value = "Separated">Separated</option>
             </select>
         </div>
@@ -271,23 +270,10 @@
 
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Course</label><span class="text-danger"> *</span>
-            <input type="text" name="course" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">Course</label>
+            <input type="text" name="course" id="simpleinput" class="form-control">
         </div>
     </div>
-
-    <!-- <div class = "col-4">
-        <div class="mb-3">
-            <label for="example-select" class="form-label">Designation</label><span class="text-danger"> *<span>
-            <select class="form-select" name="designation" id="example-select" required>
-                <option value= "">SELECT</option>
-                <option value = "Instruction">Instruction</option>
-                <option value = "Assistant">Assistant Processor</option>
-                <option value = "Associate">Associate Professor</option>
-                <option value = "Professor">Professor</option>
-            </select>
-        </div>
-    </div> -->
 
 </div>
 
@@ -298,12 +284,12 @@
         <div class="mt-2">
             <label class="form-check form-check-inline">Are you a person with disability?</label>
             <div class="form-check form-check-inline">
-                <input type="radio" id="disabilityY" name="disability" class="form-check-input">
-                <label class="form-check-label" value="disabilityY">YES</label>
+                <input type="radio" id="disabilityY" name="disability" value="YES class="form-check-input">
+                <label class="form-check-label" value="YES">YES</label>
             </div>
             <div class="form-check form-check-inline">
-                <input type="radio" id="disabilityN" name="disability" class="form-check-input">
-                <label class="form-check-label" value="disabilityN">NO</label>
+                <input type="radio" id="disabilityN" name="disability" value="NO" class="form-check-input">
+                <label class="form-check-label" value="NO">NO</label>
             </div>
         </div>
     </div>

@@ -285,11 +285,11 @@
         <div class="mt-2">
             <label class="form-check form-check-inline">Are you a person with disability?</label>
             <div class="form-check form-check-inline">
-                <input type="radio" id="disabilityY" name="disability" class="form-check-input">
+                <input type="radio" id="disabilityY" name="disability" value="YES" class="form-check-input">
                 <label class="form-check-label" value="YES">YES</label>
             </div>
             <div class="form-check form-check-inline">
-                <input type="radio" id="disabilityN" name="disability" class="form-check-input">
+                <input type="radio" id="disabilityN" name="disability" value="NO" class="form-check-input">
                 <label class="form-check-label" value="NO">NO</label>
             </div>
         </div>

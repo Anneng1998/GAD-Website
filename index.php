@@ -69,6 +69,20 @@ include "database/db.php";
                 	?>
 						<div class="card">
                             <div class="card-header">
+								<?php 
+                                    $itolitrato = $news_data['imagess'];
+
+                                    if ( $itolitrato == ''){
+                                ?>
+                                    <img src="files/news/no-image-available.jpeg" class="card-img-top" alt="..." style="width: 150px;height: 200px;margin-left: 30%;padding: 10px;">
+                                <?php       
+                                    }else{
+                                ?>
+                                    <img src="files/news/<?php echo $news_data['imagess'] ?>" class="card-img-top" alt="..." style="width: 150px;height: 200px;margin-left: 30%;padding: 10px;">
+                                <?php
+                                    }
+
+                                ?>
                                 <h2> <?php echo $news_data['news_title'] ?> </h2>
                             </div>
                             <div class="card-body">

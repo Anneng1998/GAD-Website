@@ -19,7 +19,7 @@
         <div class="col-12">
             <div class="page-title-box">
                 <div class="page-title-right">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#primary-header-modal">Add News</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#primary-header-modal">add News</button>
                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#warning-header-modal">add Events</button>
                     <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#primary1-header-modal">View News Information</button>
                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#warning1-header-modal">View Events Information</button>     -->
@@ -62,7 +62,7 @@
                                 ?>
 
                                
-                                <h2> <?php echo $news_data['news_title'] ?> </h2>
+                                <h4> <?php echo $news_data['news_title'] ?> </h4>
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $news_data['news_date'] ?></h5>
@@ -117,7 +117,7 @@
                        
                                 
                                 <div class="card-body">
-                                    <h2 class="card-title"><?php echo $events_data['event_title'] ?></h2>
+                                    <h4 class="card-title"><?php echo $events_data['event_title'] ?></h4>
                                     <h5 class="card-title"><?php echo $events_data['date_created'] ?></h5>
                                     <p class="card-text"><?php echo $events_data['event_desc'] ?></p>
                                 </div>
