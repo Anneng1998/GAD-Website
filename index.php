@@ -74,7 +74,7 @@ include "database/db.php";
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $news_data['news_date'] ?></h5>
                                 <p class="card-text"><?php echo $news_data['news_desc'] ?></p>
-                                <p class="card-text" href="<?php echo $news_data['news_vid_link'] ?>">Click the Video</p>
+                                <a class="card-text" href="<?php echo $news_data['news_vid_link'] ?>">Click the Video</a>
                             </div>
                         </div>
 						<hr style="height:2px;border-width:0;color:gray;background-color:gray">
