@@ -64,7 +64,7 @@
 
                 <div class="col-6">
                     <h6>Proposal</h6>
-                    <a class="btn btn-danger btn-sm form-control" href="files/iec/<?php echo $iec_data['fldFile'] ?>" target="_blank">
+                    <a class="btn btn-danger btn-sm form-control" href="files/IEC/<?php echo $iec_data['fldFile'] ?>" target="_blank">
                         <?php echo $iec_data['fldFile'] ?>
                     </a>
                 </div>
