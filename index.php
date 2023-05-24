@@ -57,9 +57,9 @@ include "database/db.php";
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-1" ></div>
-			<div class="col-md-4" >
+			<div class="col-md-6" >
 				
-				<h3>Programs and Events</h3>
+				<h3>News</h3>
 					<hr>
 					<?php
                     $news_query = mysqli_query($db, "Select * from tbl_news where statuss = 'unarchive' order by id");
@@ -99,8 +99,8 @@ include "database/db.php";
 				?>
 			</div>
 			
-			<div class="col-md-6">
-				<h3>Latest News</h3>
+			<div class="col-md-4">
+				<h3>Programs and Events</h3>
 				<hr>
 					<?php
                     $news_query = mysqli_query($db, "Select * from tbl_events where statuss = 'unarchive' order by id");
@@ -109,7 +109,7 @@ include "database/db.php";
 					{
                 	?>
 						<div class="card" >
-                            <img class="card-img-top" src="files/events/<?php echo $events_data['images'] ?>" alt="Card image cap" style="max-width:100%;">
+                            <img class="card-img-top" src="files/events/<?php echo $events_data['images'] ?>" alt="Card image cap" style="width: 150px;height: 200px;margin-left:30%;padding: 10px;">
                             <div class="card-body">
                                 <h2 class="card-title"><?php echo $events_data['event_title'] ?></h2>
                                 <h5 class="card-title"><?php echo $events_data['date_created'] ?></h5>
