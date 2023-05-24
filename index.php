@@ -23,6 +23,9 @@ include "database/db.php";
 		#check {
 			display: none;
 		}
+		#check1 {
+			display: none;
+		}
 
 		#text-content {
 			display: none;
@@ -34,6 +37,13 @@ include "database/db.php";
 		}
 
 		#check:checked ~ #content {
+			display: none;
+		}
+		#check1:checked ~ #text-content {
+			display: block;
+		}
+
+		#check1:checked ~ #content {
 			display: none;
 		}
 	</style>
