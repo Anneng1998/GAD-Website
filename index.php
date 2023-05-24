@@ -170,7 +170,7 @@ include "database/db.php";
 									?>
 								</p>
 								<p class="card-text" id="text-content">
-									<?php echo $news_data['news_desc']; ?>
+									<?php echo $events_data['event_desc']; ?>
 								</p>
 								<label for="check" style="cursor: pointer">Read More...</label>
 								<br>
