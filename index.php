@@ -154,7 +154,7 @@ include "database/db.php";
                                 <h2 class="card-title"><?php echo $events_data['event_title'] ?></h2>
                                 <h5 class="card-title"><?php echo $events_data['date_created'] ?></h5>
                                 <!-- <p class="card-text"></?php echo $events_data['event_desc'] ?></p> -->
-								<input type="checkbox" id="check">
+								<input type="checkbox" id="check1">
                                 <p class="card-text" id="content">
 									<?php
 										$a = $events_data['event_desc'];
@@ -172,7 +172,7 @@ include "database/db.php";
 								<p class="card-text" id="text-content">
 									<?php echo $events_data['event_desc']; ?>
 								</p>
-								<label for="check" style="cursor: pointer">Read More...</label>
+								<label for="check1" style="cursor: pointer">Read More...</label>
 								<br>
                             </div>
                         </div>
