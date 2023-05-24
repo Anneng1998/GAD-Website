@@ -18,6 +18,25 @@ include "database/db.php";
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+	<style>
+		#check {
+			display: none;
+		}
+
+		#text-content {
+			display: none;
+			transition: 0.5s linear;
+		}
+
+		#check:checked ~ #text-content {
+			display: block;
+		}
+
+		#check:checked ~ #content {
+			display: none;
+		}
+	</style>
 </head>
 
 <body>
@@ -74,11 +93,11 @@ include "database/db.php";
 
                                     if ( $itolitrato == ''){
                                 ?>
-                                    <img src="files/news/no-image-available.jpeg" class="card-img-top" alt="..." style="width: 150px;height: 200px;margin-left: 30%;padding: 10px;">
+                                    <img src="files/news/no-image-available.jpeg" class="card-img-top" alt="..." style="width: 338px;height: 254px;margin-left: 30%;padding: 10px;">
                                 <?php       
                                     }else{
                                 ?>
-                                    <img src="files/news/<?php echo $news_data['imagess'] ?>" class="card-img-top" alt="..." style="width: 150px;height: 200px;margin-left: 30%;padding: 10px;">
+                                    <img src="files/news/<?php echo $news_data['imagess'] ?>" class="card-img-top" alt="..." style="width: 338px;height: 254px;margin-left: 30%;padding: 10px;">
                                 <?php
                                     }
 
@@ -87,7 +106,29 @@ include "database/db.php";
                             </div>
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $news_data['news_date'] ?></h5>
-                                <p class="card-text"><?php echo $news_data['news_desc'] ?></p>
+								<input type="checkbox" id="check">
+                                <p class="card-text" id="content">
+									<?php
+									$a = $news_data['news_desc'];
+									$string=strip_tags($a);
+									// echo strlen($string);
+									if(strlen($string) > 200):
+										$stringcut=substr($a,0,200);
+										$endpoint=strrpos($stringcut,'');
+										$string=$endpoint?substr($stringcut,0,$endpoint):substr($stringcut,0);
+										$string .= '...';
+									endif;
+									echo $string;
+
+									?>
+									<!-- <//?php echo $news_data['news_desc'] ?> -->
+								</p>
+								
+								<p class="card-text" id="text-content">
+									<?php echo $news_data['news_desc']; ?>
+								</p>
+								<label for="check" style="cursor: pointer">Read More...</label>
+								<br>
                                 <a class="card-text" href="<?php echo $news_data['news_vid_link'] ?>">Click the Video</a>
                             </div>
                         </div>
@@ -110,7 +151,7 @@ include "database/db.php";
 					{
                 	?>
 						<div class="card" >
-                            <img class="card-img-top" src="files/events/<?php echo $events_data['images'] ?>" alt="Card image cap" style="width: 150px;height: 200px;margin-left:30%;padding: 10px;">
+                            <img class="card-img-top" src="files/events/<?php echo $events_data['images'] ?>" alt="Card image cap" style="width: 338px;height: 254px;margin-left:30%;padding: 10px;">
                             <div class="card-body">
                                 <h2 class="card-title"><?php echo $events_data['event_title'] ?></h2>
                                 <h5 class="card-title"><?php echo $events_data['date_created'] ?></h5>
