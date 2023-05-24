@@ -54,9 +54,9 @@
                    <li>
                         <a href="stakeholder-rde-list.php">External Clients</a>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a href="stakeholder-student-list.php">Students</a>
-                    </li> -->
+                    </li>
                 </ul>
             </div>
         </li>

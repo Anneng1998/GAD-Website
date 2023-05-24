@@ -329,7 +329,7 @@
     } else {
         $disability = '';
         $disability_type = '';
-        $fourps = '';
+        $fourp = '';
         $working_student = '';
         $single_parent = '';
         $spouse = '';

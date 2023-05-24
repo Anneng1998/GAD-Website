@@ -13,6 +13,12 @@
     }
 </style>
 
+<?php 
+    $id = $_GET['id']; 
+    // echo $id;
+
+?>
+
 <br><br>
 <div class="card d-block" style="box-shadow: 1px 2px 5px #333;">
 
@@ -20,32 +26,64 @@
 <br>
 <h3 class="page-title" style="text-align:center;">Student Information</h3>
 
-<form action="stakeholder/student.php" method="post" class="dropzone" id="myAwesomeDropzone" enctype="multipart/form-data">
+<form action="" method="GET" class="dropzone" id="myAwesomeDropzone" enctype="multipart/form-data">
 
+<?php
+    $view_query = mysqli_query($db, "Select * from employee_information where fldID = '$id'");
+    $view_data = mysqli_fetch_array($view_query);
+
+    if (mysqli_num_rows($view_query) > 0) {
+        $fname = $view_data['fname'];
+        $cname = $view_data['cname'];
+        $lname = $view_data['lname'];
+        $exname = $view_data['exname'];
+        $sex = $view_data['sex'];
+        $cstatus = $view_data['cstatus'];
+        $citizen = $view_data['citizen'];
+        $religion = $view_data['religion'];
+        $dob = $view_data['dob'];
+        $pob = $view_data['pob'];
+        $mobile = $view_data['mobile'];
+        $email = $view_data['email'];
+    } else {
+        $fname = '';
+        $cname = '';
+        $lname = '';
+        $exname = '';
+        $sex = '';
+        $cstatus ='';
+        $citizen ='';
+        $religion = '';
+        $dob = '';
+        $pob = '';
+        $mobile = '';
+        $email = '';
+    }
+?>
 
 <div class ="row">
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">First Name</label><span class="text-danger"> *</span>
-            <input type="text" name="fname" id="simpleinput" class="form-control"  required>
+            <input type="text" name="fname" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $fname?>">
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Middle Name</label>
-            <input type="text" name="mname" id="simpleinput" class="form-control" >
+            <input type="text" name="mname" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $cname?>"  >
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Last Name</label><span class="text-danger"> *</span>
-            <input type="text" name="lname" id="simpleinput" class="form-control"  required>
+            <input type="text" name="lname" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $lname ?>">
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Extension Name</label>
-            <input type="text" name="Ename" id="simpleinput" class="form-control" >
+            <input type="text" name="Ename" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $exname ?>"  >
         </div>
     </div>
 </div>
@@ -54,39 +92,28 @@
     <div class = "col-2">
         <div class="mb-3">
             <label for="example-select" class="form-label">Sex</label><span class="text-danger"> *<span>
-            <select class="form-select" name="gender" id="example-select">
-                <option value= "">SELECT</option>
-                <option value = "Female">Female</option>
-                <option value = "Male">Male</option>
-            </select>
+            <input type="text" name="Ename" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $sex?>"  >
         </div>
     </div>
 
     <div class = "col-2">
         <div class="mb-3">
             <label for="example-select" class="form-label">Civil Status</label><span class="text-danger"> *<span>
-            <select class="form-select" name="civil" id="example-select">
-                <option value= "">SELECT</option>
-                <option value = "Single">Single</option>
-                <option value = "Married">Married</option>
-                <option value = "Widowed">Widowed</option>
-                <option value = "Divorced">Divorced</option>
-                <option value = "Separated">Separated</option>
-            </select>
+            <input type="text" name="Ename" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $cstatus ?>"  >
         </div>
     </div>
 
     <div class="col-4">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Citizenship</label><span class="text-danger"> *</span>
-            <input type="text" name="citizenship" id="simpleinput" class="form-control"  required>
+            <input type="text" name="citizenship" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $citizen ?>"  >
         </div>
     </div>
 
     <div class="col-4">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Religion</label>
-            <input type="text" name="religion" id="simpleinput" class="form-control" >
+            <input type="text" name="religion" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $religion ?>"   >
         </div>
     </div>
 </div>
@@ -95,31 +122,52 @@
     <div class="col-2">
         <div class="mb-3">
             <label for="example-select" class="form-label">Date of Birth</label><span class="text-danger"> *</span>
-            <input type="text" class="form-control date" name="birthday" id="birthdatepicker" data-toggle="date-picker" data-single-date-picker="true">
+            <input type="text" name="dob" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $dob?>"  >
         </div>
     </div>
 
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Place of Birth</label>
-            <input type="text" name="place" id="simpleinput" class="form-control" >
+            <label for="simpleinput" class="form-label">Place of Birth</label>>
+            <input type="text" name="place" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $pob ?>"    >
         </div>
     </div>
 
     <div class="col-4">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Mobile Number</label>
-            <input type="number" name="mobile" id="simpleinput" class="form-control" >
+            <input type="number" name="mobile" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $mobile?>"  >
         </div>
     </div>
 
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Email Address</label>
-            <input type="email" name="email" id="simpleinput" class="form-control" >
+            <input type="email" name="email" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $email ?>"   >
         </div>
     </div>
 </div>
+
+<?php
+    $view_query = mysqli_query($db, "Select * from contact_information where fldID = '$id'");
+    $view_data = mysqli_fetch_array($view_query);
+
+    if (mysqli_num_rows($view_query) > 0) {
+        $house = $view_data['house'];
+        $street = $view_data['street'];
+        $village = $view_data['village'];
+        $city = $view_data['city'];
+        $province = $view_data['province'];
+        $zip = $view_data['zip'];
+    } else {
+        $house = '';
+        $street = '';
+        $village = '';
+        $city = '';
+        $province = '';
+        $zip = '';
+    }
+?>
 
 <h4 class="page-title" style="text-align:center;">Contact Information</h4>
 <h5 class="page-title" style="padding: 15px;">Residential Address</h5>
@@ -128,25 +176,25 @@
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
-            <input type="text" name="cno" id="simpleinput" class="form-control"  required>
+            <input type="text" name="cno" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $house ?>"   >
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Street</label><span class="text-danger"> *</span>
-            <input type="text" name="cstreet" id="simpleinput" class="form-control"  required>
+            <input type="text" name="cstreet" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $street?>"   >
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Subdivision/Village</label>
-            <input type="text" name="csubdivision" id="simpleinput" class="form-control"  >
+            <input type="text" name="csubdivision" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $village?>"   >
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">City/Municipality</label><span class="text-danger"> *</span>
-            <input type="text" name="ccity" id="simpleinput" class="form-control"  required>
+            <input type="text" name="ccity" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $city?>"   >
         </div>
     </div>
 </div>
@@ -155,81 +203,96 @@
     <div class="col-5">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Province</label><span class="text-danger"> *</span>
-            <input type="text" name="cprovince" id="simpleinput" class="form-control"  required>
+            <input type="text" name="cprovince" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $province?>"   >
         </div>
     </div>
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Zip Code</label><span class="text-danger"> *</span>
-            <input type="number" name="czip" id="simpleinput" class="form-control"  required>
+            <input type="number" name="czip" id="simpleinput" class="form-control"   readonly="true"  value="<?php echo $zip ?>"   >
         </div>
     </div>
 </div>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('#checkbox1').change(function () {
-            if (!this.checked) 
-            //  ^
-            $('#autoUpdate').show();
-            else 
-                $('#autoUpdate').remove();
-        });
-    });
-</script>
+<?php
+    $view_query = mysqli_query($db, "Select * from permanent_address where fldID = '$id'");
+    $view_data = mysqli_fetch_array($view_query);
 
+    if (mysqli_num_rows($view_query) > 0) {
+        $house = $view_data['house'];
+        $street = $view_data['street'];
+        $village = $view_data['village'];
+        $city = $view_data['city'];
+        $province = $view_data['province'];
+        $zip = $view_data['zip'];
+    } else {
+        $house = '';
+        $street = '';
+        $village = '';
+        $city = '';
+        $province = '';
+        $zip = '';
+    }
+?>
 
-<div class="mt-3">
-    <div class="form-check" style="padding: 15px; margin: 20px;">
-        <input type="checkbox" id="checkbox1" name="sameadd" class="form-check-input">
-        <label class="form-check-label" for="sameadd">Permanent address same as Residential Address</label>
-    </div>
-</div>
-
-<div id="autoUpdate" class="autoUpdate" style="padding:15px;">
-    <div class = "row">
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
-                <input type="text" name="pno" id="simpleinput" class="form-control"  required>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Street</label><span class="text-danger"> *</span>
-                <input type="text" name="pstreet" id="simpleinput" class="form-control"  required>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Subdivision/Village</label><span class="text-danger"> *</span>
-                <input type="text" name="psubdivision" id="simpleinput" class="form-control"  required>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">City/Municipality</label><span class="text-danger"> *</span>
-                <input type="text" name="pcity" id="simpleinput" class="form-control"  required>
-                <input type="hidden" name="sameaddress" class="form-check-input" value="off">
-            </div>
+<h5 class="page-title" style="padding: 15px;">Permanent Address</h5>
+<div class = "row">
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
+            <input type="text" name="pno" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $house ?>"   >
         </div>
     </div>
-
-    <div class = "row" >
-        <div class="col-5">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Province</label><span class="text-danger"> *</span>
-                <input type="text" name="pprovince" id="simpleinput" class="form-control"  required>
-            </div>
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Street</label><span class="text-danger"> *</span>
+            <input type="text" name="pstreet" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $street ?>"   >
         </div>
-        <div class="col-3">
-            <div class="mb-3">
-                <label for="simpleinput" class="form-label">Zip Code</label><span class="text-danger"> *</span>
-                <input type="number" name="pzip" id="simpleinput" class="form-control"  required>
-            </div>
+    </div>
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Subdivision/Village</label><span class="text-danger"> *</span>
+            <input type="text" name="psubdivision" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $village ?>"   >
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">City/Municipality</label><span class="text-danger"> *</span>
+            <input type="text" name="pcity" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $city ?>"   >
         </div>
     </div>
 </div>
+<div class = "row" >
+    <div class="col-5">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Province</label><span class="text-danger"> *</span>
+            <input type="text" name="pprovince" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $province ?>"   >
+        </div>
+    </div>
+    <div class="col-3">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Zip Code</label><span class="text-danger"> *</span>
+            <input type="number" name="pzip" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $zip ?>"   >
+        </div>
+    </div>
+</div>
+
+<?php
+    $view_query = mysqli_query($db, "Select * from student_education_information where fldID = '$id'");
+    $view_data = mysqli_fetch_array($view_query);
+
+    if (mysqli_num_rows($view_query) > 0) {
+        $department = $view_data['department'];
+        $program = $view_data['program'];
+        $years = $view_data['years'];
+        $statuss = $view_data['statuss'];
+    } else {
+        $department = '';
+        $program = '';
+        $years = '';
+        $statuss = '';
+    }
+?>
 
 <h4 class="page-title" style="text-align:center;">Educational Attainment</h4>
 
@@ -237,147 +300,101 @@
     <div class = "col-2">
         <div class="mb-3">
             <label for="example-select" class="form-label">Department</label><span class="text-danger"> *<span>
-            <select class="form-select" name="dept" id="example-select">
-                <option value= "">SELECT</option>
-                <option value = "DAS">DAS</option>
-                <option value = "DEPTEL">DEPTEL</option>
-                <option value = "BM">BM</option>
-                <option value = "DIT">DIT</option>
-            </select>
+            <input id="simpleinput" class="form-control" readonly="true"  value="<?php echo $department ?>"  >
         </div>
     </div>
+
+    <?php
+    if ($program = 'c6'){
+        $programs = 'BS Information Technology';
+    } elseif ($program = 'c5'){
+        $programs = 'Bachelor of Secondary Education';
+    }   elseif ($program = 'c4'){
+        $programs = 'Bachelor of Early Childhood Education';
+    }   elseif ($program = 'c3'){
+        $programs = 'BS in Computer Science';
+    }   elseif ($program = 'c2'){
+        $programs = 'BS Business Management';
+    }   elseif ($program = 'c1'){
+        $programs = 'BS Hospitality Management';
+    }
+    ?>
 
     <div class = "col-6">
         <div class="mb-3">
             <label for="example-select" class="form-label">Program</label><span class="text-danger"> *<span>
-            <select class="form-select" name="program" id="example-select">
-                <option value= "">SELECT</option>
-                <option value = "c1">BS Hospitality Management</option>
-                <option value = "c2">BS Business Management</option>
-                <option value = "c3">BS in Computer Science</option>
-                <option value = "c4">Bachelor of Early Childhood Education</option>
-                <option value = "c5">Bachelor of Secondary Education</option>
-                <option value = "c6">BS Information Technology</option>
-            </select>
+            <input id="simpleinput" class="form-control" readonly="true"  value="<?php echo $programs ?>"  >
         </div>
     </div>
 
     <div class = "col-2">
         <div class="mb-3">
             <label for="example-select" class="form-label">Year Level</label><span class="text-danger"> *<span>
-            <select class="form-select" name="year" id="example-select">
-                <option value= "">SELECT</option>
-                <option value = "First">First Year</option>
-                <option value = "Second">Second Year</option>
-                <option value = "Third">Third Year</option>
-                <option value = "Fourth">Fourth Year</option>
-                <option value = "Fifth">Fifth Year</option>
-            </select>
+            <input id="simpleinput" class="form-control" readonly="true"  value="<?php echo $years ?>"  >
         </div>
     </div>
 
     <div class = "col-2">
         <div class="mb-3">
             <label for="example-select" class="form-label">Student Status</label><span class="text-danger"> *<span>
-            <select class="form-select" name="status" id="example-select">
-                <option value= "">SELECT</option>
-                <option value = "Regular">Regular</option>
-                <option value = "Irregular">Irregular</option>
-            </select>
+            <input id="simpleinput" class="form-control" readonly="true"  value="<?php echo $statuss ?>"  >
         </div>
     </div>
 
 </div>
+
+<?php
+    $view_query = mysqli_query($db, "Select * from other_information where fldID = '$id'");
+    $view_data = mysqli_fetch_array($view_query);
+
+    if (mysqli_num_rows($view_query) > 0) {
+        $disability = $view_data['disability'];
+        $disability_type = $view_data['disability_type'];
+        $fourP = $view_data['fourps'];
+        $working_student = $view_data['working_student'];
+        $single_parent = $view_data['single_parent'];
+        $spouse = $view_data['spouse'];
+        $spouse_type = $view_data['spouse_type'];
+    } else {
+        $disability = '';
+        $disability_type = '';
+        $fourP = '';
+        $working_student = '';
+        $single_parent = '';
+        $spouse = '';
+        $spouse_type = '';
+    }
+?>
 
 <h4 class="page-title" style="text-align:center;">Other Information</h4>
 
 <div class="row">
-    <div class="col-5">
-        <div class="mt-2">
-            <label class="form-check form-check-inline">Are you a person with disability?</label>
-            <div class="form-check form-check-inline">
-                <input type="radio" id="disabilityY" name="disability" class="form-check-input">
-                <label class="form-check-label" value="disabilityY">YES</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input type="radio" id="disabilityN" name="disability" class="form-check-input">
-                <label class="form-check-label" value="disabilityN">NO</label>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-7" id="disabilitychoices" style="display: none">
-        <div class ="row">
-            <div class = "col-4" style="text-align: right;">
-                <label>if YES, please specify:</label>
-            </div>
-            <div class = "col-8">
-                <select class="form-select" name="disability1" id="example-select">
-                    <option value= "">SELECT</option>
-                    <option value = "Deaf">Deaf &#40; Hard of hearing &#41; </option>
-                    <option value = "Intellectual">Intellectual Disability</option>
-                    <option value = "Learning">Learning Disability</option>
-                    <option value = "Mental">Mental Disability</option>
-                    <option value = "Orthopedic">Orthopedic Disability</option>
-                    <option value = "Physical">Physical Disability</option>
-                    <option value = "Psychosocial">Psychosocial Disability</option>
-                    <option value = "Speech">Speech and Language</option>
-                    <option value = "Impairment">Impairment</option>
-                    <option value = "Visual">Visual Disability</option>
-                </select>
-            </div>
-        </div>
+    <div class="col-12">
+        <label class="">Are you a person with disability?</label>
+        <p>Answer:&nbsp;<?php echo $disability ?>,<?php echo $disability_type ?> </p>
     </div>
 </div>
 
 <div class="row">
     <div class="col-6">
-        <div class="mt-2">
-            <label class="form-check form-check-inline">Are you a 4Ps Member?</label>
-            <div class="form-check form-check-inline">
-                <input type="radio" id="4PY" name="fourP" value="YES" class="form-check-input">
-                <label class="form-check-label" value="YES">YES</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input type="radio" id="4PN" name="fourP" value="NO" class="form-check-input">
-                <label class="form-check-label" value="NO">NO</label>
-            </div>
-        </div>
+        <label class="">Are you a 4Ps Member?</label>
+        <p>Answer:&nbsp;<?php echo $fourP ?></p>
     </div> 
 </div>
 
 <div class="row">
     <div class="col-6">
-        <div class="mt-2">
-            <label class="form-check form-check-inline">Are you a working student?</label>
-            <div class="form-check form-check-inline">
-                <input type="radio" id="wsY" name="ws" value="YES" class="form-check-input">
-                <label class="form-check-label" value="wsY">YES</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input type="radio" id="wsN" name="ws" value="NO" class="form-check-input">
-                <label class="form-check-label" value="wsN">NO</label>
-            </div>
-        </div>
+        <label class="">Are you Single Parent?</label>
+        <p>Answer:&nbsp;<?php echo $single_parent ?></p>
     </div> 
 </div>
 
 <div class="row">
     <div class="col-6">
-        <div class="mt-2">
-            <label class="form-check form-check-inline">Are you a Single Parent?</label>
-            <div class="form-check form-check-inline">
-                <input type="radio" id="spY" name="sp" value="YES" class="form-check-input">
-                <label class="form-check-label" value="spY">YES</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input type="radio" id="spN" name="sp" value="NO" class="form-check-input">
-                <label class="form-check-label" value="spN">NO</label>
-            </div>
-        </div>
+        <label class="">Are you a working student?</label>
+        <p>Answer:&nbsp;<?php echo $working_student ?></p>
     </div> 
 </div>
-
 
     <br><br><br><br><br><br><br><br>
     <div class="row">
