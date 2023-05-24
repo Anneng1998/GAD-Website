@@ -377,7 +377,7 @@
     </div>
     <div class="col-4">
         <div class="" style="float: right">
-            <a href="stakeholder-hr2-list.php" type="button" class="btn btn-dark" ><i class="mdi mdi-account-circle"></i> BACK </a>
+            <a href="stakeholder-rde-list.php" type="button" class="btn btn-dark" ><i class="mdi mdi-account-circle"></i> BACK </a>
         </div>
         <br>
     </div>

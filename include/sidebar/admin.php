@@ -51,10 +51,10 @@
                     <li>
                         <a href="stakeholder-hr2-list.php">Non-Academic Employee</a>
                     </li>
-                    <!-- <li>
+                   <li>
                         <a href="stakeholder-rde-list.php">External Clients</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="stakeholder-student-list.php">Students</a>
                     </li> -->
                 </ul>

@@ -48,8 +48,8 @@
             <td><?php echo $view_data['mobile'] ?></td>
             <td><?php echo $view_data['email'] ?></td>
             <td>
-                <button class="btn btn-info shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#view<?php echo $view_data['id'] ?>"><i class="dripicons-preview"></i></button>
-            </td>
+                <a href="stakeholder-rde-view.php?id=<?php echo $view_data['fldID'] ?>" class="btn btn-info shadow btn-xs sharp me-1" ><i class="dripicons-preview"></i></button>
+           </td>
         </tr>
         <?php
             }
