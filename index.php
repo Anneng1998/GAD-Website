@@ -57,7 +57,7 @@ include "database/db.php";
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-1" ></div>
-			<div class="col-md-4" >
+			<div class="col-md-5" >
 				
 				<h3>News</h3>
 					<hr>
@@ -98,7 +98,7 @@ include "database/db.php";
 				}
 				?>
 			</div>
-			<div class="col-md-2" >
+			<div class="col-md-1" >
 			</div>
 			<div class="col-md-4">
 				<h3>Programs and Events</h3>
