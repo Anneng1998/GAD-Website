@@ -169,6 +169,11 @@ include "database/db.php";
 										echo $string;
 									?>
 								</p>
+								<p class="card-text" id="text-content">
+									<?php echo $news_data['news_desc']; ?>
+								</p>
+								<label for="check" style="cursor: pointer">Read More...</label>
+								<br>
                             </div>
                         </div>
 						<hr style="height:2px;border-width:0;color:gray;background-color:gray">
