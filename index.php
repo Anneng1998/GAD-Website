@@ -223,14 +223,14 @@ include "database/db.php";
 
 	<br><br><br>
 
-	<div class="bottomright"><button class="fa fa-arrow-up"></button></div>
-	<div id="fb-root"></div>
+	<!-- <div class="bottomright"><button class="fa fa-arrow-up"></button></div>
+	<div id="fb-root"></div> -->
 	<!-- Messenger Chat Plugin Code -->
-	<div id="fb-root"></div>
+	<!-- <div id="fb-root"></div> -->
 
 	<!-- Your Chat Plugin code -->
-	<div id="fb-customer-chat" class="fb-customerchat">
-	</div>
+	<!-- <div id="fb-customer-chat" class="fb-customerchat">
+	</div> -->
 
 	<script>
 		var chatbox = document.getElementById('fb-customer-chat');
