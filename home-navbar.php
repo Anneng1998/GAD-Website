@@ -31,7 +31,7 @@
 				<li class="dropdown">
 					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Projects and Programs<span class="caret"></span></a>
 					<ul class="dropdown-menu"  id="dropdown-menu">
-						<li><a href="news-ane-events.php" >News and Events</a></li>
+						<li><a href="news.php" >News and Events</a></li>
 					</ul>
 				</li>
 

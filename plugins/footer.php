@@ -69,16 +69,59 @@ footer { background-color:#f6f6f6; min-height:350px; bottom: 0px; }
 }
 </style>
 <footer>
-  <div class="container">
+
+<div class="container-fluid" style="padding:30px;">
+  <div class="row">
+    <div class="col-md-3 col-sm-6 footer-col">
+      <div class="logofooter"><img src="img/gad logo.jpg"></div>
+        <h4>CvSU-CCC GAD Unit</h4>
+        <p>In CvSU-CCC, Your Voice Matters</p>
+        <p>© <?php echo date('Y')?> - All Rights Reserved <br></p>
+      </div>
+    <div>
+    <div class="col-md-3 col-sm-6 footer-col">
+      <h6 class="heading7">GENERAL LINKS</h6>
+        <ul class="footer-ul">
+          <li><a href="index.php"> Home</a></li>
+          <li><a href="news-ane-events.php"> Projects and Programs</a></li>
+          <li><a href="aboutus.php"> About Us</a></li>
+          <li><a href="servicesoffered.php"> Services Offered</a></li>
+          <li><a href="https://pcw.gov.ph/"> Resources</a></li>
+          <li><a href="contactus.php"> Contact Us</a></li>
+          <li><a href="login.php"> Login</a></li>
+        </ul>
+    </div>
+    <div class="col-md-6 col-sm-6 footer-col">
+      <h6 class="heading7">CONTACT US</h6>
+      <li><i class="fa fa-map-marker"></i> Pulo II, Dalahican Cavite City</li><br><br>
+      <h6 class="heading7">GENERAL LINKS</h6>
+      <div class="row">
+        <div class="col-6 footer-col">
+          <a href="https://pcw.gov.ph/tinig-ng-kababaihan/"></a><img src="img\tinig.png" alt="">
+          <a href="https://pcw.gov.ph/transparency/"></a><img src="img\transparency.png" alt="">
+        <div>
+        <div class="col-6 footer-col">
+            <a href="https://www.foi.gov.ph/requests?agency=PCW&fbclid=IwAR3Fr_kfseFdjzMfOI_xOLte0R2NO8TSPYz6RCatudYdcV2SAdLtcVu2ans"></a><img src="img\acessgov.png" alt="">
+            <img src="img\1343.png" alt=""></img>
+        <div>
+      </div>    
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- <div class="container-fluid">
     <div class="row">
       <div class="col-md-3 col-sm-6 footer-col">
         <div class="logofooter"><img src="img/gad logo.jpg"></div>
-        <h4>CvSU-CCC GAD Unit</h4>
-        <p>In CvSU-CCC, Your Voice Matters</p>
+          <h4>CvSU-CCC GAD Unit</h4>
+          <p>In CvSU-CCC, Your Voice Matters</p>
 
-        <p>© <?php echo date('Y')?> - All Rights Reserved <br></p>
-    </div>
-    <div class="col-md-3 col-sm-6 footer-col">
+          <p>© </?php echo date('Y')?> - All Rights Reserved <br></p>
+          </div>
+      </div>
+      <div class="col-md-3 col-sm-6 footer-col">
         <h6 class="heading7">GENERAL LINKS</h6>
         <ul class="footer-ul">
           <li><a href="index.php"> Home</a></li>
@@ -88,13 +131,12 @@ footer { background-color:#f6f6f6; min-height:350px; bottom: 0px; }
           <li><a href="https://pcw.gov.ph/"> Resources</a></li>
           <li><a href="contactus.php"> Contact Us</a></li>
           <li><a href="login.php"> Login</a></li>
-
-      </ul>
-  </div>
-  <div class="col-md-4 col-sm-6 footer-col">
-    <h6 class="heading7">CONTACT US</h6>
-      <li><i class="fa fa-map-marker"></i> Pulo II, Dalahican Cavite City</li>
-      <br><br>
+        </ul>
+      </div>
+      <div class="col-md-4 col-sm-6 footer-col">
+        <h6 class="heading7">CONTACT US</h6>
+        <li><i class="fa fa-map-marker"></i> Pulo II, Dalahican Cavite City</li>
+        <br><br>
         <div class="wp-block-columns is-layout-flex wp-container-4">
           <ul class="footer-ul">
             <li><a href="https://pcw.gov.ph/tinig-ng-kababaihan/"></a><img src="img\tinig.png" alt=""></li>
@@ -102,8 +144,11 @@ footer { background-color:#f6f6f6; min-height:350px; bottom: 0px; }
             <li><a href="https://www.foi.gov.ph/requests?agency=PCW&fbclid=IwAR3Fr_kfseFdjzMfOI_xOLte0R2NO8TSPYz6RCatudYdcV2SAdLtcVu2ans"></a><img src="img\acessgov.png" alt=""></li>
             <li><img src="img\1343.png" alt=""></li>
           </ul>
-        </div>
-  </div>
+        </div>    
+      </div>
+    </div>
+  </div> -->
+<!-- </footer>         -->
 
 
 
@@ -113,8 +158,8 @@ footer { background-color:#f6f6f6; min-height:350px; bottom: 0px; }
       <li><a href="https://www."><i class="fa fa-facebook social-icon facebook" aria-hidden="true"></i></a></li>
   </ul>
 </div> -->
-</div>
-</div>
+<!-- </div>
+</div> -->
 </footer>
 <!-- credits -->
 <div id="credits" class="modal fade" role="dialog">
