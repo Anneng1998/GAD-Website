@@ -109,19 +109,17 @@ include "database/db.php";
 								<input type="checkbox" id="check">
                                 <p class="card-text" id="content">
 									<?php
-									$a = $news_data['news_desc'];
-									$string=strip_tags($a);
-									// echo strlen($string);
-									if(strlen($string) > 200):
-										$stringcut=substr($a,0,200);
-										$endpoint=strrpos($stringcut,'');
-										$string=$endpoint?substr($stringcut,0,$endpoint):substr($stringcut,0);
-										$string .= '...';
-									endif;
-									echo $string;
-
+										$a = $news_data['news_desc'];
+										$string=strip_tags($a);
+										// echo strlen($string);
+										if(strlen($string) > 200):
+											$stringcut=substr($a,0,200);
+											$endpoint=strrpos($stringcut,'');
+											$string=$endpoint?substr($stringcut,0,$endpoint):substr($stringcut,0);
+											$string .= '...';
+										endif;
+										echo $string;
 									?>
-									<!-- <//?php echo $news_data['news_desc'] ?> -->
 								</p>
 								
 								<p class="card-text" id="text-content">
@@ -155,7 +153,22 @@ include "database/db.php";
                             <div class="card-body">
                                 <h2 class="card-title"><?php echo $events_data['event_title'] ?></h2>
                                 <h5 class="card-title"><?php echo $events_data['date_created'] ?></h5>
-                                <p class="card-text"><?php echo $events_data['event_desc'] ?></p>
+                                <!-- <p class="card-text"></?php echo $events_data['event_desc'] ?></p> -->
+								<input type="checkbox" id="check">
+                                <p class="card-text" id="content">
+									<?php
+										$a = $events_data['event_desc'];
+										$string=strip_tags($a);
+										// echo strlen($string);
+										if(strlen($string) > 200):
+											$stringcut=substr($a,0,200);
+											$endpoint=strrpos($stringcut,'');
+											$string=$endpoint?substr($stringcut,0,$endpoint):substr($stringcut,0);
+											$string .= '...';
+										endif;
+										echo $string;
+									?>
+								</p>
                             </div>
                         </div>
 						<hr style="height:2px;border-width:0;color:gray;background-color:gray">
