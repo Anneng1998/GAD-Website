@@ -123,8 +123,6 @@
 
 </div> 
 
-
-
 <!-- start academic -->
 <div id="academic">
     <div class="card d-block display">
@@ -403,6 +401,7 @@
 
     </div>
 </div>
+
 <!-- start non academic -->
 <div id="nonacademic">
     <div class="card d-block" id="nonacademic" style="box-shadow: 1px 2px 5px #333; padding: 20px;">
@@ -962,7 +961,7 @@
                         <tr>
                             <td>Single Parent</td>
                             <?php
-                            $count_phdf = mysqli_query($db, "select count(*) as Female from employee_information a INNER JOIN other_information b ON b.fldID = a.fldID where a.stake_status = 'RDE' and a.sex = 'Female' and b,single_parent = 'YES'");
+                            $count_phdf = mysqli_query($db, "select count(*) as Female from employee_information a INNER JOIN other_information b ON b.fldID = a.fldID where a.stake_status = 'RDE' and a.sex = 'Female' and b.single_parent = 'YES'");
                             $phd_view = mysqli_fetch_array($count_phdf);
                             $count_phdf = mysqli_query($db, "select count(*) as Male from employee_information a INNER JOIN other_information b ON b.fldID = a.fldID where a.stake_status = 'RDE' and a.sex = 'Male' and b.single_parent = 'YES'");
                             $phd_view2 = mysqli_fetch_array($count_phdf);
@@ -1001,7 +1000,7 @@
 </div>
 
 <?php include 'include/footer.php'?>
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 
 <script>
     $(document).ready(function(){
         $('#academic').hide();
