@@ -53,7 +53,7 @@
 						<li><a href="https://pcw.gov.ph/violence-against-women-helplines/">VAW Helplines</a></li>
 					</ul>
 				</li>
-				<!-- <li><a href="contactus.php">Contact Us</a></li> -->
+				<li><a href="contactus.php">Contact Us</a></li>
 			</ul>
 			<ul class="nav navbar-nav ">
 				<li><a href="login.php">Login</a></li>

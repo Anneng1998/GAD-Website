@@ -89,6 +89,13 @@
                 </a>
             </li>
 
+            <!-- <li class="side-nav-item">
+                <a href="accomplished.php" //class="side-nav-link"">
+                    <i class="uil-moneybag"></i>
+                    <span> GAD Accomplished Report </span>
+                </a>
+            </li> -->
+
             <li class="side-nav-item">
                 <a href="based-research.php" //class="side-nav-link"">
                     <i class="uil-image-search"></i>
@@ -110,12 +117,12 @@
                 </a>
             </li>
 
-            <!-- <li class="side-nav-item">
+            <li class="side-nav-item">
                 <a href="message.php" //class="side-nav-link""">
                     <i class="uil-parcel"></i>
                     <span> Messages </span>
                 </a>
-            </li> -->
+            </li>
 
             <li class="side-nav-item">
                 <a href="news.php" //class="side-nav-link""">
