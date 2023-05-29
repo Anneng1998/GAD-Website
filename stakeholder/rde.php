@@ -24,39 +24,44 @@ if (isset($_POST['save'])){
     $mobile = $_POST['mobile'];
     $email = $_POST['email'];
 
+    $check_id = mysqli_query($db,"Select * from employee_information where fname = '$fname' and lname = '$lname' ");
 
-    $insert_employee = "INSERT INTO employee_information (
-                            fldID, 
-                            stake_status,
-                            fname, 
-                            cname, 
-                            lname, 
-                            exname, 
-                            sex, 
-                            cstatus, 
-                            citizen, 
-                            religion, 
-                            dob, 
-                            pob, 
-                            mobile, 
-                            email) 
-                        VALUES (
-                            '$UniqueID', 
-                            'RDE',
-                            '$fname', 
-                            '$mname', 
-                            '$lname', 
-                            '$Ename', 
-                            '$gender', 
-                            '$civil', 
-                            '$citizenship', 
-                            '$religion', 
-                            '$birthday', 
-                            '$place', 
-                            '$mobile', 
-                            '$email')";
+    if (mysqli_num_rows($check_id) > 0) {
+        echo "<script>alert('Name already exists');window.location.href = '../stakeholder-rde.php';</script>";
+    } else {
+        $insert_employee = "INSERT INTO employee_information (
+            fldID, 
+            stake_status,
+            fname, 
+            cname, 
+            lname, 
+            exname, 
+            sex, 
+            cstatus, 
+            citizen, 
+            religion, 
+            dob, 
+            pob, 
+            mobile, 
+            email) 
+        VALUES (
+            '$UniqueID', 
+            'STUDENT',
+            '$fname', 
+            '$mname', 
+            '$lname', 
+            '$Ename', 
+            '$gender', 
+            '$civil', 
+            '$citizenship', 
+            '$religion', 
+            '$birthday', 
+            '$place', 
+            '$mobile', 
+            '$email')";
 
-$insert_qry = mysqli_query($db, $insert_employee);
+        $insert_qry = mysqli_query($db, $insert_employee);
+    }
 
 if ($sameaddress == 'on') {
 

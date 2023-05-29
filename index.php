@@ -197,9 +197,9 @@ include "database/db.php";
 	</div>
 	<br><br><br>
 
-	<legend></legend>
+	<!-- <legend></legend> -->
 
-	<div class="container">
+	<!-- <div class="container">
 		<div class="row">
 			<div class="col-md-6"  style="padding: 20px;">
 				<li class="dropdown">
@@ -250,7 +250,7 @@ include "database/db.php";
 				</li>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
 	<!-- <div class="container-fluid">
 		<div class="row">

@@ -48,4 +48,20 @@
                 </ul>
             </div>
         </li>
+        <li class="side-nav-item">
+            <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" class="side-nav-link">
+                <i class="uil-user-circle"></i>
+                <span> List</span>
+                <span class="menu-arrow"></span>
+            </a>
+            <div class="collapse" id="sidebarEcommerce">
+                <ul class="side-nav-second-level">
+                    <li>
+                        <a href="stakeholder-hr-list.php">Academic Employee</a>
+                    </li>
+                    <li>
+                        <a href="stakeholder-hr2-list.php">Non-Academic Employee</a>
+                    </li>
+            </div>
+        </li>
 </ul>

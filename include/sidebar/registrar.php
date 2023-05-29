@@ -29,5 +29,20 @@
                 <i class="uil-user-circle"></i>
                 <span> Stakeholder Profiling </span>
             </a>
-    </li>
+        </li>
+
+        <li class="side-nav-item">
+            <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" class="side-nav-link">
+                <i class="uil-user-circle"></i>
+                <span> List </span>
+                <span class="menu-arrow"></span>
+            </a>
+            <div class="collapse" id="sidebarEcommerce">
+                <ul class="side-nav-second-level">
+                    <li>
+                        <a href="stakeholder-student-list.php">Students</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
 </ul>

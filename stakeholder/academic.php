@@ -10,7 +10,7 @@ if (isset($_POST['save'])){
     $UniqueID = 'SHA'.$random;
 
     $sameaddress = $_POST['sameaddress'];
-
+    $idn = $_POST['idnumber'];
     $fname = $_POST['fname'];
     $mname = $_POST['mname'];
     $lname = $_POST['lname'];
@@ -24,39 +24,46 @@ if (isset($_POST['save'])){
     $mobile = $_POST['mobile'];
     $email = $_POST['email'];
 
+    $check_id = mysqli_query($db,"Select * from employee_information where fldIDN = '$idn' ");
 
-    $insert_employee = "INSERT INTO employee_information (
-                            fldID, 
-                            stake_status,
-                            fname, 
-                            cname, 
-                            lname, 
-                            exname, 
-                            sex, 
-                            cstatus, 
-                            citizen, 
-                            religion, 
-                            dob, 
-                            pob, 
-                            mobile, 
-                            email) 
-                        VALUES (
-                            '$UniqueID', 
-                            'ACADEMIC',
-                            '$fname', 
-                            '$mname', 
-                            '$lname', 
-                            '$Ename', 
-                            '$gender', 
-                            '$civil', 
-                            '$citizenship', 
-                            '$religion', 
-                            '$birthday', 
-                            '$place', 
-                            '$mobile', 
-                            '$email')";
+    if (mysqli_num_rows($check_id) > 0) {
+        echo "<script>alert('Identification Number already exists');window.location.href = '../stakeholder-hr.php';</script>";
+    } else {
+        $insert_employee = "INSERT INTO employee_information (
+            fldID, 
+            fldIDN,
+            stake_status,
+            fname, 
+            cname, 
+            lname, 
+            exname, 
+            sex, 
+            cstatus, 
+            citizen, 
+            religion, 
+            dob, 
+            pob, 
+            mobile, 
+            email) 
+        VALUES (
+            '$UniqueID', 
+            '$idn',
+            'STUDENT',
+            '$fname', 
+            '$mname', 
+            '$lname', 
+            '$Ename', 
+            '$gender', 
+            '$civil', 
+            '$citizenship', 
+            '$religion', 
+            '$birthday', 
+            '$place', 
+            '$mobile', 
+            '$email')";
 
-$insert_qry = mysqli_query($db, $insert_employee);
+        $insert_qry = mysqli_query($db, $insert_employee);
+    }
 
 if ($sameaddress == 'on') {
 

@@ -44,11 +44,25 @@
         </div>
         
     </div>
-    
+    <?php 
+        $id = $_GET['id'];
+        $message_content = mysqli_query($db, "Select * from message_concern where concern_id = '$id'");
+        $message_data = mysqli_fetch_array($message_content);
+    ?>
     <div class="col-10">   
-        
- 
+        <div class="mt-3">
+        <h5 class="font-18">Subject: <?php echo $message_data['subject'];?></h5>
+        <hr>
+        <div class="d-flex mb-3 mt-1">
+            <div class="w-100 overflow-hidden">
+                <small class="float-end"><?php echo $message_data['date_created'];?></small>
+                <h6 class="m-0 font-14"><?php echo $message_data['concern_name'];?></h6>
+                <small class="text-muted">From: <?php echo $message_data['concern_number'];?></small>
+            </div>
+        </div>
+        <p><?php echo $message_data['concern_comment'];?></p>
     </div>
+            
 </div>
 
 <?php 

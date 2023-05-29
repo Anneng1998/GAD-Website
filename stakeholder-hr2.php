@@ -39,6 +39,15 @@
 <form action="stakeholder/non-academic.php" method="post" class="dropzone" id="myAwesomeDropzone" enctype="multipart/form-data">
 
 
+<div class ="row">
+    <div class="col-6">
+        <div class="mb-3">
+            <label for="simpleinput" class="form-label">Identification Number</label>
+            <input type="number" min="0" maxlength="3" minlength="3" name="idnumber" id="simpleinput" class="form-control" required>
+        </div>
+    </div>
+</div>
+
 
 <div class ="row">
     <div class="col-3">
@@ -126,7 +135,7 @@
     <div class="col-4">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Mobile Number</label>
-            <input type="number" name="mobile" id="simpleinput" class="form-control"  >
+            <input type="number" min="0" maxlength="11" minlength="11" name="mobile" id="simpleinput" class="form-control" >
         </div>
     </div>
 
@@ -178,7 +187,7 @@
     <div class="col-3">
         <div class="mb-3">
             <label for="simpleinput" class="form-label">Zip Code</label><span class="text-danger"> *</span>
-            <input type="number" name="czip" id="simpleinput" class="form-control"  required>
+            <input type="number" min="0" maxlength="4" minlength="4" name="czip" id="simpleinput" class="form-control"  required>
         </div>
     </div>
 </div>
@@ -242,7 +251,7 @@
         <div class="col-3">
             <div class="mb-3">
                 <label for="simpleinput" class="form-label">Zip Code</label><span class="text-danger"> *</span>
-                <input type="number" name="pzip" id="simpleinput" class="form-control"  required>
+                <input type="number" min="0" maxlength="4" minlength="4" name="pzip" id="simpleinput" class="form-control"  required>
             </div>
         </div>
     </div>
