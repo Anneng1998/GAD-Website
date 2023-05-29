@@ -83,7 +83,6 @@ footer { background-color:#f6f6f6; min-height:350px; bottom: 0px; }
         <h6 class="heading7">GENERAL LINKS</h6>
           <ul class="footer-ul">
             <li><a href="index.php"> Home</a></li>
-            <li><a href="news-ane-events.php"> Projects and Programs</a></li>
             <li><a href="aboutus.php"> About Us</a></li>
             <li><a href="servicesoffered.php"> Services Offered</a></li>
             <li><a href="https://pcw.gov.ph/"> Resources</a></li>
