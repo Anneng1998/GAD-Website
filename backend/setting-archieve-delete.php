@@ -13,7 +13,7 @@
             </div>
 
             <div class="modal-footer">
-                <a href="backend/setting-archieve-delete-process.php?id=<?php echo $data['fldUID'] ?>&&from=<?php echo $data['fldFrom'] ?>" class="btn btn-danger shadow btn-xs sharp me-1">RESTORE</a>
+                <a href="backend/setting-archieve-delete-process.php?id=<?php echo $data['fldUID'] ?>&&from=<?php echo $data['fldFrom'] ?>" class="btn btn-danger shadow btn-xs sharp me-1">DELETE</a>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->

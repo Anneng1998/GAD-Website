@@ -120,14 +120,14 @@ if(isset($_POST['upload'])){
                 <div class="row mb-3">
                     <label for="inputEmail3" class="col-6 col-form-label">Copy of Proposal</label>
                     <div class="col-6 fallback">
-                        <input name="proposal" type="file" accept="pdf" multiple />
+                        <input name="proposal" type="file" accept=".pdf" multiple />
                         <h6> File type accepted (PDF) </h6>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="inputEmail3" class="col-6 col-form-label">Accomplished HGDG Design Checklist</label>
                     <div class="col-6 fallback">
-                        <input name="hgdg" type="file" accept="pdf" multiple />
+                        <input name="hgdg" type="file" accept=".pdf" multiple />
                         <h6> File type accepted (PDF) </h6>
                     </div>
                 </div>

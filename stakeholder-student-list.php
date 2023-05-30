@@ -48,10 +48,12 @@
             <td><?php echo $view_data['mobile'] ?></td>
             <td><?php echo $view_data['email'] ?></td>
             <td>
-                <a href="stakeholder-student-view.php?id=<?php echo $view_data['fldID'] ?>" class="btn btn-info shadow btn-xs sharp me-1" ><i class="dripicons-preview"></i></button>
+                <a href="stakeholder-student-view.php?id=<?php echo $view_data['fldID'] ?>" class="btn btn-info shadow btn-xs sharp me-1" ><i class="dripicons-preview"></i></a>
+                <button class="btn btn-danger shadow btn-xs sharp me-1" data-bs-toggle="modal" data-bs-target="#delete<?php echo $view_data['fldID'] ?>"><i class="dripicons-trash"></i></button>
            </td>
         </tr>
         <?php
+            include 'backend/stakeholder-delete4.php';
             }
         ?>
     </tbody>
