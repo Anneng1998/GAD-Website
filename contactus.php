@@ -45,7 +45,7 @@
 
 
 	<br><br>
-	<div class="container" id="">
+	<div class="container-fluid" id="">
 		<div class="row">
 			<div class="col-md-6">
 				<div id="map">
