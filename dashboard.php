@@ -252,7 +252,7 @@
                             <td><?php echo $phd_view2['total']; ?></td>
                         </tr>
                         <tr>
-                            <td>Processor</td>
+                            <td>Assistant Professor</td>
                             <?php
                             $count_phdf = mysqli_query($db, "select count(*) as FemalePHD from employee_information a INNER JOIN educational_information b ON b.fldID = a.fldID where a.stake_status = 'ACADEMIC' and a.sex = 'FEMALE' and b.designation = 'Assistant'");
                             $phd_view = mysqli_fetch_array($count_phdf);
