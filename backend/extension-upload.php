@@ -189,14 +189,14 @@ if(isset($_POST['mediaupload'])){
                     <div class="row mb-3">
                         <label for="inputEmail3" class="col-6 col-form-label">Copy of Proposal</label>
                         <div class="col-6 fallback">
-                            <input name="file1" type="file" accept="pdf" multiple />
+                            <input name="file1" type="file" accept=".pdf" multiple />
                         </div>
                     </div>
 
                     <div class="row mb-3">
                         <label for="inputEmail3" class="col-6 col-form-label">Accomplished HGDG Design</label>
                         <div class="col-6 fallback">
-                            <input name="file2" type="file" accept="pdf" multiple />
+                            <input name="file2" type="file" accept=".pdf" multiple />
                         </div>
                     </div>
                 </div>
@@ -205,7 +205,7 @@ if(isset($_POST['mediaupload'])){
                     <div class="row mb-3">
                         <label for="inputEmail3" class="col-6 col-form-label">Copy of Paper</label>
                         <div class="col-6 fallback">
-                            <input name="file3" type="file" accept="pdf" multiple />
+                            <input name="file3" type="file" accept=".pdf" multiple />
                         </div>
                     </div>
 
@@ -213,7 +213,7 @@ if(isset($_POST['mediaupload'])){
                     <div class="row mb-3">
                         <label for="inputEmail3" class="col-6 col-form-label">Accomplished PIMME Checklist</label>
                         <div class="col-6 fallback">
-                            <input name="file4" type="file" accept="pdf" multiple />
+                            <input name="file4" type="file" accept=".pdf" multiple />
                         </div>
                     </div>
                 </div>

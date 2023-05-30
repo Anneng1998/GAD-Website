@@ -104,7 +104,7 @@ if(isset($_POST['upload'])){
                     <label for="simpleinput" class="form-label">Attach File</label><span class="text-danger"> *</span>
                     <div class="fallback">
                         <input name="file" type="file" accept="pdf, image/png, image/jpeg" multiple />
-                        <label>PDF, DOCS, PNG, JPG, MP4, and ZIP file Only</label>
+                        <label>PDF, DOCS, PNG, JPG, MP4</label>
                     </div>
                 </div>
             </div>

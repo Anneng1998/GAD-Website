@@ -74,7 +74,7 @@ if(isset($_POST['planupload'])){
                 <div class="mb-3">
                     <label for="simpleinput" class="form-label">Attach File</label> <span class="text-danger"> *</span>
                     <div class="fallback">
-                        <input name="file" type="file" accept=".xls" multiple />
+                        <input name="file" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" multiple />
                     </div>
                     <div class="dz-message needsclick">
                         <i class="h1 text-muted dripicons-cloud-upload"></i>
