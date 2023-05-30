@@ -96,11 +96,11 @@ footer { background-color:#f6f6f6; min-height:350px; bottom: 0px; }
         <h6 class="heading7">GENERAL LINKS</h6>
         <div class="row">
           <div class="col-6 footer-col">
-            <a href="https://pcw.gov.ph/tinig-ng-kababaihan/"></a><img src="img\tinig.png" alt="">
-            <a href="https://pcw.gov.ph/transparency/"></a><img src="img\transparency.png" alt="">
+            <a href="https://pcw.gov.ph/tinig-ng-kababaihan/"><img src="img\tinig.png" alt=""></a>
+            <a href="https://pcw.gov.ph/transparency/"><img src="img\transparency.png" alt=""></a>
           <div>
           <div class="col-6 footer-col">
-              <a href="https://www.foi.gov.ph/requests?agency=PCW&fbclid=IwAR3Fr_kfseFdjzMfOI_xOLte0R2NO8TSPYz6RCatudYdcV2SAdLtcVu2ans"></a><img src="img\acessgov.png" alt="">
+              <a href="https://www.foi.gov.ph/requests?agency=PCW&fbclid=IwAR3Fr_kfseFdjzMfOI_xOLte0R2NO8TSPYz6RCatudYdcV2SAdLtcVu2ans"><img src="img\acessgov.png" alt=""></a>
               <img src="img\1343.png" alt=""></img>
           <div>
         </div>    
