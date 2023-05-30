@@ -48,7 +48,7 @@ if (isset($_POST['save'])){
         VALUES (
             '$UniqueID', 
             '$idn',
-            'STUDENT',
+            'NON-ACADEMIC',
             '$fname', 
             '$mname', 
             '$lname', 
