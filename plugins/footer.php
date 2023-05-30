@@ -93,6 +93,7 @@ footer { background-color:#f6f6f6; min-height:350px; bottom: 0px; }
       <div class="col-md-6 col-sm-6 footer-col">
         <h6 class="heading7">CONTACT US</h6>
         <li><i class="fa fa-map-marker"></i> Pulo II, Dalahican Cavite City</li><br><br>
+        <li><i class="fa fa-envelope"></i> gad@cvsu.edu.ph </li><br><br>
         <h6 class="heading7">GENERAL LINKS</h6>
         <div class="row">
           <div class="col-6 footer-col">
