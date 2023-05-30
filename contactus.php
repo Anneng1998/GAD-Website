@@ -23,21 +23,33 @@
 		$con_num = $_POST['con_num'];
 		$subject = $_POST['subject'];
 		$con_comment = $_POST['con_comment'];
+		$descriptions = str_replace("'", "\'", $con_comment);
 		$msg_status = "NEW MSG";
 		date_default_timezone_set("Asia/Manila");
 		$date_created = date('m-d-Y H:i:s');
 
-		$concern_sql = $db->prepare("INSERT INTO message_concern(concern_name, concern_number, subject, concern_comment, date_created, msg_status) VALUES (?,?,?,?,?,?)");
-		$concern_sql->bind_param('ssssss', $con_name, $con_num, $subject, $con_comment, $date_created, $msg_status);
-		$concern_sql->execute();
-		if($concern_sql){
-			echo "<script>
-			$(document).ready(function() {
-				concern_sent();
-				});
-				</script>";
-				$concern_sql->close();
-			}
+		// $concern_sql = $db->prepare("INSERT INTO message_concern(concern_name, concern_number, subject, concern_comment, date_created, msg_status) VALUES (?,?,?,?,?,?)");
+		// $concern_sql->bind_param('ssssss', $con_name, $con_num, $subject, $con_comment, $date_created, $msg_status);
+		// $concern_sql->execute();
+		// if($concern_sql){
+		// 	echo "<script>
+		// 	$(document).ready(function() {
+		// 		concern_sent();
+		// 		});
+		// 		</script>";
+		// 		$concern_sql->close();
+		// 	}
+
+		$message = "INSERT INTO message_concern (concern_name, concern_number, subject, concern_comment, date_created, msg_status) VALUES ('$con_name', '$con_num', '$subject', '$descriptions','$date_created', '$msg_status' )";
+
+		// echo $message;
+		$insert_qry = mysqli_query($db, $message);
+
+		    
+        echo "<script>alert('Message Sent');window.location.href = 'contactus.php';</script>";
+
+
+
 		}
 
 
