@@ -48,14 +48,16 @@
 	<div class="container-fluid" id="">
 		<div class="row">
 			<div class="col-md-6">
-				<div id="map"></div>
+				<div id="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.457160691743!2d120.87783237497116!3d14.458418586011229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33962d58ecc6306b%3A0xb8dbaa89e5964e7f!2sCavite%20State%20University!5e0!3m2!1sen!2sph!4v1685405675498!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
 			</div>
 			
 			<div class="col-md-5" id="msg">
 				<legend>Contact Us</legend>
 				<h6><span class="fa fa-map-marker"></span>&emsp;PULO II, DALAHICAN, CAVITE CITY</h6>
 				<h6><span class="fa fa-phone"></span>&emsp;Landline</h6>
-				<h6><span class="fa fa-envelope"></span>&emsp;cvsuccc.gadunit</h6>
+				<h6><span class="fa fa-envelope"></span>&emsp;gad@cvsu.edu.ph</h6>
 				<br>
 				<form method="POST">
 					<h5>Full Name&nbsp;<span class="fa fa-asterisk" style="font-size: 8px;color: indianred;"></span></h5>
