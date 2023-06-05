@@ -23,7 +23,7 @@
             <div class="page-title-right">
                 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#primary-header-modal">UPLOAD</button>
             </div>
-            <h4 class="page-title">EXTENSION / PROJECT / PROGRAM</h4>
+            <h4 class="page-title">EXTENSION / PROJECT & PROGRAM</h4>
         </div>
     </div>
 </div>     
