@@ -4,7 +4,8 @@
 		<div class="col-md-12">
 			<div class="row">
 				<div class="col-md-8">
-					<img src="img/gad logo.jpg" class="img img-responsive" id="nav-logo">
+					<img src="img/Cavite_State_University_(CvSU).png" class="img img-responsive" id="nav-logo">
+					<img src="img/gad_logo.png" class="img img-responsive" id="nav-logo">
 					<h2>&nbsp;CvSU-CCC GAD Unit</h2>
 				</div>
 			</div>
@@ -21,7 +22,7 @@
 				<span class="icon-bar"></span>                        
 			</button>
 			<a class="navbar-brand" id="navbar-brand" href="index.php">
-				<img src="img/gad logo.jpg" class="img img-responsive" id="nav-logo">
+				<img src="img/gad_logo.png" class="img img-responsive" id="nav-logo">
 				<h2>&nbsp;CvSU-CCC GAD Unit</h2>
 			</a>
 		</div>

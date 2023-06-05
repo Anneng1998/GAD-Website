@@ -39,7 +39,7 @@
 <div class ="row">
     <div class="col-6">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Identification Number</label>
+            <label for="simpleinput" class="form-label">Student ID Number</label>
             <input type="number" min="0" maxlength="9" minlength="9" name="idnumber" id="simpleinput" class="form-control" required>
         </div>
     </div>
@@ -92,7 +92,6 @@
                 <option value = "Single">Single</option>
                 <option value = "Married">Married</option>
                 <option value = "Widowed">Widowed</option>
-                <option value = "Divorced">Divorced</option>
                 <option value = "Separated">Separated</option>
             </select>
         </div>
@@ -149,8 +148,8 @@
 <div class = "row">
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
-            <input type="text" name="cno" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">House/Block/Lot No.</label>
+            <input type="text" name="cno" id="simpleinput" class="form-control">
         </div>
     </div>
     <div class="col-3">
@@ -212,8 +211,8 @@
     <div class = "row">
         <div class="col-3">
             <div class="mb-3">
-                <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
-                <input type="text" name="pno" id="simpleinput" class="form-control"  required>
+                <label for="simpleinput" class="form-label">House/Block/Lot No.</label>
+                <input type="text" name="pno" id="simpleinput" class="form-control">
             </div>
         </div>
         <div class="col-3">

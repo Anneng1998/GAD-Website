@@ -131,7 +131,7 @@
 
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Place of Birth</label>>
+            <label for="simpleinput" class="form-label">Place of Birth</label>
             <input type="text" name="place" id="simpleinput" class="form-control" readonly="true"  value="<?php echo $pob ?>"    >
         </div>
     </div>
@@ -179,7 +179,7 @@
 <div class = "row">
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
+            <label for="simpleinput" class="form-label">House/Block/Lot No.</label>
             <input type="text" name="cno" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $house ?>"   >
         </div>
     </div>
@@ -243,7 +243,7 @@
 <div class = "row">
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
+            <label for="simpleinput" class="form-label">House/Block/Lot No.</label>
             <input type="text" name="pno" id="simpleinput" class="form-control"  readonly="true"  value="<?php echo $house ?>"   >
         </div>
     </div>
@@ -355,7 +355,7 @@
 
 <div class="row">
     <div class="col-6">
-        <label class="">Are you Single Parent?</label>
+        <label class="">Are you a Single Parent?</label>
         <p>Answer:&nbsp;<?php echo $single_parent ?></p>
     </div> 
 </div>

@@ -14,5 +14,5 @@
 
     $archieve_query = mysqli_query ($db, "Update tbl_report set fldStatus = 'archive' where fldID = '$id'");
 
-    echo "<script>alert('Data has been archieve successfully');window.location.href = '../report.php';</script>";
+    echo "<script>alert('Data has been archive successfully');window.location.href = '../report.php';</script>";
 ?>

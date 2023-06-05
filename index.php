@@ -10,7 +10,7 @@ include "database/db.php";
 <head>
 	<title>CvSU-CCC GAD Unit</title>
 	<meta charset="utf-8">
-	<link rel="icon" href="img/gad logo.jpg">
+    <link rel="icon" href="img/gad_logo.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/top-navbar.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">

@@ -30,9 +30,9 @@ if(isset($_POST['resetpass'])) {
 
     <head>
         <meta charset="utf-8" />
-        <title>GAD_RMS</title>
+        <title>CvSU-CCC Gad Unit</title>
+        <link rel="icon" href="img/gad_logo.png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <!-- App css -->
         <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style" />
@@ -62,11 +62,11 @@ if(isset($_POST['resetpass'])) {
                         <form action="reset-password.php" method="POST">
                             <div class="mb-3">
                                 <label for="sq_ans" class="form-label">New Password</label>
-                                <input class="form-control" type="text" name="npass" id="npass"  required placeholder="Enter your security question answer">
+                                <input class="form-control" type="text" name="npass" id="npass"  required placeholder="Enter your new password">
                             </div>
                             <div class="mb-3">
                                 <label for="sq_ans" class="form-label">Confirm Password</label>
-                                <input class="form-control" type="text" name="cpass" id="cpass"  required placeholder="Enter your security question answer">
+                                <input class="form-control" type="text" name="cpass" id="cpass"  required placeholder="Confirm your new password">
                             </div>
                             <div class="d-grid mb-0 text-center">
                                 <button class="btn btn-primary" name="resetpass" type="submit"><i class="mdi mdi-login"></i> Reset Password </button>

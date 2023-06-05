@@ -33,7 +33,7 @@
 
 <h1 class="page-title" style="text-align:center;">EXTERNAL CLIENT PERSONAL DATA SHEET</h1>
 <br>
-<h3 class="page-title" style="text-align:center;">Employee Information</h3>
+<h3 class="page-title" style="text-align:center;">External Client Information</h3>
 
 
 <form action="stakeholder/rde.php" method="post" class="dropzone" id="myAwesomeDropzone" enctype="multipart/form-data">
@@ -143,8 +143,8 @@
 <div class = "row">
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
-            <input type="text" name="cno" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">House/Block/Lot No.</label>
+            <input type="text" name="cno" id="simpleinput" class="form-control">
         </div>
     </div>
     <div class="col-3">
@@ -206,7 +206,7 @@
     <div class = "row">
         <div class="col-3">
             <div class="mb-3">
-                <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
+                <label for="simpleinput" class="form-label">House/Block/Lot No.</label>
                 <input type="text" name="pno" id="simpleinput" class="form-control"  required>
             </div>
         </div>

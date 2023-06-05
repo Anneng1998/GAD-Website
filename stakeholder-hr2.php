@@ -153,7 +153,7 @@
 <div class = "row">
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
+            <label for="simpleinput" class="form-label">House/Block/Lot No.</label>
             <input type="text" name="cno" id="simpleinput" class="form-control"  required>
         </div>
     </div>
@@ -216,7 +216,7 @@
     <div class = "row">
         <div class="col-3">
             <div class="mb-3">
-                <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
+                <label for="simpleinput" class="form-label">House/Block/Lot No.</label>
                 <input type="text" name="pno" id="simpleinput" class="form-control"  required>
             </div>
         </div>
@@ -347,7 +347,7 @@
 <div class="row">
     <div class="col-6">
         <div class="mt-2">
-            <label class="form-check form-check-inline">Are you Single Parent?</label>
+            <label class="form-check form-check-inline">Are you a Single Parent?</label>
             <div class="form-check form-check-inline">
                 <input type="radio" id="spY" name="sp" value="YES" class="form-check-input">
                 <label class="form-check-label" value="spY">YES</label>

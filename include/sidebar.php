@@ -10,20 +10,20 @@
     <!-- LOGO -->
     <a class="logo text-center logo-light">
         <span class="logo-lg">
-            <img src="img/gad_logo.png" alt="" height="50">  CvSU CCC  GAD UNIT
+            <img src="img/gad_logo.png" alt="" height="50">  CvSU-CCC  GAD UNIT
         </span>
         <span class="logo-sm">
-            <img src="img/gad_logo.png" alt="" height="50"> CvSU CCC  GAD UNIT
+            <img src="img/gad_logo.png" alt="" height="50"> CvSU-CCC  GAD UNIT
         </span>
     </a>
 
     <!-- LOGO -->
     <a class="logo text-center logo-dark">
         <span class="logo-lg">
-            CvSU CCC  GAD UNIT
+            CvSU-CCC GAD UNIT
         </span>
         <span class="logo-sm">
-            <img src="img/gad_logo.png" alt="" height="50">   CvSU CCC  GAD UNIT
+            <img src="img/gad_logo.png" alt="" height="50">   CvSU-CCC  GAD UNIT
         </span>
     </a>
 

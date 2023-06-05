@@ -73,7 +73,7 @@ footer { background-color:#f6f6f6; min-height:350px; bottom: 0px; }
   <div class="container-fluid" style="padding:30px;">
     <div class="row">
       <div class="col-md-3 col-sm-6 footer-col">
-        <div class="logofooter"><img src="img/gad logo.jpg"></div>
+        <div class="logofooter"><img src="img/gad_logo.png"></div>
           <h4>CvSU-CCC GAD Unit</h4>
           <p>In CvSU-CCC, Your Voice Matters</p>
           <p>© <?php echo date('Y')?> - All Rights Reserved <br></p>
@@ -94,7 +94,7 @@ footer { background-color:#f6f6f6; min-height:350px; bottom: 0px; }
         <h6 class="heading7">CONTACT US</h6>
         <li><i class="fa fa-map-marker"></i> Pulo II, Dalahican Cavite City</li><br><br>
         <li><i class="fa fa-envelope"></i> gad@cvsu.edu.ph </li><br><br>
-        <h6 class="heading7">GENERAL LINKS</h6>
+        <h6 class="heading7">LINKAGES</h6>
         <div class="row">
           <div class="col-6 footer-col">
             <a href="https://pcw.gov.ph/tinig-ng-kababaihan/"><img src="img\tinig.png" alt=""></a>

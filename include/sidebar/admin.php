@@ -152,7 +152,7 @@
             <li class="side-nav-item">
                 <a href="news.php" //class="side-nav-link""">
                     <i class="uil-parcel"></i>
-                    <span> News and Update </span>
+                    <span> News and Events </span>
                 </a>
             </li>
         </ul>

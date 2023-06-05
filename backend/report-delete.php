@@ -12,7 +12,7 @@
 
             <div class="modal-footer">
                 <form action="backend/report-delete-process.php?id=<?php echo $report_data['fldID'] ?>" method="post">
-                    <button name="delete-video" class="btn btn-danger">archive</button>
+                    <button name="delete-video" class="btn btn-danger">Archive</button>
                 </form>
             </div>
         </div><!-- /.modal-content -->

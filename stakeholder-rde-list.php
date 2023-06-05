@@ -22,7 +22,7 @@
         <div class="page-title-box">
             <div class="page-title-right">
             </div>
-            <h4 class="page-title">List of Stake Profiling - External Clients</h4>
+            <h4 class="page-title">List of Stakeholder's Profiling - External Clients</h4>
         </div>
     </div>
 </div>

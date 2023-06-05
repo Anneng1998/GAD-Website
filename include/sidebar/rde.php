@@ -52,4 +52,31 @@
                 </a>
             </li>
 
+            <li class="side-nav-item">
+                <a href="plan.php" //class="side-nav-link"">
+                    <i class="uil-moneybag"></i>
+                    <span> GAD Plan and Budget </span>
+                </a>
+            </li>
+
+            <li class="side-nav-item">
+                <a href="based-research.php" //class="side-nav-link"">
+                    <i class="uil-image-search"></i>
+                    <span> GAD Based Research </span>
+                </a>
+            </li>
+
+            <li class="side-nav-item">
+                <a href="extension.php" //class="side-nav-link"">
+                    <i class="uil-building"></i>
+                    <span> Extension / Project and Program </span>
+                </a>
+            </li>
+
+            <li class="side-nav-item">
+                <a href="infastracture.php" //class="side-nav-link""">
+                    <i class="uil-parcel"></i>
+                    <span> Infastructure Project </span>
+                </a>
+            </li>
 </ul>

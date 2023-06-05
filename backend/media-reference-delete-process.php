@@ -14,5 +14,5 @@
 
     $archieve_query = mysqli_query($db, "Update tbl_media set fldStatus = 'archive' where fldID = '$id'");
 
-    echo "<script>alert('Video has been archieve successfully');window.location.href = '../media-reference.php';</script>";
+    echo "<script>alert('Video has been archive successfully');window.location.href = '../media-reference.php';</script>";
 ?>

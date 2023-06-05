@@ -94,7 +94,6 @@
                 <option value = "Single">Single</option>
                 <option value = "Married">Married</option>
                 <option value = "Widowed">Widowed</option>
-                <option value = "Divorced">Divorced</option>
                 <option value = "Separated">Separated</option>
             </select>
         </div>
@@ -125,7 +124,7 @@
 
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">Place of Birth</label>>
+            <label for="simpleinput" class="form-label">Place of Birth</label>
             <input type="text" name="place" id="simpleinput" class="form-control"  >
         </div>
     </div>
@@ -151,8 +150,8 @@
 <div class = "row">
     <div class="col-3">
         <div class="mb-3">
-            <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
-            <input type="text" name="cno" id="simpleinput" class="form-control"  required>
+            <label for="simpleinput" class="form-label">House/Block/Lot No.</label>
+            <input type="text" name="cno" id="simpleinput" class="form-control">
         </div>
     </div>
     <div class="col-3">
@@ -214,8 +213,8 @@
     <div class = "row">
         <div class="col-3">
             <div class="mb-3">
-                <label for="simpleinput" class="form-label">House/Block/Lot No.</label><span class="text-danger"> *</span>
-                <input type="text" name="pno" id="simpleinput" class="form-control"  required>
+                <label for="simpleinput" class="form-label">House/Block/Lot No.</label>
+                <input type="text" name="pno" id="simpleinput" class="form-control"  >
             </div>
         </div>
         <div class="col-3">
@@ -355,7 +354,7 @@
 <div class="row">
     <div class="col-6">
         <div class="mt-2">
-            <label class="form-check form-check-inline">Are you Single Parent?</label>
+            <label class="form-check form-check-inline">Are you a Single Parent?</label>
             <div class="form-check form-check-inline">
                 <input type="radio" id="spY" name="sp" value="YES" class="form-check-input">
                 <label class="form-check-label" value="spY">YES</label>

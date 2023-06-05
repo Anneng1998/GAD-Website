@@ -11,7 +11,7 @@ session_start();
 <head>
 	<title>About Us</title>
 	<meta charset="utf-8">
-	<link rel="icon" href="img/gad logo.jpg">
+    <link rel="icon" href="img/gad_logo.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/top-navbar.css">
 	<link rel="stylesheet" type="text/css" href="css/aboutus.css">

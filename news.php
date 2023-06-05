@@ -19,8 +19,8 @@
         <div class="col-12">
             <div class="page-title-box">
                 <div class="page-title-right">
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#primary-header-modal">add News</button>
-                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#warning-header-modal">add Events</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#primary-header-modal">Add News</button>
+                    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#warning-header-modal">Add Events</button>
                     <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#primary1-header-modal">View News Information</button>
                     <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#warning1-header-modal">View Events Information</button>     -->
                 </div>
