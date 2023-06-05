@@ -26,6 +26,9 @@ session_start();
 	<?php include "home-navbar.php" ?>
 	<br><br>
 	<div class="container" id="about" >
+			<div>
+				<h3>History of CvSU-CCC Gad Unit</h3>
+			</div>
 			<div class="col-md-5" >
 				<h3>Vision</h3>
 				<p>A gender responsive academic and research institution in the region where stakeholders enjoy

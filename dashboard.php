@@ -130,6 +130,7 @@
         <div class="row">
             <div class="col-6">
                 <table class="table table-success mb-0">
+                <h4>Sex Disaggregated Data of CvSU-CCC faculty members by highest educational attainment</h4>
                     <thead>
                         <tr>
                             <th>Faculty</th>
@@ -228,6 +229,7 @@
             </div>
             <div class="col-6">
             <table class="table table-success mb-0">
+            <h4>Sex Disaggregated Data of CvSU-CCC faculty members by Academic Rank</h4>
                     <thead>
                         <tr>
                             <th>Faculty</th>
@@ -317,6 +319,7 @@
         <div class="row">
             <div class="col-6">
                 <table class="table table-success mb-0">
+                <h4>Sex Disaggregated Data of CvSU-CCC faculty members</h4>
                     <thead>
                         <tr>
                             <th>Faculty</th>
@@ -353,6 +356,7 @@
             </div>
             <div class="col-6">
                 <table class="table table-success mb-0">
+                <h4>Sex Disaggregated Data of CvSU-CCC faculty members</h4>
                     <thead>
                         <tr>
                             <th>Faculty</th>
@@ -409,6 +413,7 @@
         <div class="row">
             <div class="col-6">
                 <table class="table table-danger mb-0">
+                <h4>Sex Disaggregated Data of CvSU-CCC non-academic members by highest educational attainment</h4>
                     <thead>
                         <tr>
                             <th>Non-Academic Employee</th>
@@ -535,6 +540,7 @@
             </div>
             <div class="col-6">
                 <table class="table table-danger mb-0">
+                <h4>Sex Disaggregated Data of CvSU-CCC non-academic members</h4>
                     <thead>
                         <tr>
                             <th>Non-Academic Employee</th>
@@ -841,6 +847,7 @@
         <div class="row">
             <div class="col-6">
                 <table class="table table-warning mb-0">
+                <h4>Sex Disaggregated Data of CvSU-CCC enrolled Students</h4>
                     <thead>
                         <tr>
                             <th>Program</th>
