@@ -138,7 +138,7 @@
             <li class="side-nav-item">
                 <a href="infastracture.php" //class="side-nav-link""">
                     <i class="uil-parcel"></i>
-                    <span> Infastructure Project </span>
+                    <span> Infrastructure Project </span>
                 </a>
             </li>
 

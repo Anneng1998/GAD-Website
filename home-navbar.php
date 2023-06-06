@@ -45,7 +45,7 @@
 				</li>
 				<li><a href="servicesoffered.php">Services Offered</a></li>
 				<li class="dropdown">
-					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Resources<span class="caret"></span></a>
+					<a class="dropdown-toggle" data-toggle="dropdown" href="#">Linkages<span class="caret"></span></a>
 					<ul class="dropdown-menu"  id="dropdown-menu">
 						<li><a href="https://library.pcw.gov.ph/" >Digital GAD Library</a></li>
 						<li><a href="https://pcw.gov.ph/gender-and-statistics/">Gender Statistics</a></li>
